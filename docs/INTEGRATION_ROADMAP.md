@@ -24,18 +24,19 @@
 - **Fixed seven-day loop: gate / refuge / gate / refuge / gate / refuge / off**, with school, Grandma and home scenes each day. Mama voluntarily sought the second appointment for income/career progression.
 - No per-entrant inspection deadline. Preserve the user's **shift timer only** requirement and flexible day phases. **Round 4 resolves clock behavior:** generous real-time shift timer, pauses during document reading and menus, and may be disabled in Settings for unlimited shift time. Do not copy Claude's 120-second timer unchanged.
 - Household expenses, public refuge budget and Mafia debt have separate **Honey Marks (HM)** ledgers. The wider city economy is mostly simulated in the background; do not overbuild detailed NPC finance for every resident.
-- **Grandma (Mama's mother)** lives nearby and cares for Button and Hazel after structured **half-day** preschool; **she deliberately enjoys humiliating cruel dares, threats, and neglecting comfort**, and both cubs **justifiably hate her**. **Mama knows she is mean** but relies on her because of work and money. A new regular caregiver requires a **substantial replacement-care storyline**, though immediate protective responses remain possible. Track memory, severity, evidence, safety and aftermath; do not turn her into a benign default.
+- **Grandma (Mama's mother), a fired former nursery teacher (reason unapproved),** lives nearby and cares for Button and Hazel after structured **half-day** preschool; **she deliberately enjoys humiliating cruel dares, threats, and neglecting comfort**, and both cubs **justifiably hate her**. **Mama knows she is mean** but relies on her because of work and money. A new regular caregiver requires a **substantial replacement-care storyline**, though immediate protective responses remain possible. Track memory, severity, evidence, safety and aftermath; do not turn her into a benign default.
 - **Button** prefers inside/modern conveniences over wilderness; **Hazel** hates being told what to do. Each has different teachers and peer relationships. Both can harm one another physically/emotionally, fight, become estranged, hate each other, or reconcile; **bear emotional tears** need animation support.
 - Ensure **quadrupedal movement** for all bears, with cub/adult anatomy, desks, classrooms, furniture and visibly tearful expressions arranged accordingly.
 - Implement **continuous calendar aging** and developmental milestones; do not default to forced narrative time skips. Preschool scenes are observational/visit-based initially, with a deeper playable school perspective deferred.
 
 ### 2b. Populate the persistent Honeyhold world
 - **Seven connected districts** with explorable interiors and individual resident schedules; specific district names are proposals only.
-- Start with **12–20 deeply simulated recurring characters**, including Mama, Button, Hazel and Grandma (the Round 6 proposal contains 20 total, not 20 additions).
+- **12–20 deeply simulated recurring characters is a future target only**, NOT permission to create or import a roster. **Design each named person individually with the user**. Only Mama, Button, Hazel, Grandma (name undecided), and Queen Ursula are established characters.
 - Bears are a large citywide majority with smaller cat and red panda populations; mixed neighborhoods have sharply unequal resources.
-- Queen is **Kodiak brown bear**; two major political parties contest welfare/civil rights versus royal authority/security, with names undecided.
+- **Queen Ursula** is a **Kodiak brown bear** with a cuddly, affectionate public persona and ruthless protection of power. Two major political parties contest welfare/civil rights versus royal authority/security, with names and leaders undecided.
 - Profession-specific eligibility combines schooling, apprenticeship, experience and patronage. Young cubs normally use school/welfare jurisdiction; juvenile court thresholds vary by offense and emergency orders.
-- Before import, resolve **legacy naming collisions**: v0.1 already has a **Button cub** and an **adult Hazel**. Use stable unique IDs, audit source scripts and avoid overwriting/mistakenly merging them with the new Mama family.
+- **Preschool includes multiple classes yet district/wealth affect placement and quality**. Button and Hazel's individual teachers/classmates are not approved, and all characters from the rejected proposal must stay absent until created individually.
+- **Legacy character blacklist:** The v0.1 **Button cub** and **adult Hazel** are **OLD / BAD / DO NOT USE**. Preserve the source archive for audit, but **exclude these legacy characters from new game canon, migration and NPC spawns**. Create fresh persistent IDs for Mama's approved cubs. Do not adapt/rewrite the blacklisted legacy characters into the new cast.
 
 ### 3. Upgrade the inspection loop
 - Use data-driven legal policies but separate `law`, `facts`, `evidence available to player`, `verdict`, and `supervisor assessment`.
@@ -59,6 +60,10 @@ Acceptance test: over a fixed **3 gate + 3 refuge + 1 off** seven-day cycle, a f
 - Conflicting schedules: both-job-per-day concept is **superseded** by approved alternating-day design.
 - Conflicting pressure: Claude's short timer is **not canon**. Round 4 approved a **generous real-time shift timer, paused during reading/menus, with a settings toggle to disable it**, and **no per-case deadlines**.
 - Family ownership, foster status, refuge placement, and city-entry authorization must not be collapsed into a single `guardian` or `admitted` value.
+
+## Round 6 retraction
+
+The former 20-character AI-created roster is **rejected**. The current [Round 6 document](ROUND6_CAST_AND_INSTITUTIONS_PROPOSALS.md) withdraws the roster and replaces it with a one-character-at-a-time creation requirement. Any implementation must exclude the rejected proposal and two blacklisted v0.1 legacy names.
 
 ## Current repository state when this document was initialized
 
