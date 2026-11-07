@@ -49,7 +49,7 @@ None of A/B/C is approved. Existing proposed district names from earlier design 
 - Private/political nature: ruthless in protecting her authority.
 - Constitutional powers: can suspend most laws indefinitely when a state of emergency is declared.
 - Physiology and acting: **all fours**, genuine large Kodiak stature, bear muzzle and paws, emotional tears possible; avoid anthropomorphic standing/walking.
-- Age, lineage, accession history, family members, relationships, physical marks, personal routines, and party ties are **not approved**.
+- **Child accession APPROVED:** She took the throne unusually young and was raised among courtiers who reinforced her sense of entitlement. **Unresolved:** exact accession/current age, specific succession or regency details, family members, physical marks, private routines and party ties.
 
 ### Defining contradiction (option C APPROVED; A/B are rejected alternatives)
 
@@ -71,7 +71,7 @@ All three can generate dark satire; avoid reducing her to a purely random villai
 
 - **RESOLVED:** Ursula's affection is **possessive and genuine**, with dangerous reactions to rejection (user-approved option C).
 - **Cavern layout RESOLVED:** monumental central cavern and adjoining major chambers/tunnels (option C). **Still open:** exact location of the palace, heights, levels, district boundaries and travel routes.
-- Ursula's age in bear-year terms, length of reign, and route to throne (inherited normally, childhood accession, coup, wartime emergency).
+- **Child monarch D APPROVED.** Ursula's exact age at accession, current age, reason for succession, any regency and length of reign remain open. Her childhood was surrounded by courtiers who reinforced her entitlement. Do not name or invent those courtiers.
 - Her relationship to existing parties and the precise formal act of declaring an emergency.
 - Her current interest in Mama/Briarwood, if any, should be developed after approved history, not preinstalled as a scripted connection.
 - Names/identities of any royal relatives, aides, guards or staff require **separate character creation and approval**.
@@ -89,3 +89,9 @@ All three can generate dark satire; avoid reducing her to a purely random villai
 ## Provenance
 
 Official Japanese Tensura sources: https://www.ten-sura.com/map ; https://www.ten-sura.com/anime/tensura/story/no4 ; https://www.ten-sura.com/character/gazel . Supplementary wiki and subtitle sources: https://tensura.fandom.com/wiki/Armed_Nation_of_Dwargon ; https://subs.yakuaru.com/books/that-time-i-got-reincarnated-as-a-slime/page/e4-in-the-kingdom-of-the-dwarves-71D .
+
+## F. Specific childhood accession approval (design checkpoint)
+
+The user explicitly selected **D — Child monarch**: Ursula became Queen **unusually young** and grew up surrounded by courtiers who **reinforced her entitlement**. This fits but does not fully explain her previously approved genuine possessiveness: she may experience criticism of a royal decree as a subject personally rejecting her affection. She is not required to be calculating or incapable of love.
+
+**Not decided:** age when crowned, how many years she has ruled, whether a regency existed, the previous monarch's fate, her family members' identities, palace routines, or individual court officials. No new character has been created. Keep the next design round solely on Ursula's own childhood and current beliefs.
