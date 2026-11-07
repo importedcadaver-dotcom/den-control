@@ -93,6 +93,30 @@
 - Queen is specifically **Kodiak brown bear**, which is a brown bear type; do not present the monarchy as a separate non-brown species.
 - The user selected **B for school presentation for now**, with **C a future development goal**, not immediate playable preschool scenes.
 
+## Round 6 — approved and corrected by user (individual-character creation required)
+
+**Priority instruction:** The user's Round 6 response accepted the recommended answers **except** explicitly overridden items below. **The entire assistant-authored 20-character cast and its unapproved names, occupations, biographies, and relationships is REJECTED.** The player wants to **create every new character individually**. Round 5's target of 12–20 detailed recurring characters describes intended **eventual scale**, **not** approval for mass character creation. Existing user-established Mama, Button, Hazel and Grandma remain canon; Queen's role is established, and her name is approved below. Do not silently reintroduce rejected proposed NPCs in a future cast, data file or build.
+
+1. **REJECT previous option A and the entire invented roster:** No bulk approval or adaptation of the 20 proposed cast members. Each new character's identity, name, species, job, age, backstory and relationships must be designed **one at a time with user approval**, including roles formerly filled with assistant-created names. This does not revoke established family members or institutions.
+2. **A — Queen's name:** **Queen Ursula** approved. She is specifically a **Kodiak brown bear**, as settled in Round 5.
+3. **A — Queen's personality:** Publicly cuddly, affectionate and absurdly sweet, while **ruthless in protecting her power**. More detailed biography still undecided.
+4. **D — Grandma's personal name:** Undecided until we develop the family surname; do **not** assume the earlier proposed name.
+5. **B modified — Grandma's former profession:** She was a **nursery teacher and was fired**. Why, when, which employer and any legal/disciplinary aftermath are **not decided**. Do not revive the proposed municipal receptionist history.
+6. **D — Political party names:** Not approved; decide later. Two main ideologically opposed parties exist from earlier canon.
+7. **C — Gate-supervisor behavior archetype:** Complex, self-interested, capable of genuinely helping Mama or betraying her. **No individual supervisor identity/name approved**; design that person individually later.
+8. **A + B — Preschool structure:** A **public preschool that includes children from different social classes**, *and* **school placement/access is substantially stratified by household wealth and district**. Both must coexist: public education does not imply equal access to the same opportunities.
+9. **N/A — Proposed classmates:** Rejected with the bulk cast. **No assistant-invented classmates, their names, species, or connections are approved**. Design future classmates individually.
+10. **C — Replacement childcare:** A multistep storyline spanning **evidence, finances, work arrangements, trustworthy contacts and actual caregiver availability**. This does not prevent emergency protection of a cub in danger.
+11. **Legacy source characters: OLD / BAD / DO NOT USE.** The original **Briarwood Refuge v0.1** has an unrelated cub named Button and an adult bear named Hazel. **Do not reuse, adapt, rename into new NPCs, import into canonical save data or treat them as the user-approved new siblings.** The old source may remain archived *unchanged for historical provenance*, but these old NPCs are **excluded from the new game's canon and migration**. Do not merge characters by matching display names.
+
+### Character-by-character creation requirement
+
+- **Do not invent additional named major NPCs**, or entire character rosters, to meet the eventual 12–20 character target.
+- For each character, present role, name options, species, age, development stage, social ties, occupation, qualification, home, daily routine and personality as separate **user-selectable proposals**, not implicit approvals.
+- Existing approved characters: **Mama Bear, Button, Hazel, Grandma (name not chosen), Queen Ursula**. Grandma and Queen Ursula can have deeper individual design rounds; other roles remain blank until individually created.
+- Story/event examples must not install unapproved NPCs as established canon.
+- Never assume a generated character in a document was implemented in Godot. Documents record design choices; **no merged playable build has been established**.
+
 ## Character, identity, and ending choices — approved
 
 - **Game title:** *Unbearable Conditions*. The GitHub repository may remain named `den-control`.
@@ -123,8 +147,8 @@
 - Button and Hazel's **specific appearances** beyond species, their full histories, deeper relationships, and character development arcs remain open. Their names, ages, sex, and core personalities are approved above.
 - The caregiver is **Mama's mother / the cubs' grandmother**, living **nearby in her own home**. Her name, age, occupation and exact incident details remain undecided, but her **enjoyment of emotional cruelty, threats, comfort neglect and humiliating dangerous dares** is approved, as is the cubs' justified hatred. Mama knows she is mean and depends on her for work/money.
 - Mama's personal name (beyond "Mama Bear"), the **Kodiak brown bear Queen's** name, precise species demographics, the seven districts' final names, political party names and monetary balance figures remain undecided. **Honeyhold** and **Honey Marks (HM)** are confirmed.
-- Whether "Queen Ursula", "Hibernia", "Honeywell", and "Hearth Gazette" survive as final names. **Hibernia is not the selected city name**; Honeyhold is.
-- Administrative legal powers, court procedure, refuge staffing model, debt amounts, and balance tuning.
+- **Queen Ursula is approved.** "Hibernia" is **not** the city name; Honeyhold is. Whether "Honeywell" and "Hearth Gazette" survive remains undecided.
+- Administrative legal powers, court procedure, refuge staffing model, debt amounts, and balance tuning. **No supporting cast or named coworkers/classmates from the former Round 6 proposal are approved**.
 - Which particular story events become canon. Examples from ideation are **not automatic approvals**.
 
 ## Design implications
