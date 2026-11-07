@@ -1,4 +1,4 @@
-# Den Control — Technical integration roadmap
+# Unbearable Conditions — Technical integration roadmap
 
 ## Sources inspected (not yet committed as game code)
 
@@ -22,9 +22,10 @@
 
 ### 2. Implement a calendar and role schedule
 - Gate day, refuge-management day, days off, home and evening interactions.
-- No continuous inspection countdown. World time and consequences respond to explicit game actions and chosen phases.
+- No per-entrant inspection deadline. Preserve the user's **shift timer only** requirement and flexible day phases. Exact shift-clock mechanism is pending Round 4 selection; do not copy Claude's 120-second timer unchanged.
 - Household expenses, public refuge budget, and debts have separate ledgers.
-- Caregiver-relative schedule and cub autonomous routines.
+- **Grandma (Mama's mother)** caregiver schedule, Button and Hazel preschool routines and separate teacher/peer graphs; cubs at six months have roughly human-three-year-old development.
+- Ensure **quadrupedal movement** for all bears, with cub/adult anatomy, desks, classrooms and furniture arranged accordingly.
 
 ### 3. Upgrade the inspection loop
 - Use data-driven legal policies but separate `law`, `facts`, `evidence available to player`, `verdict`, and `supervisor assessment`.
@@ -46,7 +47,7 @@ Acceptance test: over seven consecutive days, a family is encountered at the gat
 - Claude's rule engine equates legality with correctness; it cannot model morally troubling lawful decisions or false evidence adequately.
 - Claude's travel parties and cub names are generated anew and **not persistent**.
 - Conflicting schedules: both-job-per-day concept is **superseded** by approved alternating-day design.
-- Conflicting pressure: short real-time timer is **superseded** by approved no-inspection-deadline design.
+- Conflicting pressure: Claude's short real-time timer is **not canon**; user wants **shift timer only** with no per-case deadline. Actual clock progression remains to be selected.
 - Family ownership, foster status, refuge placement, and city-entry authorization must not be collapsed into a single `guardian` or `admitted` value.
 
 ## Current repository state when this document was initialized
