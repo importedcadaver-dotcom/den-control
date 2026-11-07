@@ -1,12 +1,12 @@
 # Research brief — Dwargon as inspiration for Honeyhold, and Queen Ursula (v0.1)
 
-**Status:** USER-SUPPLIED REFERENCE + SOURCE-GROUNDED RESEARCH + UNAPPROVED DESIGN OPTIONS. 
+**Status:** USER-SUPPLIED REFERENCE + SOURCE-GROUNDED RESEARCH. **The user has now approved BOTH option C choices**: Ursula's possessive affection and Honeyhold's hybrid central/satellite cave form. All other options, names, maps, visuals and story suggestions are unapproved. 
 **User request:** Develop **Queen Ursula individually**, and research a Honeyhold cave-bear city **inspired by Dwargon** from *That Time I Got Reincarnated as a Slime* (*Tensura*). Do **not** create or name any other individual character without explicit user approval. Do **not** copy copyrighted art, maps, characters or storylines.
 
 ## A. Existing approved game canon — do not rewrite
 
 - *Unbearable Conditions*, set in **Honeyhold**, a bear-majority cave city with **seven connected districts**, explorable interiors, detailed NPC routines, minority cat/red panda populations and sharp inequality in housing, schooling, healthcare and services.
-- Brown-bear royal dynasty. **Queen Ursula** is a **Kodiak brown bear**; publicly cuddly, affectionate and almost absurdly sweet, but ruthless when protecting her power.
+- Brown-bear royal dynasty. **Queen Ursula** is a **Kodiak brown bear**; publicly cuddly, affectionate and almost absurdly sweet, **genuinely** enjoys her subjects' adoration, sees the population almost as her own **family or property**, and is dangerous when her authority is rejected. She is ruthless when protecting her power.
 - Constitutional monarchy with two major parties (names undecided) and royal ability to **indefinitely suspend most laws during declared emergencies**.
 - All bears **walk on four legs**; visible emotional tears exist in-universe. Gameplay is detailed 2D pixel art.
 - Gate work, child/family systems, Briarwood Refuge and political dilemmas must connect into a coherent world. The original Godot v0.1 Button/Hazel are **OLD / BAD / DO NOT USE**.
@@ -30,7 +30,7 @@
 **Proposed mountain geometry:**
 - **Option A: One colossal hollow** — seven districts occupy different terraces and side caves around one gigantic interior plaza; visually closest to monumental Dwargon.
 - **Option B: Seven connected great caverns** — each district is its own major chamber, linked by descending tunnels and control points; best for local cultural and economic differences.
-- **Option C: Hybrid (recommended)** — one showpiece central cave containing the main civic/market districts, plus satellite cavern districts connected by broad ramps and passages. Exterior gate opens onto an immense urban interior. The Crown occupies a commanding rock shelf. Still exactly seven districts.
+- **Option C: Hybrid (APPROVED)** — one monumental central cavern, plus seven total districts distributed across it and substantial adjoining chambers and tunnels. Broad ramps, the precise main gate opening, location of public markets and any royal rock shelf are **proposals only**; exact topology and palace location remain unapproved.
 
 None of A/B/C is approved. Existing proposed district names from earlier design documents remain provisional.
 
@@ -51,13 +51,13 @@ None of A/B/C is approved. Existing proposed district names from earlier design 
 - Physiology and acting: **all fours**, genuine large Kodiak stature, bear muzzle and paws, emotional tears possible; avoid anthropomorphic standing/walking.
 - Age, lineage, accession history, family members, relationships, physical marks, personal routines, and party ties are **not approved**.
 
-### Proposed defining contradiction (choose one; not canon)
+### Defining contradiction (option C APPROVED; A/B are rejected alternatives)
 
 **A. Calculated mask:** Ursula deliberately performs maternal tenderness to manipulate public opinion; her affection is mostly tactical.
 
 **B. Sincere affection, brutal paternalism:** She truly finds cubs adorable and wants subjects safe but believes her unlimited judgment overrides their rights; she can sincerely weep during a restrictive speech she authored.
 
-**C. Possessive love (recommendation):** Ursula genuinely enjoys cuddling her subjects and seeks their approval, but sees Honeyhold as *hers*. She can comfort a distressed cub in public and sign an order that harms that child's household hours later, without perceiving inconsistency.
+**C. Possessive love (APPROVED):** Ursula genuinely enjoys her subjects and their adoration, but views the city and its inhabitants almost as her personal family or property. She is dangerous when people reject her authority. A scene of her comforting a cub while signing a harmful decree remains an **illustrative scene proposal**, not approved plot.
 
 All three can generate dark satire; avoid reducing her to a purely random villain or copying King Gazel's personality.
 
@@ -69,8 +69,8 @@ All three can generate dark satire; avoid reducing her to a purely random villai
 
 ### Open Queen Ursula decisions — must ask before canonizing
 
-- Is her maternal affection strategic, sincere-but-authoritarian, or possessive?
-- Is the palace above a single cavern, integrated into the city, or deep in a separated royal cave?
+- **RESOLVED:** Ursula's affection is **possessive and genuine**, with dangerous reactions to rejection (user-approved option C).
+- **Cavern layout RESOLVED:** monumental central cavern and adjoining major chambers/tunnels (option C). **Still open:** exact location of the palace, heights, levels, district boundaries and travel routes.
 - Ursula's age in bear-year terms, length of reign, and route to throne (inherited normally, childhood accession, coup, wartime emergency).
 - Her relationship to existing parties and the precise formal act of declaring an emergency.
 - Her current interest in Mama/Briarwood, if any, should be developed after approved history, not preinstalled as a scripted connection.
@@ -82,7 +82,7 @@ All three can generate dark satire; avoid reducing her to a purely random villai
 - Every "Dwargon-inspired" element must be reworked into original structures/assets; no reproduction of anime scene composition or maps.
 - No NPC name/role from the withdrawn Round 6 roster is restored by this brief.
 - Queen is a Kodiak brown bear, physically quadrupedal, with approved dual image, and her actions can influence regulations that affect NPCs beyond the gate.
-- Seven districts remain seven; city layout option remains unapproved until user chooses.
+- Seven districts remain seven, and the **hybrid layout is approved**; specific map, palace position and district allocation are not.
 - Market, heating, schooling and residential scenes demonstrate that Honeyhold operates as a city beyond the main gate.
 - No gameplay code or art assets are claimed to exist on the basis of this research brief.
 
