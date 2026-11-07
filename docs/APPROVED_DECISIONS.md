@@ -128,7 +128,7 @@
 
 - **D — Child monarch:** Ursula **became Queen unusually young** and was raised amid royal courtiers who **reinforced her entitlement**. This is an **approved element of her personal history**.
 - **Causal development (interpretation, not additional canon):** constant deference and praise are plausible influences on her later **genuine, possessive affection** for subjects, her belief that Honeyhold belongs to her, and her dangerous response to rejection. This interpretation is not a confirmed unique cause of her personality.
-- **Open:** her **current age** (**accession at six months is approved**), succession circumstances, any regency or guardianship arrangement, the identities of past sovereigns or attendants, duration of reign, early formative incidents, private habits and the history of emergency powers. **Do not create additional named royal characters** without approval.
+- **Open:** her **current age** (**accession and real political power at six months are approved**), succession circumstances, the implementation of childhood decrees, the identities of past sovereigns or attendants, duration of reign, early formative incidents, private habits and the history of emergency powers. **No regent could override her; do not create additional named royal characters** without approval.
 
 ## Queen Ursula — thoroughly spoiled royal childhood approved
 
@@ -140,9 +140,17 @@
 ## Queen Ursula — coronation age approved
 
 - **Accession age: exactly 6 months old.** Ursula was crowned Queen of Honeyhold as a **six-month-old Kodiak brown bear cub**. Under Honeyhold's approved accelerated development rules, this is the **preschool stage, roughly comparable to a three-year-old human**.
-- This specifies **when she became Queen**, not when she first exercised independent government authority. A royal office can be legally held by a child without implying the child personally drafted laws or fully understood statecraft.
+- **Later clarified by the user:** she also **had the real political power from the outset**; no adult institution could meaningfully tell her no or rule over her. She could rely on officials for administration without ceding final authority. A six-month-old cub's comprehension is not equivalent to personally drafting legal documents.
 - Already approved: child monarch (D); childhood **thoroughly spoiled (A)**, continually indulged/entertained/praised; genuine yet possessive affection for subjects; publicly sweet and ruthless when her authority is challenged.
-- **Not decided:** Ursula's **current age**, the number of years she has ruled, why she inherited so young, who (if anybody) legally exercised her powers during childhood, the date she took direct control, succession ceremony, relatives, former rulers and individual courtiers. Do not create any new characters or assume a specific regent.
+- **Not decided:** Ursula's **current age**, the number of years she has ruled, why she inherited so young, exact machinery for implementing her childhood demands, succession ceremony, relatives, former rulers and individual courtiers. **Her real authority from age six months is approved; do not infer a governing regent or transfer of power when she grew older.**
+
+## Queen Ursula — real power from childhood approved
+
+- **Early rule C, with the user's stronger correction:** From her accession at **six months old**, Ursula was **the real sovereign with overwhelming effective political authority**, not a ceremonial child figurehead. She had **all the power, in practice**. Other government personnel might perform administrative work and carry out complex instructions, but **they did not control her or have a meaningful veto over her wishes**.
+- **Nobody told her no:** Her demands and preferences were treated as royal commands, even when she was a preschool-stage cub. Adults/courtiers and government institutions overwhelmingly indulged and obeyed her; **they did not meaningfully constrain her power on grounds of age**. This strengthens the previously approved thoroughly spoiled upbringing and distinguishes her from a powerless child with a regent.
+- **Institutional interpretation:** The constitutional monarchy, Assembly, ministries and two major parties still exist as previously approved, but **their existence does not imply they can overrule Ursula**. The Queen's already approved power to suspend most laws indefinitely during an emergency remains in force. Her dominance is **de facto**, while the precise written constitutional hierarchy and how ordinary/non-emergency powers are legally worded remain unselected.
+- **Practical functioning:** Staff may translate a very young Queen's wishes into formal orders, manage paperwork and carry out state business; **administration is not independent supreme authority**. Do not impose a regent who secretly governs, mandatory adult countersignature, waiting until majority, automatic judicial veto or a protective puppet monarchy.
+- **Do not over-specify:** This **does not** mean Ursula personally possessed adult reasoning at six months, authored every document, or performed clerical work herself. Her exact childhood orders, any dissent despite the lack of effective refusal, methods of enforcement, accession cause and current age are still unresolved. **No additional characters created or approved.**
 
 ## Character, identity, and ending choices — approved
 
