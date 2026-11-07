@@ -7,7 +7,7 @@
 
 - *Unbearable Conditions*, set in **Honeyhold**, a bear-majority cave city with **seven connected districts**, explorable interiors, detailed NPC routines, minority cat/red panda populations and sharp inequality in housing, schooling, healthcare and services.
 - Brown-bear royal dynasty. **Queen Ursula** is a **Kodiak brown bear**; publicly cuddly, affectionate and almost absurdly sweet, **genuinely** enjoys her subjects' adoration, sees the population almost as her own **family or property**, and is dangerous when her authority is rejected. She is ruthless when protecting her power.
-- Constitutional monarchy with two major parties (names undecided) and royal ability to **indefinitely suspend most laws during declared emergencies**.
+- Constitutional monarchy with two major parties (names undecided); the royal office allows **indefinite suspension of most laws during declared emergencies**. Ursula held **genuine, effectively unchecked personal royal authority even as a six-month-old**; departments carried out her wishes but had no meaningful veto.
 - All bears **walk on four legs**; visible emotional tears exist in-universe. Gameplay is detailed 2D pixel art.
 - Gate work, child/family systems, Briarwood Refuge and political dilemmas must connect into a coherent world. The original Godot v0.1 Button/Hazel are **OLD / BAD / DO NOT USE**.
 - **No new named supporting cast**: the former assistant-generated 20-character roster was rejected. Every new character must be approved individually. This brief addresses Queen Ursula **only**.
@@ -106,6 +106,12 @@ The user approved **A — Thoroughly spoiled**. Ursula was indulged, entertained
 
 ## H. Numeric coronation age — six months APPROVED
 
-The user explicitly approved **six months old** as Ursula's age upon becoming Queen. Under the established accelerated-development scheme, she was a **preschool-stage cub**, roughly comparable to a three-year-old human. This establishes her *title* and childhood social standing, but not that she personally governed with adult comprehension. The system of early royal governance remains to be designed, **without inventing a named regent, family member or courtier**.
+The user explicitly approved **six months old** as Ursula's age upon becoming Queen. Under the established accelerated-development scheme, she was a **preschool-stage cub**, roughly comparable to a three-year-old human. **Later user clarification supersedes any mere title/figurehead interpretation:** Ursula **held real, overwhelming political power immediately**, even at six months old; officials executed her directions without effectively saying no. This does not imply adult comprehension or personal bureaucratic work. **Do not invent a named regent, family member or courtier.**
 
-**Still open:** Ursula's current age, how the child accession was legally administered, cause of succession, duration of her reign and when she began exercising direct powers.
+**Still open:** Ursula's current age, the procedure used to translate a preschool-aged Queen's demands into official orders, cause of succession, and reign duration. **She already exercised real authority from the start; no later transfer of power is needed.**
+
+## I. Early rule — C with user's correction APPROVED
+
+The user selected **C** but explicitly strengthened it: **"she had lots of authority and like no one told her no and she has all the power really."** Record this as **actual personal sovereign authority from her six-month coronation**, rather than a government secretly led by adults. Officials may prepare the paperwork and perform the practical work; they cannot meaningfully override Ursula's demands. This is consistent with her spoiled upbringing and possessive approach to political power. The precise written constitutional mechanisms and the processing of childhood instructions remain undecided.
+
+**No additional characters were created.** Any subordinate roles remain unnamed institutional functions until the user creates individual people.
