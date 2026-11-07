@@ -1,7 +1,21 @@
-# Unbearable Conditions — Round 5: Honeyhold as a lived-in city
+# Unbearable Conditions — Round 5 proposals (historical reference)
 
-**STATUS: PROPOSALS ONLY — NOT APPROVED CANON.** 
+**STATUS: ROUND 5 ANSWERED.** This was written **before** the Round 5 votes. The user's *latest revised* Round 5 answers are authoritative and in [APPROVED_DECISIONS.md](APPROVED_DECISIONS.md). **Do not treat unselected proposals here as canon**; see explicit corrections below. 
 Created November 6, 2026. This is an implementable worldbuilding proposal based on the user's approved Rounds 1–4. See [APPROVED_DECISIONS.md](APPROVED_DECISIONS.md) before introducing or rejecting any system. Names, district counts, job ratios, and numerical values below are working proposals.
+
+## Round 5 results superseding this draft
+
+- Approved **seven** connected districts; the seven **names** in this document remain provisional.
+- Approved bear-majority demographics with smaller cat/red panda minorities and mixed neighborhoods with sharply unequal resources.
+- Royal family is **brown bear**, and the Queen specifically is **Kodiak brown bear**.
+- Two major parties: welfare/civil liberties vs royal authority/security; names and individual members still proposed.
+- Careers can be entered via education, apprenticeships, patronage and experience depending on role.
+- **12–20** deeply developed recurring characters (not this draft's 30–60 full NPC proposal). Background cast may remain lighter.
+- Grandma enjoys deliberate **emotional cruelty, discomfort neglect, threats and hazardous humiliation/hazing**. Mama **already knows she is mean**, but relies on her for work/money; changing ordinary childcare requires a **substantial story**, though emergency intervention should be possible.
+- Preschool B for now (observable visits and reports), C later (direct playable cub perspective).
+- **Continuous calendar aging** with abilities unlocked as age advances; **no default narrative time skips**.
+- Juvenile law uses offense-specific ages and emergency exceptions.
+- **Button and Hazel can hate, fight, and hurt one another emotionally or physically**, with real relationships and injury consequences. **Bears show emotional tears.**
 
 ## 1. Invariants established by the user
 
@@ -46,7 +60,7 @@ Class may affect:
 
 Avoid automatic criminal propensity or assigned professions by species. A discriminatory rule needs a traceable policy source or institutional practice; economic effects should be observable.
 
-**Population simulation scope proposal:** 30–60 fully persistent named/important NPCs in the first substantial milestone, plus a larger pool of lightweight background residents with stable IDs where they appear repeatedly. This number is an implementation target only; measure performance and adjust. NPC records should not multiply automatically simply because UI scenes switch.
+**Superseded population proposal:** The user selected **12–20 deeply simulated recurring characters**, not the old 30–60 target. This draft's earlier proposal was 30–60 persistent named/important NPCs, plus a larger pool of lightweight background residents with stable IDs where they appear repeatedly. This number is an implementation target only; measure performance and adjust. NPC records should not multiply automatically simply because UI scenes switch.
 
 ## 4. Government and two-party structure
 
@@ -104,7 +118,7 @@ Do not assume the same reaction to Grandma from both cubs:
 
 **Player agency must include trying to understand what happened and changing arrangements.** Potential reactions: question Grandma, talk privately to each cub, investigate school/care records, set boundaries, seek substitute care, rearrange work, involve social services or allies. There should be real cost and logistical consequences without trapping the children indefinitely in a single forced abusive-care storyline. Not all options can succeed quickly, and Grandma cannot be treated as automatically redeemed.
 
-Specific abuse severity, caregiver alternatives and what Mama knows at start are still undecided.
+**Superseded:** Round 5 confirms Grandma enjoys cruelty/humiliating dares, Mama knows she is mean, and alternatives require a substantial storyline; details of specific cases and alternate arrangements remain to design.
 
 ## 7. A sample week of causal simulation (illustrative, not an approved storyline)
 
