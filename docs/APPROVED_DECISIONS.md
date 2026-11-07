@@ -117,6 +117,13 @@
 - Story/event examples must not install unapproved NPCs as established canon.
 - Never assume a generated character in a document was implemented in Godot. Documents record design choices; **no merged playable build has been established**.
 
+## Queen Ursula and Honeyhold mountain form — explicitly approved
+
+- **Queen Ursula: C — possessive affection.** Her fondness for her subjects and their adoration is **genuine**. She sees Honeyhold's inhabitants almost as **her own family or property**, and becomes dangerous when people reject her authority. This deepens, rather than replaces, her already approved publicly cuddly/affectionate and privately ruthless nature. Do **not** portray her affection as merely a calculated mask, or assume her policy decisions are automatically benevolent.
+- **Honeyhold's cavern layout: C — hybrid**, inspired broadly by the grandeur of **Dwargon from *That Time I Got Reincarnated as a Slime***. The city has **one monumental central cavern**, with additional districts extending into **substantial neighboring chambers and tunnels**. Preserve **exactly seven connected districts**; the final map, district boundaries, names, routes, utilities and palace placement remain open.
+- **Creative independence:** The city is an **original** setting, not Dwargon relocated or reproduced. Do not import Tensura's royal family, dwarves, precise geography, assets, magic system, or story automatically. Every new named character must still be designed and approved **individually**.
+- **Remaining individual Queen decisions:** age, reign history, how she inherited or acquired power, royal residence, physical details, family relationships and daily routines are **not yet approved**.
+
 ## Character, identity, and ending choices — approved
 
 - **Game title:** *Unbearable Conditions*. The GitHub repository may remain named `den-control`.
