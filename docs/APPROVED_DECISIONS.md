@@ -130,6 +130,13 @@
 - **Causal development (interpretation, not additional canon):** constant deference and praise are plausible influences on her later **genuine, possessive affection** for subjects, her belief that Honeyhold belongs to her, and her dangerous response to rejection. This interpretation is not a confirmed unique cause of her personality.
 - **Open:** her **exact age at accession**, **current age**, succession circumstances, any regency or guardianship arrangement, the identities of past sovereigns or attendants, duration of reign, early formative incidents, private habits and the history of emergency powers. **Do not create additional named royal characters** without approval.
 
+## Queen Ursula — thoroughly spoiled royal childhood approved
+
+- **A — Thoroughly spoiled:** After becoming Queen unusually young, Ursula was **constantly indulged, entertained and praised**, and **almost nobody dared tell her no**. The adults around her treated even ordinary preferences as worthy of deference. This is **approved biography**, not a mere suggestion.
+- This **does not approve** the alternative isolated-childhood options B or C. Do **not** assume she was kept from friendships, experienced loneliness, had no peers or was subjected to strict ceremonial isolation unless the user chooses those details later.
+- **Character continuity:** Her approved genuine, possessive affection for subjects and ruthless reaction to challenges can be *influenced* by her spoiled upbringing, but any particular childhood incident or precise psychological mechanism is still a proposal, not an established event.
+- Still open: precise age when crowned, age now, why succession happened, former sovereign's fate, whether a regency existed, identities and histories of relatives/courtiers, details of her daily routine and royal residence. **No additional characters may be created without the user's individual approval.**
+
 ## Character, identity, and ending choices — approved
 
 - **Game title:** *Unbearable Conditions*. The GitHub repository may remain named `den-control`.
