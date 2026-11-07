@@ -49,7 +49,7 @@ None of A/B/C is approved. Existing proposed district names from earlier design 
 - Private/political nature: ruthless in protecting her authority.
 - Constitutional powers: can suspend most laws indefinitely when a state of emergency is declared.
 - Physiology and acting: **all fours**, genuine large Kodiak stature, bear muzzle and paws, emotional tears possible; avoid anthropomorphic standing/walking.
-- **Child accession APPROVED:** She took the throne unusually young and was raised among courtiers who reinforced her sense of entitlement. **Unresolved:** exact accession/current age, specific succession or regency details, family members, physical marks, private routines and party ties.
+- **Child accession APPROVED:** She took the throne unusually young and was raised among courtiers who reinforced her sense of entitlement. **Childhood upbringing option A APPROVED:** she was thoroughly spoiled, continually indulged/entertained/praised, and almost nobody dared say no. **Unresolved:** exact accession/current age, specific succession or regency details, family members, physical marks, private routines and party ties. **Do not infer isolation** from this choice.
 
 ### Defining contradiction (option C APPROVED; A/B are rejected alternatives)
 
@@ -92,6 +92,14 @@ Official Japanese Tensura sources: https://www.ten-sura.com/map ; https://www.te
 
 ## F. Specific childhood accession approval (design checkpoint)
 
-The user explicitly selected **D — Child monarch**: Ursula became Queen **unusually young** and grew up surrounded by courtiers who **reinforced her entitlement**. This fits but does not fully explain her previously approved genuine possessiveness: she may experience criticism of a royal decree as a subject personally rejecting her affection. She is not required to be calculating or incapable of love.
+The user explicitly selected **D — Child monarch**: Ursula became Queen **unusually young** and grew up surrounded by courtiers who **reinforced her entitlement**. The user then selected **A — Thoroughly spoiled**: she was routinely indulged, constantly entertained and praised, and almost nobody dared tell her no. This fits but does not fully explain her previously approved genuine possessiveness: she may experience criticism of a royal decree as a subject personally rejecting her affection. She is not required to be calculating or incapable of love.
 
 **Not decided:** age when crowned, how many years she has ruled, whether a regency existed, the previous monarch's fate, her family members' identities, palace routines, or individual court officials. No new character has been created. Keep the next design round solely on Ursula's own childhood and current beliefs.
+
+## G. Childhood upbringing decision — A approved
+
+The user approved **A — Thoroughly spoiled**. Ursula was indulged, entertained and praised nearly constantly after her unusually early accession, and almost nobody refused her requests. **Important distinction:** this is **not** B (isolated strict ceremonial childhood) or C (spoiled but isolated). No loneliness, social isolation, specific friends, specific adult courtiers or historical incidents were approved.
+
+**Individual character development proposals (not canon yet):** She may associate love with compliance, react to ordinary disagreement as if it were disloyalty, and delight in public praise while having difficulty acknowledging independent needs. Her delight in affection remains sincere; her political ruthlessness remains established. This produces a consistent, legible character without automatically making every action a tantrum.
+
+**Unanswered biographical question:** How old was Ursula when she inherited the crown? Her developmental stage at accession affects whether the public remembers her as a toddler sovereign or as an older, politically conscious cub; no numeric age has been approved.
