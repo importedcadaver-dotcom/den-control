@@ -65,7 +65,33 @@
 - **Grandma is mean to the cubs; their dislike is justified.** Her exact behavior, motivation, supervision risks and capacity to change still need design. Do not retcon her into a universally kind or trusted caregiver without an earned and player-approved story.
 - **Button** strongly prefers being **indoors over outdoors** and favors indoor conveniences, domestic objects, human-like technology/culture ("human stuff") over wilderness/nature. Bears still move on all fours; their world may have tools and technology without implying bipedal anatomy.
 - **Hazel hates being told what to do**; explicit orders tend to trigger resistance. Keep her inquisitiveness, independent goals and delinquent-peer connections.
-- Grandma's nearby home and part-time school mean she covers the necessary non-school caregiving windows. How Mama learns about Grandma's treatment and what other care options exist should be implemented, not assumed.
+- Grandma's nearby home and half-day preschool mean she covers necessary non-school caregiving windows. **Mama knows Grandma is mean but relies on her for economic/work reasons**; a **substantial storyline** must be resolved before routine childcare replacement. Emergency responses must still be possible. See Round 5.
+
+## Round 5 — approved (latest revised choices take precedence)
+
+**Authority note:** The user sent two Round 5 versions. The **later revised message is authoritative** and supersedes the earlier answers where they differ. Specifically, question 9 is **A**, question 10 is **C**, and question 12 is **A**, not the earlier B/B/B.
+
+1. **A — Geography:** **Seven connected city districts** with explorable interiors and individual NPC routines. Their proposed names are *not yet approved*.
+2. **A — Species:** Bears form a **large majority** of Honeyhold's inhabitants. Cats and red pandas are smaller minorities; precise population percentages are undecided.
+3. **B — Class:** Districts have mixed incomes, but stark inequalities in housing, schooling, healthcare and services.
+4. **A — Royal dynasty:** The royal family is **brown bear**; the Queen specifically is a **Kodiak brown bear**. Her personal name is still undecided.
+5. **A — Party conflict:** The two dominant parties broadly contest **social welfare and civil liberties versus royal authority and public security**, with smaller civic movements. Names, platforms and leaders are undecided.
+6. **C — Careers:** Employment pathways depend on profession, mixing formal qualifications, apprenticeships, patronage and work experience.
+7. **A — Recurring cast:** Aim for **12–20 deeply simulated recurring characters**, each with relationships, schedules and histories; other residents may be simplified.
+8. **B — Grandma's cruelty:** Emotional cruelty, neglect of comfort, threats, and **deliberately making the cubs miserable**. She **enjoys the cruelty**, using dangerous, humiliating hazing-style dares. User examples include telling a cub to eat a bug, drink an unknown liquid, jump into a lake, or insult a much larger male polar bear. These are **examples of abusive situations for the narrative**, not a settled event list or safe activities. Their actual hazards, possible injuries and Mama's interventions need case-specific design. Grandma is not harmless or secretly benevolent.
+9. **A — Mama's awareness:** Mama **knows Grandma is mean** but continues relying on her because of **work and money**. This **supersedes** the earlier proposal that Mama only suspects she is unpleasant. Mama may still be unaware of the *full severity* of individual incidents; that distinction is not a retcon.
+10. **C — Alternative care:** Replacing Grandma is a **substantial storyline** that must be resolved before normal childcare arrangements can change. Earlier instant-switch proposals are superseded. The game should still allow players to intervene and respond to urgent danger without pretending replacement arrangements are simple.
+11. **B now, C later — Preschool:** Observable classrooms and playgrounds during visits or authored scenes, with reports and conversations. **Future-development goal:** a deeper periodically playable preschool perspective. Not yet in the initial production scope.
+12. **A — Aging:** **Continuous calendar aging**, with new developmental abilities appearing at suitable ages. Do **not** impose story-driven time skips as the default progression; the earlier Round 5 version's choice B is superseded. Aging should persist in saves.
+13. **C — Juvenile courts:** The legal system has different age thresholds by offense, with exceptional changes under royal emergency powers. Very young cubs normally remain in school/welfare jurisdiction as approved in Round 4.
+
+### Further explicit Round 5 world and character rules
+
+- **Button and Hazel may fight**, including arguments, jealousy, hatred and estrangement. Their relationship is **not protected by a mandatory positive sibling bond**.
+- They can **hurt each other emotionally and physically**. Simulate causes, escalating conflicts, possible injury, fear, apologies, grudges, intervention, reconciliation or lasting resentment, using the fiction's age/development context. Do not force forgiveness.
+- **Bears have visible emotional tears** in this fictional universe. Use expressive crying/tearing for adult and cub bear sprites when appropriate; they remain anatomically quadrupedal.
+- Queen is specifically **Kodiak brown bear**, which is a brown bear type; do not present the monarchy as a separate non-brown species.
+- The user selected **B for school presentation for now**, with **C a future development goal**, not immediate playable preschool scenes.
 
 ## Character, identity, and ending choices — approved
 
@@ -95,8 +121,8 @@
 ## NOT YET APPROVED / NEEDS SOURCE RECOVERY
 
 - Button and Hazel's **specific appearances** beyond species, their full histories, deeper relationships, and character development arcs remain open. Their names, ages, sex, and core personalities are approved above.
-- The caregiver is **Mama's mother / the cubs' grandmother**, who lives **nearby in her own home**. Her name, age, occupation, precise mistreatment behaviors and motivations are undecided. **She is mean to Button and Hazel, and both cubs justifiably hate her.**
-- Mama's personal name (beyond "Mama Bear"), the Queen's name, exact species demographics, political party names, and the numerical value of Honey Marks. The city name **Honeyhold** and currency **Honey Marks (HM)** are confirmed.
+- The caregiver is **Mama's mother / the cubs' grandmother**, living **nearby in her own home**. Her name, age, occupation and exact incident details remain undecided, but her **enjoyment of emotional cruelty, threats, comfort neglect and humiliating dangerous dares** is approved, as is the cubs' justified hatred. Mama knows she is mean and depends on her for work/money.
+- Mama's personal name (beyond "Mama Bear"), the **Kodiak brown bear Queen's** name, precise species demographics, the seven districts' final names, political party names and monetary balance figures remain undecided. **Honeyhold** and **Honey Marks (HM)** are confirmed.
 - Whether "Queen Ursula", "Hibernia", "Honeywell", and "Hearth Gazette" survive as final names. **Hibernia is not the selected city name**; Honeyhold is.
 - Administrative legal powers, court procedure, refuge staffing model, debt amounts, and balance tuning.
 - Which particular story events become canon. Examples from ideation are **not automatic approvals**.
@@ -105,7 +131,9 @@
 
 - Separate the government **gate entry** decision from **admission to Briarwood Refuge**.
 - Staff continue refuge operations during Mama's checkpoint days; her management responsibilities remain, but she does not personally work full shifts at both sites each day.
-- Grandma lives nearby and supervises Button and Hazel outside their structured half-day preschool; she is **mean**, and both children **justifiably hate her**. Model the relationship honestly, with safety and alternative-care possibilities.
-- All bear sprite rigs, movement, and interaction animations must accommodate quadrupedal bodies and scaled age differences.
+- Grandma lives nearby and supervises Button and Hazel outside structured half-day preschool. **Mama knows she is mean and depends on her financially**; Grandma deliberately mistreats the cubs for amusement, and both **justifiably hate her**. Changing normal childcare is a substantial storyline, with immediate safety interventions separately available.
+- All bear sprite rigs, movement, and interaction animations must accommodate quadrupedal bodies, scaled age differences and **visible emotional tears**.
+- Sibling relationships can worsen into hatred or fights, with emotional and physical consequences; no unconditional sibling friendship or forced reconciliation.
+- **Continuous calendar aging** (not forced story time skips) drives developmental unlocks, schooling and legal-age changes.
 - The **shift** has a generous real-time countdown; inspecting a single entrant has **no separate time limit**. Pauses must cover document reading and menus, and a setting disables the timer entirely. This Round 4 choice supersedes earlier no-clock suggestions.
 - Never reuse the Restaurant Empire cub identities (Biscuit, Bruno, Mochi, Nugget) or the Tamagotchi cub Nova: those are distinct canons.
