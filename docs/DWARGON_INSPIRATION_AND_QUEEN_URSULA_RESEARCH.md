@@ -49,7 +49,7 @@ None of A/B/C is approved. Existing proposed district names from earlier design 
 - Private/political nature: ruthless in protecting her authority.
 - Constitutional powers: can suspend most laws indefinitely when a state of emergency is declared.
 - Physiology and acting: **all fours**, genuine large Kodiak stature, bear muzzle and paws, emotional tears possible; avoid anthropomorphic standing/walking.
-- **Child accession APPROVED:** She took the throne unusually young and was raised among courtiers who reinforced her sense of entitlement. **Childhood upbringing option A APPROVED:** she was thoroughly spoiled, continually indulged/entertained/praised, and almost nobody dared say no. **Unresolved:** exact accession/current age, specific succession or regency details, family members, physical marks, private routines and party ties. **Do not infer isolation** from this choice.
+- **Child accession APPROVED:** She took the throne unusually young and was raised among courtiers who reinforced her sense of entitlement. **Childhood upbringing option A APPROVED:** she was thoroughly spoiled, continually indulged/entertained/praised, and almost nobody dared say no. **Resolved:** Ursula was crowned **at exactly six months**. **Unresolved:** current age, succession or regency details, family members, physical marks, private routines and party ties. **Do not infer isolation** from this choice.
 
 ### Defining contradiction (option C APPROVED; A/B are rejected alternatives)
 
@@ -71,7 +71,7 @@ All three can generate dark satire; avoid reducing her to a purely random villai
 
 - **RESOLVED:** Ursula's affection is **possessive and genuine**, with dangerous reactions to rejection (user-approved option C).
 - **Cavern layout RESOLVED:** monumental central cavern and adjoining major chambers/tunnels (option C). **Still open:** exact location of the palace, heights, levels, district boundaries and travel routes.
-- **Child monarch D APPROVED.** Ursula's exact age at accession, current age, reason for succession, any regency and length of reign remain open. Her childhood was surrounded by courtiers who reinforced her entitlement. Do not name or invent those courtiers.
+- **Child monarch D APPROVED; coronation at six months APPROVED.** Ursula's current age, reason for succession, any regency and length of reign remain open. Her childhood was surrounded by courtiers who reinforced her entitlement. Do not name or invent those courtiers.
 - Her relationship to existing parties and the precise formal act of declaring an emergency.
 - Her current interest in Mama/Briarwood, if any, should be developed after approved history, not preinstalled as a scripted connection.
 - Names/identities of any royal relatives, aides, guards or staff require **separate character creation and approval**.
@@ -102,4 +102,10 @@ The user approved **A — Thoroughly spoiled**. Ursula was indulged, entertained
 
 **Individual character development proposals (not canon yet):** She may associate love with compliance, react to ordinary disagreement as if it were disloyalty, and delight in public praise while having difficulty acknowledging independent needs. Her delight in affection remains sincere; her political ruthlessness remains established. This produces a consistent, legible character without automatically making every action a tantrum.
 
-**Unanswered biographical question:** How old was Ursula when she inherited the crown? Her developmental stage at accession affects whether the public remembers her as a toddler sovereign or as an older, politically conscious cub; no numeric age has been approved.
+**Answered biographical question:** Ursula inherited the Crown at **six months old**, Honeyhold's preschool-age stage (roughly human three-year-old equivalent). Her actual capacity to govern at coronation, any delegated decisions, and her current age remain undecided.
+
+## H. Numeric coronation age — six months APPROVED
+
+The user explicitly approved **six months old** as Ursula's age upon becoming Queen. Under the established accelerated-development scheme, she was a **preschool-stage cub**, roughly comparable to a three-year-old human. This establishes her *title* and childhood social standing, but not that she personally governed with adult comprehension. The system of early royal governance remains to be designed, **without inventing a named regent, family member or courtier**.
+
+**Still open:** Ursula's current age, how the child accession was legally administered, cause of succession, duration of her reign and when she began exercising direct powers.
