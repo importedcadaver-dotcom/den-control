@@ -11,7 +11,7 @@
 - **Role and powers:** Sovereign within a constitutional monarchy; the Queen can suspend most laws indefinitely during declared emergencies.
 - **Public personality:** Cuddly, affectionate, almost absurdly sweet.
 - **Core psychological contradiction:** Ursula's love of her subjects and their adoration is **genuine, but possessive**. She views the populace almost as her own family or property. Rejecting her authority can provoke dangerous consequences; she protects her power ruthlessly.
-- **Child accession (approved choice D):** She became Queen unusually young, among royal courtiers who reinforced her sense of entitlement.
+- **Child accession (approved choice D; numeric age now approved):** Ursula was **crowned at exactly six months old**, in Honeyhold's accelerated bear-development system roughly equivalent to a **human three-year-old preschooler**. Courtiers reinforced her sense of entitlement.
 - **Childhood upbringing (approved choice A):** She was **thoroughly spoiled**—constantly indulged, entertained and praised, and almost nobody dared say no.
 
 ## Boundaries of the approved childhood
@@ -38,10 +38,10 @@ These are **fictional possibilities**, not mandatory scripted events or achievem
 
 ## Open choices — develop Ursula individually
 
-1. **Exact age at coronation:** not yet selected. The accepted child monarch premise alone does not determine a number.
+1. **Age at coronation: RESOLVED — six months old.** The preschool-level monarch's legal title and the actual exercise of governing power are separate questions.
 2. **Current age and reign duration:** not selected; must fit continuous aging conventions.
-3. **Cause of accession and any regency:** no former sovereign or named regent has been created.
-4. **Early rule:** how much authority could she exercise as a child versus decisions made in her name?
+3. **Cause of accession and any regency:** no former sovereign or named regent has been created. Do not assume an automatic regent, a death, an abdication or a coup.
+4. **Early rule:** at her six-month coronation, how were decisions issued under the Crown's authority while Ursula was preschool-aged? No decision-making arrangement is approved.
 5. **Political worldview and personal insecurities:** how does she justify indefinite emergency power?
 6. **Royal residence and physical look:** palace placement, coat, markings, decorations and ceremonial protocol.
 7. **Current daily routine:** audiences, rituals, leisure, formal government business; do not invent named staff.
@@ -51,3 +51,9 @@ These are **fictional possibilities**, not mandatory scripted events or achievem
 ## Implementation status
 
 This is **design-only documentation**. No Queen Ursula character logic, sprite, palace scene or playable political mechanic has yet been committed to the Godot game. The previous mass-created Round 6 NPC proposal is withdrawn.
+
+## Accession-age decision — approved
+
+The user explicitly selected **six months** as Queen Ursula's age when she became Queen. Because six months is Honeyhold's **preschool developmental stage** (roughly human age three), her legal accession **does not establish** independent competence to govern at that age. The constitutional machinery, any delegation, ceremonial behavior, and timing of her eventual personal rule need their own decisions. This is also distinct from **Ursula's current age**, which remains open.
+
+**Do not create any additional characters** to explain succession, guardianship or temporary governance without the user's approval.
