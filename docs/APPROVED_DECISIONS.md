@@ -122,13 +122,13 @@
 - **Queen Ursula: C — possessive affection.** Her fondness for her subjects and their adoration is **genuine**. She sees Honeyhold's inhabitants almost as **her own family or property**, and becomes dangerous when people reject her authority. This deepens, rather than replaces, her already approved publicly cuddly/affectionate and privately ruthless nature. Do **not** portray her affection as merely a calculated mask, or assume her policy decisions are automatically benevolent.
 - **Honeyhold's cavern layout: C — hybrid**, inspired broadly by the grandeur of **Dwargon from *That Time I Got Reincarnated as a Slime***. The city has **one monumental central cavern**, with additional districts extending into **substantial neighboring chambers and tunnels**. Preserve **exactly seven connected districts**; the final map, district boundaries, names, routes, utilities and palace placement remain open.
 - **Creative independence:** The city is an **original** setting, not Dwargon relocated or reproduced. Do not import Tensura's royal family, dwarves, precise geography, assets, magic system, or story automatically. Every new named character must still be designed and approved **individually**.
-- **Remaining individual Queen decisions:** age, reign history, how she inherited or acquired power, royal residence, physical details, family relationships and daily routines are **not yet approved**.
+- **Remaining individual Queen decisions:** her current age (coronation at six months is approved), reign history, reasons for early succession, royal residence, physical details, family relationships and daily routines are **not yet approved**.
 
 ## Queen Ursula — childhood accession approved
 
 - **D — Child monarch:** Ursula **became Queen unusually young** and was raised amid royal courtiers who **reinforced her entitlement**. This is an **approved element of her personal history**.
 - **Causal development (interpretation, not additional canon):** constant deference and praise are plausible influences on her later **genuine, possessive affection** for subjects, her belief that Honeyhold belongs to her, and her dangerous response to rejection. This interpretation is not a confirmed unique cause of her personality.
-- **Open:** her **exact age at accession**, **current age**, succession circumstances, any regency or guardianship arrangement, the identities of past sovereigns or attendants, duration of reign, early formative incidents, private habits and the history of emergency powers. **Do not create additional named royal characters** without approval.
+- **Open:** her **current age** (**accession at six months is approved**), succession circumstances, any regency or guardianship arrangement, the identities of past sovereigns or attendants, duration of reign, early formative incidents, private habits and the history of emergency powers. **Do not create additional named royal characters** without approval.
 
 ## Queen Ursula — thoroughly spoiled royal childhood approved
 
@@ -136,6 +136,13 @@
 - This **does not approve** the alternative isolated-childhood options B or C. Do **not** assume she was kept from friendships, experienced loneliness, had no peers or was subjected to strict ceremonial isolation unless the user chooses those details later.
 - **Character continuity:** Her approved genuine, possessive affection for subjects and ruthless reaction to challenges can be *influenced* by her spoiled upbringing, but any particular childhood incident or precise psychological mechanism is still a proposal, not an established event.
 - Still open: precise age when crowned, age now, why succession happened, former sovereign's fate, whether a regency existed, identities and histories of relatives/courtiers, details of her daily routine and royal residence. **No additional characters may be created without the user's individual approval.**
+
+## Queen Ursula — coronation age approved
+
+- **Accession age: exactly 6 months old.** Ursula was crowned Queen of Honeyhold as a **six-month-old Kodiak brown bear cub**. Under Honeyhold's approved accelerated development rules, this is the **preschool stage, roughly comparable to a three-year-old human**.
+- This specifies **when she became Queen**, not when she first exercised independent government authority. A royal office can be legally held by a child without implying the child personally drafted laws or fully understood statecraft.
+- Already approved: child monarch (D); childhood **thoroughly spoiled (A)**, continually indulged/entertained/praised; genuine yet possessive affection for subjects; publicly sweet and ruthless when her authority is challenged.
+- **Not decided:** Ursula's **current age**, the number of years she has ruled, why she inherited so young, who (if anybody) legally exercised her powers during childhood, the date she took direct control, succession ceremony, relatives, former rulers and individual courtiers. Do not create any new characters or assume a specific regent.
 
 ## Character, identity, and ending choices — approved
 
