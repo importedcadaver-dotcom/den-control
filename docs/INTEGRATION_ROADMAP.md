@@ -24,9 +24,18 @@
 - **Fixed seven-day loop: gate / refuge / gate / refuge / gate / refuge / off**, with school, Grandma and home scenes each day. Mama voluntarily sought the second appointment for income/career progression.
 - No per-entrant inspection deadline. Preserve the user's **shift timer only** requirement and flexible day phases. **Round 4 resolves clock behavior:** generous real-time shift timer, pauses during document reading and menus, and may be disabled in Settings for unlimited shift time. Do not copy Claude's 120-second timer unchanged.
 - Household expenses, public refuge budget and Mafia debt have separate **Honey Marks (HM)** ledgers. The wider city economy is mostly simulated in the background; do not overbuild detailed NPC finance for every resident.
-- **Grandma (Mama's mother)** lives nearby and cares for Button and Hazel after structured **half-day** preschool; **she is mean to them and both justifiably hate her**. Model conflict, observations, safety, options for alternate care, and memories; do not turn her into a benign default without player-approved development.
-- **Button** prefers inside/modern conveniences over wilderness; **Hazel** hates being told what to do. Each has different teachers and peer relationships.
-- Ensure **quadrupedal movement** for all bears, with cub/adult anatomy, desks, classrooms and furniture arranged accordingly.
+- **Grandma (Mama's mother)** lives nearby and cares for Button and Hazel after structured **half-day** preschool; **she deliberately enjoys humiliating cruel dares, threats, and neglecting comfort**, and both cubs **justifiably hate her**. **Mama knows she is mean** but relies on her because of work and money. A new regular caregiver requires a **substantial replacement-care storyline**, though immediate protective responses remain possible. Track memory, severity, evidence, safety and aftermath; do not turn her into a benign default.
+- **Button** prefers inside/modern conveniences over wilderness; **Hazel** hates being told what to do. Each has different teachers and peer relationships. Both can harm one another physically/emotionally, fight, become estranged, hate each other, or reconcile; **bear emotional tears** need animation support.
+- Ensure **quadrupedal movement** for all bears, with cub/adult anatomy, desks, classrooms, furniture and visibly tearful expressions arranged accordingly.
+- Implement **continuous calendar aging** and developmental milestones; do not default to forced narrative time skips. Preschool scenes are observational/visit-based initially, with a deeper playable school perspective deferred.
+
+### 2b. Populate the persistent Honeyhold world
+- **Seven connected districts** with explorable interiors and individual resident schedules; specific district names are proposals only.
+- Start with **12–20 deeply simulated recurring characters**, including Mama, Button, Hazel and Grandma (the Round 6 proposal contains 20 total, not 20 additions).
+- Bears are a large citywide majority with smaller cat and red panda populations; mixed neighborhoods have sharply unequal resources.
+- Queen is **Kodiak brown bear**; two major political parties contest welfare/civil rights versus royal authority/security, with names undecided.
+- Profession-specific eligibility combines schooling, apprenticeship, experience and patronage. Young cubs normally use school/welfare jurisdiction; juvenile court thresholds vary by offense and emergency orders.
+- Before import, resolve **legacy naming collisions**: v0.1 already has a **Button cub** and an **adult Hazel**. Use stable unique IDs, audit source scripts and avoid overwriting/mistakenly merging them with the new Mama family.
 
 ### 3. Upgrade the inspection loop
 - Use data-driven legal policies but separate `law`, `facts`, `evidence available to player`, `verdict`, and `supervisor assessment`.
