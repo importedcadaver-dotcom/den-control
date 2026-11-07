@@ -145,8 +145,8 @@
 ## NOT YET APPROVED / NEEDS SOURCE RECOVERY
 
 - Button and Hazel's **specific appearances** beyond species, their full histories, deeper relationships, and character development arcs remain open. Their names, ages, sex, and core personalities are approved above.
-- The caregiver is **Mama's mother / the cubs' grandmother**, living **nearby in her own home**. Her name, age, occupation and exact incident details remain undecided, but her **enjoyment of emotional cruelty, threats, comfort neglect and humiliating dangerous dares** is approved, as is the cubs' justified hatred. Mama knows she is mean and depends on her for work/money.
-- Mama's personal name (beyond "Mama Bear"), the **Kodiak brown bear Queen's** name, precise species demographics, the seven districts' final names, political party names and monetary balance figures remain undecided. **Honeyhold** and **Honey Marks (HM)** are confirmed.
+- The caregiver is **Mama's mother / the cubs' grandmother**, living **nearby in her own home**. **Her name and age are undecided. She was formerly a nursery teacher and was fired; the reason is undecided.** Her enjoyment of emotional cruelty, threats, comfort neglect and humiliating dangerous dares is approved, as is the cubs' justified hatred. Mama knows she is mean and depends on her for work/money.
+- Mama's personal name (beyond "Mama Bear"), Grandma's name, precise species demographics, the seven districts' final names, political party names and monetary balance figures remain undecided. **Queen Ursula**, **Honeyhold**, and **Honey Marks (HM)** are confirmed.
 - **Queen Ursula is approved.** "Hibernia" is **not** the city name; Honeyhold is. Whether "Honeywell" and "Hearth Gazette" survive remains undecided.
 - Administrative legal powers, court procedure, refuge staffing model, debt amounts, and balance tuning. **No supporting cast or named coworkers/classmates from the former Round 6 proposal are approved**.
 - Which particular story events become canon. Examples from ideation are **not automatic approvals**.
