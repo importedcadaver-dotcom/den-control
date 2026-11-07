@@ -1,10 +1,10 @@
-# Unbearable Conditions — Round 3 society and family design proposals
+# Unbearable Conditions — Round 3 proposals (resolved / historical)
 
-**STATUS: PROPOSALS, NOT APPROVED CANON.** All suggestions below remain optional until the player chooses. Use [APPROVED_DECISIONS.md](APPROVED_DECISIONS.md) as the authority for established facts.
+**STATUS: ROUND 3 ANSWERED.** This file is a historical pre-decision discussion brief. Round 3 results, approved on November 6, 2026, are recorded in [APPROVED_DECISIONS.md](APPROVED_DECISIONS.md). **Where this file disagrees with approved canon, the approved decisions take priority.** Unselected mechanisms below remain proposals. Use [APPROVED_DECISIONS.md](APPROVED_DECISIONS.md) as the authority for established facts.
 
 ## Scope and central design principles
 
-- The city is **Honeyhold**, a constitutional monarchy with elected officials, ministries, and competing factions. The Queen's name and exact legal powers are undecided.
+- The city is **Honeyhold**, a constitutional monarchy with elected officials, ministries, and competing factions. The Queen's name is undecided; the Queen has approved significant emergency powers within a constitutional monarchy.
 - Mama (seven-year-old brown bear) works alternate gate and city-owned Briarwood Refuge management days, with home scenes, school involvement, and a relative caregiver.
 - Button and Hazel are six-month-old brown bear littermates. Button is clingy, openly emotional, unfiltered, and eager to help Mama. Hazel is independent, inquisitive, and drawn toward delinquent cub peers at cub school.
 - Keep a **shift-level timer only**; no per-person inspection countdown. Exact time progression is pending clarification.
@@ -28,7 +28,7 @@ Represent each policy as a versioned rule with enactment date, responsible autho
 
 ## Schools and cub life — proposed
 
-At six months, Button and Hazel's attendance at **cub school** is established only for Hazel; the institution's age conventions are **not yet designed**. Do not map real-world bear development mechanically onto human schooling or silently change the approved ages. Design a coherent bear-society developmental convention (e.g. early cub social school, or accelerated bear milestones) and obtain the user's decision.
+**Superseded by Round 3 approval:** 0–3 months remain den-dependent with Mama; nursery/social school begins at 4 months; at 6 months Button and Hazel both attend preschool (roughly human three-year-old developmental equivalent), with separate teachers, friendships and interests. Bears walk on all four legs. See approved canon.
 
 - School has staff, rooms, peer groups, attendance, schoolwork / play, parent meetings, reputation, and disciplinary records.
 - Delinquent peer groups need distinct motives and relationships, not a generic 'bad kids' flag. Explore pranks, theft, forbidden districts, contraband, and exploitation through consequences and interpersonal context.
@@ -62,7 +62,7 @@ The relative caregiver has their own needs, personal schedule, judgments, and re
 
 The player's selected ending path includes Mama infiltrating the bear capitol, killing the queen, being martyred, and a revolution cutscene, then continuing play as Button and Hazel. The heirs must be persistent characters before the event. Suggested continuation mechanics: player alternates between two siblings, their distinct goals and disagreements persist, family/guardianship records update, and the revolution changes laws, factions, and institutions rather than just changing scenery.
 
-The precise player-switch UI, time jump (if any), government outcome, and endgame scope need future decisions.
+**Superseded by Round 3 approval:** following Mama's death, the player chooses Button **or** Hazel as the main playable sibling; the other continues autonomously. Time skip, outcome, and endgame scope remain undecided.
 
 ## Suggested next acceptance tests
 
@@ -73,7 +73,7 @@ The precise player-switch UI, time jump (if any), government outcome, and endgam
 5. After an ending that removes Mama, both children remain in the world with separate agency; relationships, history, and social context continue correctly.
 6. Newspaper claims can be disputed by evidence; reporting does not automatically reveal objective truth.
 
-## Pending Round 3 decisions
+## Questions in original proposal (resolved by Round 3 or moved to Round 4)
 
 - Queen's constitutional powers and role in government;
 - whether six-month-old cubs attend nursery/social school vs accelerated formal school;
