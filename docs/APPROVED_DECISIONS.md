@@ -124,6 +124,12 @@
 - **Creative independence:** The city is an **original** setting, not Dwargon relocated or reproduced. Do not import Tensura's royal family, dwarves, precise geography, assets, magic system, or story automatically. Every new named character must still be designed and approved **individually**.
 - **Remaining individual Queen decisions:** age, reign history, how she inherited or acquired power, royal residence, physical details, family relationships and daily routines are **not yet approved**.
 
+## Queen Ursula — childhood accession approved
+
+- **D — Child monarch:** Ursula **became Queen unusually young** and was raised amid royal courtiers who **reinforced her entitlement**. This is an **approved element of her personal history**.
+- **Causal development (interpretation, not additional canon):** constant deference and praise are plausible influences on her later **genuine, possessive affection** for subjects, her belief that Honeyhold belongs to her, and her dangerous response to rejection. This interpretation is not a confirmed unique cause of her personality.
+- **Open:** her **exact age at accession**, **current age**, succession circumstances, any regency or guardianship arrangement, the identities of past sovereigns or attendants, duration of reign, early formative incidents, private habits and the history of emergency powers. **Do not create additional named royal characters** without approval.
+
 ## Character, identity, and ending choices — approved
 
 - **Game title:** *Unbearable Conditions*. The GitHub repository may remain named `den-control`.
