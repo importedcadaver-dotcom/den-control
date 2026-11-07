@@ -8,11 +8,12 @@
 - **Species:** **Kodiak brown bear**; royal dynasty is brown bear.
 - **Setting:** Honeyhold, monumental hybrid mountain cave-city with seven connected districts.
 - **Physiology:** Bears move on all fours and are capable of visible emotional tears in this universe.
-- **Role and powers:** Sovereign within a constitutional monarchy; the Queen can suspend most laws indefinitely during declared emergencies.
+- **Role and powers:** **The real sovereign with overwhelming practical authority from coronation at six months**, not merely a figurehead. Government officials administer and carry out her wishes but do not meaningfully veto or overrule them. Honeyhold retains constitutional-monarchy institutions and two parties, yet they cannot independently control her. She can suspend most laws indefinitely during declared emergencies.
 - **Public personality:** Cuddly, affectionate, almost absurdly sweet.
 - **Core psychological contradiction:** Ursula's love of her subjects and their adoration is **genuine, but possessive**. She views the populace almost as her own family or property. Rejecting her authority can provoke dangerous consequences; she protects her power ruthlessly.
 - **Child accession (approved choice D; numeric age now approved):** Ursula was **crowned at exactly six months old**, in Honeyhold's accelerated bear-development system roughly equivalent to a **human three-year-old preschooler**. Courtiers reinforced her sense of entitlement.
 - **Childhood upbringing (approved choice A):** She was **thoroughly spoiled**—constantly indulged, entertained and praised, and almost nobody dared say no.
+- **Early governance (approved C, user correction stronger than original option):** **Ursula had real, effectively unchecked royal authority from six months old**. Adults handled paperwork and complex practical administration **for her, not over her**. Almost nobody dared refuse her, and no regency or ministry controlled her as a powerless child.
 
 ## Boundaries of the approved childhood
 
@@ -38,10 +39,10 @@ These are **fictional possibilities**, not mandatory scripted events or achievem
 
 ## Open choices — develop Ursula individually
 
-1. **Age at coronation: RESOLVED — six months old.** The preschool-level monarch's legal title and the actual exercise of governing power are separate questions.
+1. **Age at coronation: RESOLVED — six months old.** She **had genuine ultimate authority from the outset** (not mere title). Administrative execution of her wishes could be delegated; her capacity for preschool-level reasoning is distinct from political power.
 2. **Current age and reign duration:** not selected; must fit continuous aging conventions.
-3. **Cause of accession and any regency:** no former sovereign or named regent has been created. Do not assume an automatic regent, a death, an abdication or a coup.
-4. **Early rule:** at her six-month coronation, how were decisions issued under the Crown's authority while Ursula was preschool-aged? No decision-making arrangement is approved.
+3. **Cause of accession and constitutional machinery:** no former sovereign or named regent has been created. **Do not install a governing regent or ministry that can override her.** Why she took the throne remains undecided.
+4. **Early rule: RESOLVED at authority level** — Ursula made the wishes and royal decisions with real, nearly unchallengeable force, while officials handled execution and paperwork. The exact **procedure** for taking/recording her instructions is open, but **not who had final power**.
 5. **Political worldview and personal insecurities:** how does she justify indefinite emergency power?
 6. **Royal residence and physical look:** palace placement, coat, markings, decorations and ceremonial protocol.
 7. **Current daily routine:** audiences, rituals, leisure, formal government business; do not invent named staff.
@@ -54,6 +55,16 @@ This is **design-only documentation**. No Queen Ursula character logic, sprite, 
 
 ## Accession-age decision — approved
 
-The user explicitly selected **six months** as Queen Ursula's age when she became Queen. Because six months is Honeyhold's **preschool developmental stage** (roughly human age three), her legal accession **does not establish** independent competence to govern at that age. The constitutional machinery, any delegation, ceremonial behavior, and timing of her eventual personal rule need their own decisions. This is also distinct from **Ursula's current age**, which remains open.
+The user explicitly selected **six months** as Queen Ursula's age when she became Queen. Because six months is Honeyhold's **preschool developmental stage** (roughly human age three), she did not need to personally do adult administrative tasks. **Subsequent clarification established that she had the real power from that very young age**: officials could handle administration, but not rule instead of her or veto her wishes. The mechanics for formalizing a cub's demands into official acts remain to be designed. This is also distinct from **Ursula's current age**, which remains open.
 
-**Do not create any additional characters** to explain succession, guardianship or temporary governance without the user's approval.
+**Do not create any additional characters** to explain succession, guardianship or government functioning. Do not assume a hidden regent or age-based check on her authority.
+
+## Young Queen's actual power — C with explicit correction (APPROVED)
+
+User statement: **"C but like she had lots of authority and like no one told her no and she has all the power really."** This OVERRIDES the softer version of C in which administrative officials could effectively rule instead of her.
+
+**Binding interpretation:** Ursula was an unusually young ruler crowned at six months who **personally held ultimate practical power**. Nobody around her meaningfully told her no. Her indulgent upbringing was institutionally reinforced: preferences and childish demands were treated as sovereign wishes to be executed. Other government roles may perform technical work, but they do **not** hold overriding authority. Honeyhold can retain nominal constitutional forms and elected parties, but their ability to constrain Ursula in practice is extremely weak or nonexistent. Her indefinite emergency-law suspension power remains approved.
+
+**Important limits on inference:** Do not give six-month-old Ursula adult intellect or professional skill merely because her commands were followed. Nor invent a named regent, royal relative, personal aide, resistance leader, specific childhood decree, or family tragedy. Formal wording of her ordinary constitutional powers remains a further design question.
+
+**Next individual-development questions:** current age / reign duration, circumstances of accession, whether she retains a playful demand-making style in adulthood, how officials physically receive and implement her commands, and what she personally wants from subjects. Choose one topic at a time, without making new characters.
