@@ -1,6 +1,6 @@
-# Unbearable Conditions — Round 4: Honeyhold systems proposal
+# Unbearable Conditions — Round 4 proposals (historical reference)
 
-**STATUS: DETAILED PROPOSALS — NOT APPROVED CANON.**
+**STATUS: ROUND 4 ANSWERED.** User approved selected decisions, not every idea in this brief. See [APPROVED_DECISIONS.md](APPROVED_DECISIONS.md) for binding canon. Where this draft contradicts Round 4, the Round 4 approval supersedes it.
 Last edited November 6, 2026. For approved facts use [APPROVED_DECISIONS.md](APPROVED_DECISIONS.md). The user asked for the economy, occupations, government, criminal justice and family schedules next. This document offers implementable mechanics and possible defaults, not compulsory decisions.
 
 ## 1. Canon constraints that govern every system
@@ -9,8 +9,8 @@ Last edited November 6, 2026. For approved facts use [APPROVED_DECISIONS.md](APP
 - Mama: seven-year-old female brown bear. Button and Hazel: six-month-old brown bear littermates, male/female respectively. Button is emotional, extremely clingy, candid, and eager to help. Hazel is independent, inquisitive and beginning to associate with delinquent cub peers.
 - Preschool: from 6 months, roughly equivalent to age 3 in human developmental terms; from 4 months nursery/social school; months 0–3 stay in the den constantly with Mama. Button and Hazel attend the same school with distinct teachers and friendships.
 - **Quadrupedal movement for all bears** (adult and cub); do not make human-biped character animations. Desks, documents, seating, classrooms, beds, tools, and work stations must allow four-legged bodies.
-- Grandma (Mama's mother) is primary relative caregiver; personal details undecided.
-- City owns and funds Briarwood Refuge; Mama manages it. Alternate gate and refuge workdays, not both full shifts daily. No per-entrant inspection deadline; a shift-level time structure is intended, precise implementation unresolved.
+- **Updated canon:** Grandma (Mama's mother) lives nearby and cares for the cubs outside preschool; Grandma is mean to them, and both cubs justifiably hate her. Name, age, occupation, severity and motivations still undecided.
+- **Updated canon:** City owns/funds Briarwood; Mama voluntarily sought the second job and works a fixed 3 gate + 3 refuge + 1 day off rotation. Generous real-time shift clock **pauses for reading and menus** and can be **disabled for infinite shift time**. No per-entrant time limit.
 - Constitutional monarchy, Queen with significant emergency powers, elected officials and competing factions; official species equality with systemic discrimination and emergency restrictions; punitive juvenile justice; politically connected Panda Mafia; competitive partisan/independent media.
 - Optional rebellion path removes Mama; player chooses Button **or** Hazel, with other sibling autonomous.
 
@@ -36,7 +36,7 @@ A single consolidated money bar is prohibited. Assign each transaction an accoun
 - Money can buy comfort, legal help, staff, transport or favors, but not erase all social or political consequences.
 - Wage, cost-of-living, cub-care, and mafia-debt numbers are all **TBD**; benchmark only after a full week is playable.
 
-### Currency names (proposals only)
+### Currency names (resolved by Round 4: **Honey Marks (HM)** approved)
 
 A. **Crowns** — plausible national monetary unit, boring on purpose.
 B. **Honey Marks** — distinctive bureaucracy-themed money without literal jars for every purchase.
@@ -44,7 +44,7 @@ C. **Denars** — in-world currency with a modest bear pun.
 D. **Berry Dollars** — clear and playful, but already used in another independent bear-game universe; avoid copying cross-project canon unless deliberately approved.
 E. Custom.
 
-Recommend a simple single legal currency (Crowns or Honey Marks) plus distinct nonmonetary commodities (actual honey, food stores, fuel); **do not create arbitrary premium currency**.
+**Approved:** Honey Marks (HM) are the legal currency. Moderator economy: detailed household and refuge accounts, broader economic trends primarily in the background. No premium currency has been approved.
 
 ## 3. Occupations, workforce, prerequisites and advancement (proposal)
 
@@ -73,14 +73,14 @@ Each job defines skill requirements (literacy, record-keeping, first aid, craft,
 
 ### Political office and institutional power
 
-- The Crown: emergency directives plus reputational and patronage leverage.
+- **Updated canon:** The Queen can suspend most laws indefinitely during declared emergencies, despite nominal constitutional limitations; emergency rules need not automatically expire.
 - Elected Assembly: votes on laws, services and budgets; elections and faction coalitions.
 - Ministries: implement orders; may issue inconsistent circulars or partial guidance.
 - Courts: process legal challenges; not magically independent of political pressure.
 - Independent media: investigation and corrections; can amplify falsehoods and expose abuse.
 - School, welfare, refuge and police each have distinct authority.
 - A law's event record stores: source, text, enactedAt, effectiveAt, sunsetAt, emergencyAuthority, appealRights, coverage and exceptions.
-- Proposed procedural check: emergency rules can require renewal, judicial review or legislative approval. Exact duration undecided.
+- **Superseded:** automatic renewal or judicial sunset requirement is **not** canon. User explicitly approved indefinite suspension of most laws in emergencies.
 
 ## 4. Criminal justice and consequences (proposal)
 
@@ -111,19 +111,19 @@ Sentencing and punishment change observable lives: separation, attendance, famil
 
 **Refuge day:** morning family routine -> school / Grandma -> on-site Briarwood management + observable residents/staff -> optional city errands -> home evening -> budget.
 
-**Rest day:** Mama can stay with cubs, attend family events, visit friends, go shopping or investigate issues. A weekly day off was mentioned by the user in the Claude conversation; exact day assignment and flexibility should be confirmed if necessary.
+**Rest day:** Mama can stay with cubs, attend family events, visit friends, go shopping or investigate issues. One fixed day off per seven-day week is approved, with three gate and three refuge days.
 
 ### Shift timer boundary
 
 - **No timer per visitor.** Shift-end constraints only.
 - Do not force a hidden two-minute countdown or constantly deplete an inspection bar while the user is reading.
-- Candidate implementations: shift clock progresses on actions and phases; or a pausable real-time shift clock with generous duration. This is an **unresolved mechanic** because the user said both "flexible phases" and "shift timer only".
+- Candidate implementations: shift clock progresses on actions and phases; or a pausable real-time shift clock with generous duration. **Resolved by Round 4:** generous real-time shift clock, automatic pause while reading or in menus, and a settings toggle to disable the timer for unlimited shift time.
 - When shift ends: open case finishes, is handed off, or becomes late by explicit rules; never silently erase evidence.
 
 ### School and caregiving
 
-- Grandma handles transitions and care, but has opinions, stamina and other commitments. She can offer support, create tension, and set boundaries.
-- Preschool needs separate teacher and peer graphs for Button and Hazel, even in the same institution.
+- **Updated canon:** Grandma has her own home nearby, supervises outside preschool, **is mean to the cubs**, and both children **justifiably hate her**. Do not inadvertently write her as a wholesome caregiver. Specific behavior and alternative care still need design.
+- **Updated canon:** Structured **half-day** preschool, despite scheduled activities, meals, naps, outdoor play, less free time. Each cub has distinct teachers and friends in the same school.
 - Button's attempts to help can generate competence, pride, mistakes or conflicts; his honesty can reveal real information without being infallible.
 - Hazel's exploration produces knowledge, friendships, infringements and gradual risks. Her age equivalent limits what is plausible in the opening campaign.
 - Family bond uses trust, warmth, resentment, attachment, promises and remembered incidents rather than one obedience meter.
@@ -142,7 +142,7 @@ A ministry cuts refuge heating aid on a day Mama is at the gate. A caregiver at 
 5. **School and family:** distinct teacher/peer schedules, Grandma AI, nuanced relationship memory, quadrupedal character rig.
 6. **Justice cases:** event-sourced legal pipeline; appeal, sanction and custody cases, with age-dependent jurisdiction.
 7. **Consequences:** newspaper claims linked to evidence, resident visibility, social consequences, history-aware authored events.
-8. **Playable week test:** two gate days, two refuge days, one rest period and ongoing family/home scenes across seven days (exact weekly rotation still to design); avoid inventing unearned availability numbers.
+8. **Playable week test:** **three gate days, three refuge days, one day off**, fixed alternating rotation. Family/home scenes every day; preserve separate finances, active Grandma conflict and school routines.
 9. **Campaign:** scale toward 25+ days after the connected first-week milestone proves causal behavior.
 
 ### QA invariants
@@ -166,7 +166,7 @@ A ministry cuts refuge heating aid on a day Mama is at the gate. A caregiver at 
 6. Factions/parties and changes in law.
 7. Court authority, juvenile age thresholds and appeal chances.
 8. Preschool schedule and Grandma's residence.
-9. Shift clock implementation.
+9. Shift clock is approved: generous real-time shift, pause while reading/in menus, toggle off for unlimited time.
 10. Occupational access/education and post-rebellion control.
 
 These are design choices, **not blockers for source archival work**. Source provenance and stable original tests still need to be recovered and rerun before feature changes.
