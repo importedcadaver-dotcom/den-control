@@ -9,14 +9,14 @@ A standalone 2D pixel-art Honeyhold cave-city bureaucracy, family-life, and refu
 - Original playable foundation: `BriarwoodRefuge_v0.1_Windows_and_Source.zip` (Godot 4 / GDScript), recovered from the user's ChatGPT Library.
 - Other implementation: `Honey, Please` (single-file HTML/CSS/JavaScript), provided as an attachment and reviewed.
 - The later in-progress Godot UI/economy/guardianship fixes described in the Den Control conversation have **not yet been recovered as a source archive**.
-- The user has since supplied and approved the family canon: seven-year-old brown bear Mama, with six-month-old littermates Button and Hazel. Their specific personalities are recorded in the approved decisions document.
+- The user has approved the family canon: seven-year-old brown bear Mama, with six-month-old littermates Button and Hazel. Grandma (Mama's mother) cares for them. Cubs stay in the den with Mama at 0–3 months, begin nursery at 4 months, and attend preschool from 6 months (roughly human three-year-old development). Both siblings attend the same school with distinct teachers and friends. Their personalities are recorded in approved decisions.
 - This repository begins with canon and migration documentation, not a claim that the source/build has already been pushed.
 
-Read [approved decisions](docs/APPROVED_DECISIONS.md) before changing core mechanics, and [integration roadmap](docs/INTEGRATION_ROADMAP.md) before porting code.
+Read [approved decisions](docs/APPROVED_DECISIONS.md) before changing core mechanics, [Round 4 systems proposals](docs/ROUND4_SYSTEMS_PROPOSALS.md) for economy/careers/government/justice/schedules (not yet approved), and [integration roadmap](docs/INTEGRATION_ROADMAP.md) before porting code.
 
 ## Game direction
 
-The player is Mama Bear, a seven-year-old brown bear in **Honeyhold**: a government admissions officer, manager of a city-owned refuge, and mother of six-month-old brown bear littermates **Button** (clingy, emotional, bluntly honest, eager to help) and **Hazel** (curious, fiercely independent, increasingly involved with delinquent peers at cub school). Her city is a constitutional monarchy with changing rules, social factions, organized crime, and difficult legal choices. Workdays alternate between gate inspection and managing Briarwood Refuge. Decisions persist in the lives of the people affected.
+The player is Mama Bear, a seven-year-old brown bear in **Honeyhold**: a government admissions officer, manager of a city-owned refuge, and mother of six-month-old brown bear littermates **Button** (clingy, emotional, bluntly honest, eager to help) and **Hazel** (curious, fiercely independent, increasingly involved with delinquent peers at cub school). Her city is a constitutional monarchy with a Queen wielding significant emergency powers, discriminatory practices despite official equality, competing media, punitive juvenile justice, organized crime and difficult legal choices. Workdays alternate between gate inspection and managing Briarwood Refuge. Decisions persist in the lives of the people affected.
 
 At the gate there is **no individual inspection deadline**. The user separately selected **shift timer only**; preserve the shift-level time boundary and deliberate case handling, but do not import the HTML prototype's 120-second timer unchanged. Reading and investigating must remain understandable. The broader day schedule, costs, obligations, and consequences create pressure.
 
@@ -25,6 +25,7 @@ This setting is **completely independent** of the user's other bear games. A pos
 ## Development principles
 
 - Keep persistent animal IDs across gate, city, refuge, home, custody, and saves.
+- All bears are quadrupedal. Animate locomotion and design physical interactions, classroom props, and office furniture for animals moving on all fours.
 - Distinguish objective truth, evidence currently known, legal violations, player actions, and subsequent outcomes.
 - Simulate visible day-to-day behavior and consequences, not just event text.
 - Preserve existing working Godot source and test fixes before attempting any merge.
