@@ -1,6 +1,6 @@
-# Den Control
+# Unbearable Conditions
 
-A standalone 2D pixel-art cave-city bureaucracy, family-life, and refuge-management game. Developed by combining the original Godot **Briarwood Refuge** prototype with the strongest mechanics and worldbuilding from the HTML **Honey, Please** prototype.
+A standalone 2D pixel-art Honeyhold cave-city bureaucracy, family-life, and refuge-management game. Developed by combining the original Godot **Briarwood Refuge** prototype with the strongest mechanics and worldbuilding from the HTML **Honey, Please** prototype.
 
 ## Project status
 
@@ -9,18 +9,18 @@ A standalone 2D pixel-art cave-city bureaucracy, family-life, and refuge-managem
 - Original playable foundation: `BriarwoodRefuge_v0.1_Windows_and_Source.zip` (Godot 4 / GDScript), recovered from the user's ChatGPT Library.
 - Other implementation: `Honey, Please` (single-file HTML/CSS/JavaScript), provided as an attachment and reviewed.
 - The later in-progress Godot UI/economy/guardianship fixes described in the Den Control conversation have **not yet been recovered as a source archive**.
-- The user's more detailed Mama-cub choices reportedly live in the **full Claude chat**, but those passages have not been provided in the available transcript extracts.
+- The user has since supplied and approved the family canon: seven-year-old brown bear Mama, with six-month-old littermates Button and Hazel. Their specific personalities are recorded in the approved decisions document.
 - This repository begins with canon and migration documentation, not a claim that the source/build has already been pushed.
 
 Read [approved decisions](docs/APPROVED_DECISIONS.md) before changing core mechanics, and [integration roadmap](docs/INTEGRATION_ROADMAP.md) before porting code.
 
 ## Game direction
 
-The player is Mama Bear: a government admissions officer, the manager of a city-owned refuge, and mother of two same-age biological cubs. Her city is a constitutional monarchy with changing rules, social factions, organized crime, and difficult legal choices. Workdays alternate between gate inspection and managing Briarwood Refuge. Decisions persist in the lives of the people affected.
+The player is Mama Bear, a seven-year-old brown bear in **Honeyhold**: a government admissions officer, manager of a city-owned refuge, and mother of six-month-old brown bear littermates **Button** (clingy, emotional, bluntly honest, eager to help) and **Hazel** (curious, fiercely independent, increasingly involved with delinquent peers at cub school). Her city is a constitutional monarchy with changing rules, social factions, organized crime, and difficult legal choices. Workdays alternate between gate inspection and managing Briarwood Refuge. Decisions persist in the lives of the people affected.
 
-At the gate there is **no real-time inspection countdown**. Reading and investigating must be understandable; the broader day schedule, costs, obligations, and consequences create pressure.
+At the gate there is **no individual inspection deadline**. The user separately selected **shift timer only**; preserve the shift-level time boundary and deliberate case handling, but do not import the HTML prototype's 120-second timer unchanged. Reading and investigating must remain understandable. The broader day schedule, costs, obligations, and consequences create pressure.
 
-This setting is **completely independent** of the user's other bear games.
+This setting is **completely independent** of the user's other bear games. A possible late-game rebellion ends with Mama killing the queen and dying as a martyr; gameplay then continues from Button and Hazel's perspectives, with their family history preserved.
 
 ## Development principles
 
@@ -29,7 +29,7 @@ This setting is **completely independent** of the user's other bear games.
 - Simulate visible day-to-day behavior and consequences, not just event text.
 - Preserve existing working Godot source and test fixes before attempting any merge.
 - Avoid copying `Papers, Please` art, assets, text, or exact puzzles; develop original family-centric mechanics.
-- Do not fill missing cub canon with guessed names or traits.
+- Preserve the approved Button and Hazel identities and traits; do not assume unapproved appearances, surnames, caregiver identity, or life events.
 - Keep a playable Godot Windows build, tests, and known-limitations report as real deliverables.
 
 ## Sources and provenance
