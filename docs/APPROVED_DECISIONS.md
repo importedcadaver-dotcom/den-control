@@ -24,6 +24,19 @@
 7. **B**: **Frequent moral tension**, everyday life between crises, and **occasional extreme shocks**.
 8. **B**: **No inspection deadlines**. Only the broader daily schedule matters. In particular, **do not import the HTML prototype's 120-second timer**.
 
+## Character, identity, and ending choices — approved
+
+- **Game title:** *Unbearable Conditions*. The GitHub repository may remain named `den-control`.
+- **Cave-city:** **Honeyhold**.
+- **Mama:** Female **brown bear**, **7 years old**, mother of the two cubs.
+- **Button:** Male **brown bear**, **6 months old**. Biological littermate of Hazel. Extremely clingy and outwardly emotional; says what he thinks without a filter even when it hurts feelings; loves helping Mama.
+- **Hazel:** Female **brown bear**, **6 months old**. Biological littermate of Button. Fiercely independent, curious, inquisitive, often asks "why" and insists on doing things herself; beginning to mix with delinquent cubs at cub school.
+- **School:** Hazel attends cub school and is beginning to associate with delinquent cubs. Exact structure, calendar and attendance rules are undecided.
+- **Newspaper:** Approved as part of game presentation/narrative.
+- **Shift timing:** User separately stated "shift timer only." Preserve a **shift-level clock/ending** while **not** imposing individual inspection deadlines. The exact clock semantics and pacing remain to be designed; do not silently adopt Claude's 120-second countdown.
+- **Rebellion path:** An optional late-game storyline involves Mama infiltrating the bear capitol, killing the queen, dying as a martyr, and a bear revolution shown in a cutscene. User chose ending **B**: gameplay continues from **Button and Hazel's perspective** after Mama's death. This is not necessarily the only campaign ending.
+- **Content tone:** User is comfortable with explicit depiction of fictional adult subjects, drugs/vaping as a potential storyline with school-aged Hazel, state violence, crime, and grim consequences. Actual specific encounters and portrayals still require design and consistent treatment; no specific incident has been mandated.
+
 ## Approved earlier in the game discussions
 
 - Bear and cat species, including babies and family groups, can be inspected at the gate.
@@ -38,10 +51,10 @@
 
 ## NOT YET APPROVED / NEEDS SOURCE RECOVERY
 
-- Mama's two cubs' **actual names, ages, appearance, sex/gender, detailed personalities, and relationships**. The user states these were decided in Claude, but those sections are **absent from the excerpts available here**.
+- Button and Hazel's **specific appearances** beyond species, their full histories, deeper relationships, and character development arcs remain open. Their names, ages, sex, and core personalities are approved above.
 - The caregiver relative's identity, age, opinions, and role beyond general caregiving.
-- Mama's name, the cave-city's name, the monarchy's specific rulers, exact species demographics, and currency.
-- Whether "Queen Ursula", "Hibernia", "Honeywell", and "Hearth Gazette" survive as final names.
+- Mama's personal name (beyond "Mama Bear"), the monarchy's specific rulers, exact species demographics, and currency. The city name **Honeyhold** is confirmed.
+- Whether "Queen Ursula", "Hibernia", "Honeywell", and "Hearth Gazette" survive as final names. **Hibernia is not the selected city name**; Honeyhold is.
 - Administrative legal powers, court procedure, refuge staffing model, debt amounts, and balance tuning.
 - Which particular story events become canon. Examples from ideation are **not automatic approvals**.
 
