@@ -21,10 +21,11 @@
 - Add save schema version and validation, and tests for custody transitions and case continuity.
 
 ### 2. Implement a calendar and role schedule
-- Gate day, refuge-management day, days off, home and evening interactions.
-- No per-entrant inspection deadline. Preserve the user's **shift timer only** requirement and flexible day phases. Exact shift-clock mechanism is pending Round 4 selection; do not copy Claude's 120-second timer unchanged.
-- Household expenses, public refuge budget, and debts have separate ledgers.
-- **Grandma (Mama's mother)** caregiver schedule, Button and Hazel preschool routines and separate teacher/peer graphs; cubs at six months have roughly human-three-year-old development.
+- **Fixed seven-day loop: gate / refuge / gate / refuge / gate / refuge / off**, with school, Grandma and home scenes each day. Mama voluntarily sought the second appointment for income/career progression.
+- No per-entrant inspection deadline. Preserve the user's **shift timer only** requirement and flexible day phases. **Round 4 resolves clock behavior:** generous real-time shift timer, pauses during document reading and menus, and may be disabled in Settings for unlimited shift time. Do not copy Claude's 120-second timer unchanged.
+- Household expenses, public refuge budget and Mafia debt have separate **Honey Marks (HM)** ledgers. The wider city economy is mostly simulated in the background; do not overbuild detailed NPC finance for every resident.
+- **Grandma (Mama's mother)** lives nearby and cares for Button and Hazel after structured **half-day** preschool; **she is mean to them and both justifiably hate her**. Model conflict, observations, safety, options for alternate care, and memories; do not turn her into a benign default without player-approved development.
+- **Button** prefers inside/modern conveniences over wilderness; **Hazel** hates being told what to do. Each has different teachers and peer relationships.
 - Ensure **quadrupedal movement** for all bears, with cub/adult anatomy, desks, classrooms and furniture arranged accordingly.
 
 ### 3. Upgrade the inspection loop
@@ -34,7 +35,7 @@
 - Design most routine arrivals procedurally; preserve authored family arcs across days.
 
 ### 4. Build the first connected week
-Acceptance test: over seven consecutive days, a family is encountered at the gate, investigated, admitted/denied/held, located afterward, affected by Mama's refuge decisions, and able to return. Mama's two authored cubs and caregiver maintain independent routines through checkpoint and refuge days; finances and consequences persist through save/reload.
+Acceptance test: over a fixed **3 gate + 3 refuge + 1 off** seven-day cycle, a family is encountered at the gate, investigated, admitted/denied/held, located afterward, affected by Mama's refuge decisions, and able to return. Mama's two authored cubs and caregiver maintain independent routines through checkpoint and refuge days; finances and consequences persist through save/reload.
 
 ### 5. Expand and test
 - 25+ day authored campaign with procedural variety, factions, lawful and illicit choices, rebellion threads, multiple endings, and post-campaign free play.
@@ -47,7 +48,7 @@ Acceptance test: over seven consecutive days, a family is encountered at the gat
 - Claude's rule engine equates legality with correctness; it cannot model morally troubling lawful decisions or false evidence adequately.
 - Claude's travel parties and cub names are generated anew and **not persistent**.
 - Conflicting schedules: both-job-per-day concept is **superseded** by approved alternating-day design.
-- Conflicting pressure: Claude's short real-time timer is **not canon**; user wants **shift timer only** with no per-case deadline. Actual clock progression remains to be selected.
+- Conflicting pressure: Claude's short timer is **not canon**. Round 4 approved a **generous real-time shift timer, paused during reading/menus, with a settings toggle to disable it**, and **no per-case deadlines**.
 - Family ownership, foster status, refuge placement, and city-entry authorization must not be collapsed into a single `guardian` or `admitted` value.
 
 ## Current repository state when this document was initialized
