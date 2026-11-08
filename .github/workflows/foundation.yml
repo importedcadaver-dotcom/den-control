@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.13'
       - run: python -m pip install --disable-pip-version-check pytest
-      - run: python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py
+      - run: python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py tests/test_p3_static.py
 
   godot-headless:
     runs-on: ubuntu-latest
@@ -43,3 +43,8 @@ jobs:
         run: godot --headless --path game --script res://tests/test_p1.gd
       - name: Run P2 headless Godot tests
         run: godot --headless --path game --script res://tests/test_p2.gd
+
+      - name: Run P3 home and autonomy tests
+        run: godot --headless --path game --script res://tests/test_p3.gd
+      - name: Boot main P3 home scene
+        run: godot --headless --path game --quit-after 12

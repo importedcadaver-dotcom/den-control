@@ -3,7 +3,8 @@ extends RefCounted
 ## Balance values stay null until approved or explicitly configured by a test.
 
 const CanonLoader = preload("res://scripts/foundation/canon_loader.gd")
-const SAVE_VERSION: int = 2
+const HomeSystem = preload("res://scripts/home/home_system.gd")
+const SAVE_VERSION: int = 3
 const DUTIES = ["gate", "refuge", "gate", "refuge", "gate", "refuge", "off"]
 const PHASES = ["morning", "daytime", "evening"]
 const ALLOWED_ENTRIES = ["authorized", "denied", "held"]
@@ -51,6 +52,7 @@ func reset() -> void:
         },
         "shift_clock": {"duration_seconds": null, "elapsed_seconds": 0.0,
             "enabled": true, "pause_reasons": [], "running": false},
+        "home": HomeSystem.initial_state(),
         "events": [], "next_event_sequence": 1
     }
 
@@ -280,6 +282,29 @@ func repay_debt(amount_hm: int) -> bool:
     _record("debt.payment", "", {"amount_hm": amount_hm})
     return true
 
+func select_home_cub(cub_id: String) -> bool:
+    if not HomeSystem.select(state["home"], cub_id):
+        return _fail("Unknown approved cub")
+    last_error = ""
+    return true
+
+func act_with_cub(cub_id: String, action: String) -> bool:
+    var result: Dictionary = HomeSystem.interact(state["home"], cub_id, action)
+    if not bool(result.get("ok", false)):
+        return _fail(str(result.get("reason", "Invalid home interaction")))
+    _record(str(result.get("event", "home.action")), cub_id, {"action": action, "description": str(result.get("description", ""))})
+    last_error = ""
+    return true
+
+func tick_home(steps: int = 1) -> bool:
+    if steps < 1 or steps > 32:
+        return _fail("Invalid home step count")
+    var events: Array[Dictionary] = HomeSystem.step(state["home"], steps)
+    for event in events:
+        _record(str(event["kind"]), str(event["subject_id"]), event["details"])
+    last_error = ""
+    return true
+
 static func validate_state(candidate: Dictionary) -> Array[String]:
     var errors: Array[String] = []
     if int(candidate.get("schema_version", -1)) != SAVE_VERSION:
@@ -314,6 +339,9 @@ static func validate_state(candidate: Dictionary) -> Array[String]:
         for fixed_field in ["mother_id", "littermate_id", "coronation_age_months"]:
             if canonical_by_id[id].has(fixed_field) and person.get(fixed_field, null) != canonical_by_id[id][fixed_field]:
                 errors.append("canonical relation changed")
+    var home_errors: Array[String] = HomeSystem.valid(candidate.get("home", null))
+    for home_error in home_errors:
+        errors.append("home: " + home_error)
     var calendar: Variant = candidate.get("calendar", null)
     if not calendar is Dictionary or not _is_whole_number(calendar.get("day_index", -1)) or int(calendar.get("day_index", -1)) < 0 or not PHASES.has(calendar.get("phase", "")):
         errors.append("invalid calendar")

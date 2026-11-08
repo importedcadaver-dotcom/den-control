@@ -1,24 +1,24 @@
-# Unbearable Conditions — P2 persistent world foundation
+# Unbearable Conditions — P3 Home Sandbox
 
-This is a **Godot 4.7.2 data-model foundation**, not the first playable milestone.
-The start scene displays its validated world status only.
+**A small interactable home scene**, not the complete game or the two-day gate/refuge/family release.
 
-## Test commands
+Start with Godot 4.7.2:
 
-From repository root (after installing Godot 4.7.2 and Python with pytest):
+    godot --path game
 
+Controls: select Button or Hazel with sidebar tabs or click the cub, choose an interaction (feed, cuddle, play, wash, pick up, put down, tidy request, first aid, separate, or play together). Autonomous behavior advances at a fixed sandbox rate; pause/resume in the sidebar. Save and load from the local user data directory. Pressing save records persistent needs, memories, sibling relationships and location.
+
+Some actions can fail or be refused; the feedback field explains why. The P3 pantry has six **demo** portions so feeding is not a free infinite resource. The production economy is still unconfigured.
+
+Run verification:
+
+    python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py tests/test_p3_static.py
+    godot --headless --path game --editor --quit
     godot --headless --path game --script res://tests/test_p1.gd
     godot --headless --path game --script res://tests/test_p2.gd
-    python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py
+    godot --headless --path game --script res://tests/test_p3.gd
+    godot --headless --path game --quit-after 12
 
-The local container did not have Godot, but [GitHub Actions successfully executed](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379) Godot 4.7.2 headless: P1 7/7 checks, P2 56/56 checks. The Python checks only validate static contracts and structure; they are not a substitute for GDScript or Windows gameplay tests.
+The latter commands are run by GitHub CI; they are not assumed successful until the actual run is checked. The first production milestone still requires playable gate and refuge shifts.
 
-## Foundation modules
-
-- `scripts/foundation/canon_loader.gd` — approved characters and schedule JSON.
-- `scripts/world/world_state.gd` — state registry, legal/temporary care, case/entry/refuge, HM finance, calendar, clock and event history.
-- `scripts/world/save_store.gd` — versioned JSON save and restore with validation and backup.
-- `tests/test_p2.gd` — real Godot behavioral tests to run on target machine.
-
-No new recurring characters are initialized. The v0.1 legacy Button/Hazel are **OLD / BAD / DO NOT USE**.
-Only the five established individuals appear at reset. Anonymous QA fixtures can be created in explicit test mode and have no names.
+The legacy Godot v0.1 cub named Button and adult bear Hazel are **OLD / BAD / DO NOT USE**. Only the newly approved family records are loaded.
