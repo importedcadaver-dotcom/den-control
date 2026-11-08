@@ -104,3 +104,11 @@
 ## 6. Evidence and limits
 
 This audit verifies **GitHub state and current-conversation decisions**. It does not independently inspect the contents of the historical `BriarwoodRefuge_v0.1_Windows_and_Source.zip` or Claude HTML source, execute Godot, test gameplay, or claim all older project chats were exhaustively retrieved. No claimed playable build, QA pass percentage or full-transcript completion can be inferred. The preexisting [Round 5 interpretation audit](ROUND5_RECORD_AND_INTERPRETATION_AUDIT.md) records the earlier unauthorized cast mistake; this checkpoint includes its corrected status.
+
+## 7. Repairs actually completed during this checkpoint (documentation only)
+
+- **Approved the newest user selection A**: the former monarch's unexpected death explains Ursula's accession. Updated `docs/APPROVED_DECISIONS.md`, `docs/characters/QUEEN_URSULA.md` and the Dwargon/Ursula research brief. No predecessor name, relation, cause of death or new NPC was invented. The latest of these three commits was `4c617ce6b0f20876fe9f5e658115f628a628b973`.
+- **Created this audit/checkpoint** and `docs/CHAT_REVIEW_PROMPT_2026-11-07.md` to preserve a reusable audit process. The reviewer must always recheck future GitHub state rather than assume this snapshot is current.
+- **Repaired README status wording**: said the Godot/HTML prototypes were design sources, not already merged game code; linked the new checkpoint, individual Ursula dossier and review prompt. Commit `7668584f4b0d75fbff80beecb352c76cf8e3862b`.
+- **Cleaned stale Ursula wording**: removed outdated claims that coronation age, succession trigger or reign duration remain unselected, and corrected a typo and a mistaken "decades" characterization. Documentation-only corrections: `0e69d1b998f7e9ef5433b0f66ab7c679562fe864`, `354c600f297cd0cbf1b68f1b54980a44e1af4df0`, `e3e5548c0255c975010069ced6cc0db67cf09be3`.
+- **Not completed:** source import, a first executable, test execution, implementation of any approved mechanic, creation of new NPCs, or selecting unapproved Queen Ursula biography details.
