@@ -263,16 +263,16 @@ static func step(home: Dictionary, count: int = 1) -> Array[Dictionary]:
         var hazel: Dictionary = home["cubs"][HAZEL]
         var sibling: Dictionary = home["sibling"]
         var close: bool = home["holding_id"] == "" and absf(float(button["x"]) - float(hazel["x"])) < 0.22
-        if close and tick % 5 == 0 and int(button["curiosity"]) > 25 and int(hazel["curiosity"]) > 25:
+        if close and tick % 11 == 7 and int(button["curiosity"]) > 25 and int(hazel["curiosity"]) > 25:
             # Competing interests sometimes create resentment before real fights.
-            sibling["resentment"] = mini(100, int(sibling["resentment"]) + 12)
+            sibling["resentment"] = mini(100, int(sibling["resentment"]) + 22)
             _change(button, {"stress": 5, "comfort": -3})
             _change(hazel, {"stress": 7, "comfort": -4})
             _remember(button, "sibling.dispute", tick, "Argued over space and toys")
             _remember(hazel, "sibling.dispute", tick, "Argued over space and toys")
             events.append({"kind": "home.sibling_dispute", "subject_id": BUTTON,
                 "details": {"other_id": HAZEL, "resentment": sibling["resentment"]}})
-        if close and int(sibling["resentment"]) >= 40 and (int(button["stress"]) + int(hazel["stress"]) >= 60) and tick % 6 == 0:
+        if close and int(sibling["resentment"]) >= 40 and (int(button["stress"]) + int(hazel["stress"]) >= 60) and tick % 11 == 7:
             sibling["conflicts"] = int(sibling["conflicts"]) + 1
             sibling["resentment"] = mini(100, int(sibling["resentment"]) + 7)
             sibling["bond"] = maxi(-100, int(sibling["bond"]) - 9)
