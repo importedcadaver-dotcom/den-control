@@ -25,3 +25,7 @@
 ## Result classification
 
 **P2 code written and committed. Static checks pass. Godot runtime verification is outstanding. Not a playable game.**
+
+## CI status
+
+The workflow file `.github/workflows/foundation.yml` is present on `main` and defines both Python static and Godot 4.7.2 headless verification. At report time GitHub returned **zero workflow runs**, so CI completion and GDScript pass/fail are **unknown**. A workflow definition is not test evidence.
