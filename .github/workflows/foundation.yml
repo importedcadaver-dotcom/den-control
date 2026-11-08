@@ -1,0 +1,41 @@
+name: Foundation verification
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python-static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install --disable-pip-version-check pytest
+      - run: python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py
+
+  godot-headless:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install official Godot 4.7.2 stable
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --silent --show-error \
+            https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip \
+            --output /tmp/godot-4.7.2.zip
+          mkdir -p /tmp/godot-bin
+          unzip -q /tmp/godot-4.7.2.zip -d /tmp/godot-bin
+          chmod +x /tmp/godot-bin/Godot_v4.7.2-stable_linux.x86_64
+          sudo mv /tmp/godot-bin/Godot_v4.7.2-stable_linux.x86_64 /usr/local/bin/godot
+          godot --version
+      - name: Import project in headless editor
+        run: godot --headless --path game --editor --quit
+      - name: Run P1 headless Godot tests
+        run: godot --headless --path game --script res://tests/test_p1.gd
+      - name: Run P2 headless Godot tests
+        run: godot --headless --path game --script res://tests/test_p2.gd
