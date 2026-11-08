@@ -9,8 +9,9 @@
 
 ## Not performed
 
-- Godot GDScript parse, headless P1/P2 behavior tests, UI scenes, Windows export and interactive playtest: **not run**, because Godot is unavailable in this environment.
-- Thus these static tests do not prove the 40+ GDScript behavioral assertions pass. They are intentionally not counted as gameplay-tested features.
+- **GitHub Actions, Ubuntu hosted runner, Godot 4.7.2 official**: project headless import succeeded; P1 **7 checks, 0 failures**; P2 **56 checks, 0 failures** on the latest verified code commit. See [successful run 42522146379](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379).
+- GitHub Python CI: **17 passed** (the repo subset; the local full-source package has 19).
+- **Windows export and interactive gameplay** have **not** been run. This is still an engineering foundation, not the first playable game.
 
 ## Prepared regression scenarios in `game/tests/test_p2.gd`
 
@@ -24,8 +25,8 @@
 
 ## Result classification
 
-**P2 code written and committed. Static checks pass. Godot runtime verification is outstanding. Not a playable game.**
+**P2 source and Linux Godot headless tests verified (56/56 P2, 7/7 P1); Windows build and gameplay unverified. Not a playable game.**
 
-## CI status
+## GitHub CI workflow
 
-The workflow file `.github/workflows/foundation.yml` is present on `main` and defines both Python static and Godot 4.7.2 headless verification. At report time GitHub returned **zero workflow runs**, so CI completion and GDScript pass/fail are **unknown**. A workflow definition is not test evidence.
+`.github/workflows/foundation.yml` provides Python static and official Godot 4.7.2 headless jobs. The workflow is committed to the connected public GitHub repository. After the initial check, GitHub completed real Python and Godot jobs successfully; see the linked run above.

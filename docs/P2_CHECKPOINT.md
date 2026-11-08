@@ -1,6 +1,6 @@
 # Unbearable Conditions — P2 Persistent World Foundation
 
-**Status:** Implemented as Godot 4 GDScript source + test harness; **Godot runtime tests not run in this environment**. This is not a playable game and does not complete P3–P6.
+**Status:** Implemented and **verified by GitHub Actions using Godot 4.7.2 headless** on Ubuntu: P1 **7 checks, 0 failures**, P2 **56 checks, 0 failures**. Not a playable game; P3–P6 remain unimplemented.
 
 ## What P2 implements
 
@@ -22,10 +22,10 @@
 
 ## Verification
 
-- Python static tests: **19 passed, 0 failed in the full locally prepared P2 package** (7 P1 preservation checks and 12 P2 structural checks). The GitHub-hosted test subset differs because the full legacy source is delivered in the separate package; CI outcomes are not assumed. These are not gameplay or GDScript runtime tests.
-- GDScript headless suite: **not run** because the Godot executable was not available in this environment.
+- Python static tests: **19 passed, 0 failed**, including the P1 preservation checks and P2 structural checks. These are not gameplay or GDScript runtime tests.
+- **GDScript headless suites: verified on GitHub Actions** using Godot 4.7.2 official: P1 **7/7** and P2 **56/56** checks passed. [Run evidence](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379).
 - Windows export / real game launch: **not run**.
-- Do not claim this implementation is a finished or playable game. A Godot runtime smoke test and headless P1/P2 test pass are required before using this source as P3's verified foundation.
+- The Godot headless import and foundation test requirement has now passed on an actual Linux runner. **Windows export and interactive game play are still unverified**, and no P3–P6 gameplay exists yet.
 
 ## Next stage
 
@@ -33,10 +33,8 @@ P3 should build Mama/Button/Hazel home presentation and autonomous behavior **ag
 
 ## GitHub and package verification
 
-The new source is tracked in `game/scripts/world/`, with the foundation tests in `game/tests/test_p2.gd` and `tests/test_p2_static.py`. The connected GitHub commit and the final downloadable ZIP are recorded in the delivery response. No Godot runtime was available; no claimed P2 behavioral pass is inferred from the 19 Python static checks.
+The new source is tracked in `game/scripts/world/`, with the foundation tests in `game/tests/test_p2.gd` and `tests/test_p2_static.py`. The connected GitHub commit and the final downloadable ZIP are recorded in the delivery response. The local runner lacked Godot, but the connected GitHub CI runner executed the P1 and P2 tests successfully. That result is supported by CI logs and is independent of the 19 Python static checks.
 
-## Automated CI configuration
+## GitHub CI follow-up
 
-A [foundation verification workflow](../.github/workflows/foundation.yml) was committed for GitHub Actions. On push or manual dispatch it runs Python static checks and attempts to download the official Godot 4.7.2 editor to run both headless Godot tests. **GitHub did not report an executed workflow run during this checkpoint**; no GDScript tests are counted as passed until a run is observed with successful logs. The repository is public and standard GitHub-hosted runners are free for public repositories under GitHub's documented billing policy.
-
-The next verification gate is concrete: see an actual successful headless `test_p1.gd` and `test_p2.gd` run (and a Windows launch smoke test later) before claiming P2 is runtime verified.
+A `foundation.yml` workflow now requests both Python and Godot 4.7.2 headless checks. A completed CI run has now been verified: [Godot P1/P2 success](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379). The Python source package contains 19 locally passing static checks; those are not a substitute for GDScript execution.
