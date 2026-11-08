@@ -1,17 +1,17 @@
 # Unbearable Conditions — Technical integration roadmap
 
-## Sources inspected (not yet committed as game code)
+## Recovered sources inspected (not yet imported into the active project)
 
-1. **Briarwood Refuge v0.1:** Godot 4 project, from `BriarwoodRefuge_v0.1_Windows_and_Source.zip`; includes a Windows executable, GDScript source, tests, screenshots, README, and QA record. It is a **recovered baseline**, not the later uncollected UI audit revision.
-2. **Honey, Please — Layer 1 v3:** Single-file HTML game source. Includes SVG animal faces, a drag-and-compare document desk, procedural parties, rules data, stamping, a queue, Gazette headlines, escalating policies, and a 120-second shift timer. **No implemented home, refuge, persistent characters, or multi-day narrative simulation.**
-3. User feedback and approvals in both chat transcripts. These take priority over proposed assistant defaults.
+1. **Briarwood Refuge v0.1:** recovered from the current conversation attachment `BriarwoodRefuge_v0.1_Windows_and_Source.zip` and statically inspected. It includes a Windows executable, 19 editable source files, tests, screenshots, README and QA record. The archive passes ZIP integrity testing. The editable source is a **legacy baseline**, not the later uncollected UI audit revision. A source-only copy is prepared, but neither copy is committed to GitHub yet.
+2. **Honey, Please — Layer 1 v3:** complete HTML source recovered from the current conversation attachment `Pasted text(20261107-050627).txt`, extracted and JavaScript syntax-checked. It includes SVG animal faces, a drag-and-compare document desk, procedural parties, rules data, stamping, a queue, Gazette headlines, escalating policies and a 120-second shift timer. **No implemented home, refuge, persistent characters or multi-day narrative simulation.** It remains a presentation reference, not a second production engine.
+3. User feedback and approvals in both chat transcripts. These take priority over proposed assistant defaults. The later Godot UI/economy/guardianship fixes are described in a transcript, but their source archive has not been recovered; do not assume those fixes exist in v0.1.
 
 ## Recommended engineering order
 
 ### 0. Preserve and reconcile sources
 - Import Godot editable source as a tagged initial snapshot; **exclude the large Windows binary**, generated Godot cache, personal saves, and build artifacts from the main source tree.
 - Commit the original Claude HTML under `references/honey-please/` as a **reference**, not as a second production engine.
-- Find the post-v0.1 Den Control revision, inspect its changes, and merge its fixes before feature work.
+- Recover the post-v0.1 Den Control revision if it still exists, inspect its changes and compare it with v0.1 before deciding which fixes to port. The current transcript is evidence of reported changes, not source code.
 - Capture reproducible tests and screenshots from actual executed builds. Distinguish previous reported test results from newly rerun ones.
 
 ### 1. Stabilize persistent world model
@@ -44,8 +44,13 @@
 - Distinguish city-entry clearance from any subsequent refuge-placement decision.
 - Design most routine arrivals procedurally; preserve authored family arcs across days.
 
-### 4. Build the first connected week
-Acceptance test: over a fixed **3 gate + 3 refuge + 1 off** seven-day cycle, a family is encountered at the gate, investigated, admitted/denied/held, located afterward, affected by Mama's refuge decisions, and able to return. Mama's two authored cubs and caregiver maintain independent routines through checkpoint and refuge days; finances and consequences persist through save/reload.
+### 4. Build the first connected production slice
+**Approved first milestone:** one complete gate day + one complete refuge-management day + home/family gameplay. Gate work combines routine arrivals with detailed investigations. Refuge work combines hands-on resident care with facility/operational management. Mama can directly interact with Button and Hazel while both cubs retain autonomous behavior. Art begins as a consistent functional pixel-art prototype, followed by polish.
+
+**Acceptance test:** on Day 1, the player completes a gate shift and records decisions; the same persistent people and consequences remain available to the refuge/legal systems; on Day 2, the player completes a refuge-management shift with hands-on care, beds, supplies and a separate public budget; home/family scenes occur on both days; save/load preserves the complete state. Entry permission, guardianship and refuge placement remain distinct. Do not create new named recurring characters to fill test cases; use anonymous fixtures until the user individually designs an authored family.
+
+### 4b. Expand to the first connected week
+After the two-day slice passes, test the approved full rotation of **3 gate + 3 refuge + 1 off** days. A family can be encountered at the gate, investigated, admitted/denied/held, separately considered for refuge placement, located afterward, affected by Mama's refuge decisions and able to return. Mama's cubs and caregiver maintain independent routines; finances and consequences persist through save/reload.
 
 ### 5. Expand and test
 - 25+ day authored campaign with procedural variety, factions, lawful and illicit choices, rebellion threads, multiple endings, and post-campaign free play.
@@ -65,6 +70,11 @@ Acceptance test: over a fixed **3 gate + 3 refuge + 1 off** seven-day cycle, a f
 
 The former 20-character AI-created roster is **rejected**. The current [Round 6 document](ROUND6_CAST_AND_INSTITUTIONS_PROPOSALS.md) withdraws the roster and replaces it with a one-character-at-a-time creation requirement. Any implementation must exclude the rejected proposal and two blacklisted v0.1 legacy names.
 
-## Current repository state when this document was initialized
+## Current repository state after source recovery and production approval
 
-Only design/integration documentation has been uploaded via the connected GitHub integration. **Do not represent this as a code import or playable version.** First source-import commit is a separate tracked step.
+The Godot v0.1 archive and Honey, Please HTML source have now been recovered from the conversation attachments and statically inspected. The Godot ZIP passes integrity checking; the HTML JavaScript passes a syntax check. **The actual source files are not yet imported into GitHub or merged into a new game project.** The repository still contains design/integration documentation only. P0 source recovery and reuse audit is complete; P1 source preservation and clean project setup remain next. Do not represent this as a merged codebase or playable Unbearable Conditions build.
+
+
+## Production scope approved November 7, 2026
+
+The user approved first milestone B (one gate day + one refuge day + home), gate gameplay C (detailed cases plus routine arrivals), refuge gameplay C (hands-on care plus operations), family gameplay B (direct interaction plus autonomous cubs), and art production C (consistent functional pixel-art prototype, then polish). See [PRODUCTION_PLAN_V0_1.md](PRODUCTION_PLAN_V0_1.md) for the complete production specification, architecture, staged sequence and acceptance tests.
