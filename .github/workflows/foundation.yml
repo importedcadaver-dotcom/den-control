@@ -2,6 +2,10 @@ name: Foundation verification
 on:
   push:
     branches: [main]
+    paths:
+      - 'game/**'
+      - 'tests/**'
+      - '.github/workflows/foundation.yml'
   workflow_dispatch:
 
 permissions:
