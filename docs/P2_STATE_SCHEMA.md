@@ -46,3 +46,7 @@ python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py
 ```
 
 The Python tests are static source/fixture checks, not evidence that GDScript runs successfully.
+
+## Verified headless Godot result
+
+The P1 and P2 GDScript suites were executed with official Godot 4.7.2 on a GitHub-hosted Linux runner: **P1 7/7 checks passed; P2 56/56 checks passed**. [GitHub Actions run evidence](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379). This does not establish a Windows build, P3 family gameplay or P4/P5 work scenes.
