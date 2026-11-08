@@ -84,3 +84,11 @@ The user approved first milestone B (one gate day + one refuge day + home), gate
 - The original source remains intact in a separate recovery bundle and verified SHA-256 list, not in the GitHub active project.
 - See [P1 source-gap matrix](P1_LATER_REVISION_GAP_MATRIX.md) for the later reported-but-unrecovered fixes.
 - **P2 is next:** persistent world state, lawful transitions, calendar, financial separation and versioned save/load. P1 cannot be declared Godot-runtime validated until the headless suite is run with Godot installed.
+
+## P2 persistent-world checkpoint — November 8, 2026
+
+**Source implemented:** `game/scripts/world/world_state.gd` and `save_store.gd` contain a new version-2 state model, separate legal/entry/refuge records, work calendar and shift-clock APIs, independent HM household/refuge ledgers and debt, event history and guarded save/restore. The [P2 state schema](P2_STATE_SCHEMA.md) and [P2 checkpoint](P2_CHECKPOINT.md) document exact contracts and limits.
+
+**Testing:** Godot test scenarios are authored in `game/tests/test_p2.gd`; Python source-level checks are authored in `tests/test_p2_static.py`. The complete local package passed **19 static pytest checks**. A [GitHub Actions verification workflow](../.github/workflows/foundation.yml) now targets Godot 4.7.2 as well, but there was **no confirmed run at checkpoint**; Godot runtime and Windows export remain unverified. P2 should not be treated as engine-tested until both headless suites pass.
+
+**Next:** Verify the Godot tests, repair any actual parser/runtime failures, then begin P3 family behavior against this persistent state. P4/P5 gate and refuge surfaces remain unimplemented. No new named NPCs were created.
