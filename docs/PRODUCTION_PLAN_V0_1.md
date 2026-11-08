@@ -188,7 +188,7 @@ Do not let a menu pause accidentally advance the calendar, age cubs, charge cost
 |---|---|---|
 | P0 — Source recovery and inspection | Godot v0.1 and Honey, Please sources recovered, integrity checked and statically inspected | Source inventory, reuse decisions and limitations recorded. **Completed in this preparation pass.** |
 | P1 — Source preservation and clean project shell | **Clean shell committed**; original source preserved unchanged in separate recovery package | Python static checks pass; Godot headless validation remains pending. No legacy world script is imported. |
-| P2 — Persistent world foundation | Character IDs, households/guardianship, calendar, event log, separate ledgers, save/load and cheats | Unit tests prove stable IDs, state validation, finance separation and save round-trip. |
+| P2 — Persistent world foundation | **Implemented and headless-verified**: stable IDs, legal/guardian isolation, calendar, event log, separate HM ledgers, debt, validated save/load | Official Godot 4.7.2 CI: P1 7/7 and P2 56/56; Python CI 17 passed. Windows gameplay untested. |
 | P3 — Home and family foundation | Mama, Button and Hazel scene; direct interactions and autonomous intentions | Cub differences are observable; direct interaction influences but does not fully override autonomy. |
 | P4 — Gate workday | Routine arrivals, detailed cases, document comparison, questions, verification, decisions and case journal | A complete gate shift can be played and decisions persist. |
 | P5 — Refuge-management day | Residents, care interactions, beds, supplies, capacity and public budget | Refuge actions alter the same persistent residents and ledger. |
@@ -273,9 +273,13 @@ These can be developed alongside production when a system actually needs them. D
 5. Build the home/family foundation, then the gate shift and refuge shift.
 6. Run the two-day integration acceptance tests before expanding the world.
 
-**Current completion:** P0 completed. P1 clean project code, source manifests, exclusion contracts and static tests are written/committed; seven local Python tests passed, but Godot headless tests have not run. P2–P8 remain unimplemented. This document is a production plan, not a claim that a new build exists.
+**Current completion (November 8, 2026):** P0 source recovery and P1 shell completed. **P2 persistent world foundation implemented and verified in GitHub Actions** with Godot 4.7.2 (7 P1 and 56 P2 headless checks passed; 17 CI Python tests passed). **P3–P8 remain unimplemented.** No playable game or Windows export has been verified. This document is a production plan, not a claim that a new build exists.
 ## Production implementation update — P1
 
 The first source-code commit added `game/` as a clean Godot 4.7.2 project, approved identity and schedule fixtures, a canon loader, GDScript contract tests and Python static checks. This is **infrastructure**, not a playable two-day slice. The complete unmodified legacy source, including the earlier HTML reference, is in a separate downloadable P1 recovery bundle, while GitHub contains preservation manifests/hashes. The previously rejected v0.1 Button/Hazel records are excluded from all new seeds.
 
 The [worldbuilding dependency audit](P1_WORLDBUILDING_GATE.md) finds no need to resolve further Ursula/party/district biography for P1. Before authoring the final gate/refuge story content, one applicant/household should be created individually or kept as anonymous QA fixtures. See [later revision gap matrix](P1_LATER_REVISION_GAP_MATRIX.md) for the differences between source code and claims in the old transcript.
+
+## P2 verified engine-checkpoint
+
+[CI run 42522146379](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379) checked out the actual GitHub source, downloaded official Godot 4.7.2 and successfully ran the P1 (7 checks) and P2 (56 checks) headless suites. GitHub Python checks passed (17). The complete local recovery package also passed 19 static checks because it carries additional legacy-integrity tests. This is **verified foundation logic, not playable family/gate/refuge gameplay**. P3 is the next production phase.
