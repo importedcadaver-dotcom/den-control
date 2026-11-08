@@ -6,6 +6,7 @@
 
 - **Name:** Queen Ursula.
 - **Species:** **Kodiak brown bear**; royal dynasty is brown bear.
+- **Age at game start: 7 years old (APPROVED).** Crowned at 6 months, giving her **6 years and 6 months** on the throne at game start.
 - **Setting:** Honeyhold, monumental hybrid mountain cave-city with seven connected districts.
 - **Physiology:** Bears move on all fours and are capable of visible emotional tears in this universe.
 - **Role and powers:** **The real sovereign with overwhelming practical authority from coronation at six months**, not merely a figurehead. Government officials administer and carry out her wishes but do not meaningfully veto or overrule them. Honeyhold retains constitutional-monarchy institutions and two parties, yet they cannot independently control her. She can suspend most laws indefinitely during declared emergencies.
@@ -40,7 +41,7 @@ These are **fictional possibilities**, not mandatory scripted events or achievem
 ## Open choices — develop Ursula individually
 
 1. **Age at coronation: RESOLVED — six months old.** She **had genuine ultimate authority from the outset** (not mere title). Administrative execution of her wishes could be delegated; her capacity for preschool-level reasoning is distinct from political power.
-2. **Current age and reign duration:** not selected; must fit continuous aging conventions.
+2. **Current age and reign duration: RESOLVED — seven years old; six years six months as Queen.** Exact calendar dates still unselected; continuous aging applies.
 3. **Cause of accession and constitutional machinery:** no former sovereign or named regent has been created. **Do not install a governing regent or ministry that can override her.** Why she took the throne remains undecided.
 4. **Early rule: RESOLVED at authority level** — Ursula made the wishes and royal decisions with real, nearly unchallengeable force, while officials handled execution and paperwork. The exact **procedure** for taking/recording her instructions is open, but **not who had final power**.
 5. **Political worldview and personal insecurities:** how does she justify indefinite emergency power?
@@ -55,7 +56,7 @@ This is **design-only documentation**. No Queen Ursula character logic, sprite, 
 
 ## Accession-age decision — approved
 
-The user explicitly selected **six months** as Queen Ursula's age when she became Queen. Because six months is Honeyhold's **preschool developmental stage** (roughly human age three), she did not need to personally do adult administrative tasks. **Subsequent clarification established that she had the real power from that very young age**: officials could handle administration, but not rule instead of her or veto her wishes. The mechanics for formalizing a cub's demands into official acts remain to be designed. This is also distinct from **Ursula's current age**, which remains open.
+The user explicitly selected **six months** as Queen Ursula's age when she became Queen. Because six months is Honeyhold's **preschool developmental stage** (roughly human age three), she did not need to personally do adult administrative tasks. **Subsequent clarification established that she had the real power from that very young age**: officials could handle administration, but not rule instead of her or veto her wishes. The mechanics for formalizing a cub's demands into official acts remain to be designed. Her **current age is now approved at seven years**.
 
 **Do not create any additional characters** to explain succession, guardianship or government functioning. Do not assume a hidden regent or age-based check on her authority.
 
@@ -67,4 +68,4 @@ User statement: **"C but like she had lots of authority and like no one told her
 
 **Important limits on inference:** Do not give six-month-old Ursula adult intellect or professional skill merely because her commands were followed. Nor invent a named regent, royal relative, personal aide, resistance leader, specific childhood decree, or family tragedy. Formal wording of her ordinary constitutional powers remains a further design question.
 
-**Next individual-development questions:** current age / reign duration, circumstances of accession, whether she retains a playful demand-making style in adulthood, how officials physically receive and implement her commands, and what she personally wants from subjects. Choose one topic at a time, without making new characters.
+**Next individual-development questions:** circumstances of accession, whether she retains a playful demand-making style in adulthood, how officials physically receive and implement her commands, and what she personally wants from subjects. Choose one topic at a time, without making new characters.
