@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "work_rotation": [
+    "gate",
+    "refuge",
+    "gate",
+    "refuge",
+    "gate",
+    "refuge",
+    "off"
+  ],
+  "school": {
+    "half_day": true,
+    "eligible_ages_months_from": 6,
+    "attendees": [
+      "uc.family.button",
+      "uc.family.hazel"
+    ]
+  },
+  "time_policy": {
+    "per_case_timer": false,
+    "shift_timer": "generous_real_time",
+    "pause_during": [
+      "reading_documents",
+      "menus"
+    ],
+    "timer_off_setting": true
+  },
+  "implementation_status": "canon_fixture_not_simulated"
+}

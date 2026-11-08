@@ -1,0 +1,9 @@
+**/.godot/
+**/.import/
+__pycache__/
+.pytest_cache/
+*.exe
+*.pck
+*.log
+*.tmp
+*.bak

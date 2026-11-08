@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "provenance": "Approved user canon; not legacy Briarwood v0.1 records",
+  "characters": [
+    {
+      "id": "uc.family.mama",
+      "display_name": "Mama Bear",
+      "species": "brown_bear",
+      "age_months": 84,
+      "role": "player_and_mother"
+    },
+    {
+      "id": "uc.family.button",
+      "display_name": "Button",
+      "species": "brown_bear",
+      "age_months": 6,
+      "role": "biological_son",
+      "mother_id": "uc.family.mama",
+      "littermate_id": "uc.family.hazel"
+    },
+    {
+      "id": "uc.family.hazel",
+      "display_name": "Hazel",
+      "species": "brown_bear",
+      "age_months": 6,
+      "role": "biological_daughter",
+      "mother_id": "uc.family.mama",
+      "littermate_id": "uc.family.button"
+    },
+    {
+      "id": "uc.family.grandma",
+      "display_name": "Grandma",
+      "species": "brown_bear",
+      "age_months": null,
+      "role": "mamas_mother",
+      "personal_name_approved": false
+    },
+    {
+      "id": "uc.royal.ursula",
+      "display_name": "Queen Ursula",
+      "species": "kodiak_brown_bear",
+      "age_months": 84,
+      "role": "sovereign",
+      "coronation_age_months": 6
+    }
+  ],
+  "excluded_legacy_ids": [
+    "button",
+    "hazel"
+  ],
+  "implementation_status": "approved_identity_records_only_no_behaviors_yet"
+}
