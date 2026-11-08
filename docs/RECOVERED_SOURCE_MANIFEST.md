@@ -23,10 +23,13 @@ This document records the exact source material recovered for Unbearable Conditi
 - Do not import Honey, Please's Hibernia setting, Supervisor Honeywell, generated names, random families or 120-second shift timer.
 - Do not claim later Godot fixes are present in v0.1.
 - Do not report the stored test results as newly rerun.
-- The active den-control GitHub repository remains documentation-only until source files are deliberately imported. These recovered archives are currently attached to the conversation and available for production work; they have not yet been committed into the repository.
+- The den-control GitHub repository now contains a **new clean Godot P1 shell** with data fixtures and tests. This is **not a merged playable game**. The recovered full original Godot source and HTML reference remain preserved in the **separate downloadable P1 recovery package**; the GitHub legacy directories contain manifests and hashes, not complete historical source files.
 
 ## Verification
 
 - Original ZIP integrity check: passed.
 - Godot source: statically inspected; no Godot runtime was available in this Linux environment, so GDScript tests and the Windows executable were not rerun.
 - Honey, Please JavaScript: passed Node syntax check; no browser playtest was completed.
+## P1 package availability
+
+The P1 recovery bundle `Unbearable_Conditions_P1_Source_and_Legacy.zip` was created and ZIP-tested in this conversation (SHA-256 `a9b9eb9d7eb4fa320428a559067f594d38499505a756df61bae03a5da935581c`). It contains all 19 historical editable source files unmodified, the unchanged HTML, a clean Godot foundation, test code and a verification report. It is delivered as a conversation attachment; not yet uploaded to GitHub.
