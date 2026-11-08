@@ -49,7 +49,7 @@ This setting is **completely independent** of the user's other bear games. A pos
 ## P1 verification
 
 - Seven Python foundation tests passed in the complete locally prepared P1 recovery package. The GitHub test subset can be run independently with Python/pytest.
-- Godot headless tests are written under `game/tests/`, but **were not executed** in the current environment because Godot was unavailable.
+- **GitHub Actions successfully executed the Godot headless tests** on an Ubuntu standard runner using official Godot 4.7.2: P1 **7 checks, 0 failures**; P2 **56 checks, 0 failures**. [Verified CI run](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379). Windows launch and gameplay remain unverified.
 - **Historical source is contained in the downloadable P1 recovery package, not yet in the GitHub legacy directory**; only its manifests and integrity hashes are in GitHub. The new clean shell is committed separately.
 
 ## Sources and provenance
@@ -62,4 +62,4 @@ The P2 source under `game/scripts/world/` now defines canonical identities and h
 
 The system initializes only **Mama, Button, Hazel, Grandma and Queen Ursula**. Any anonymous test subject exists only in explicit QA mode. The old unrelated v0.1 Button and adult Hazel are **OLD / BAD / DO NOT USE**.
 
-**Verification:** 19 local Python static tests passed in the full P2 source package; they do not execute GDScript. A [GitHub Actions workflow](.github/workflows/foundation.yml) has been added for Python and Godot headless checks, but **no workflow run had been confirmed** at the P2 checkpoint. The Godot runtime behavior and Windows export remain unverified. **P3–P6 gameplay has not been built.**
+**Verification:** 19 Python static checks passed in the full local source package; the GitHub CI repository subset passed **17 tests**. The [GitHub Actions workflow](.github/workflows/foundation.yml) also passed official **Godot 4.7.2** headless validation: **P1 7/7, P2 56/56** ([run evidence](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379)). Windows export and interactive gameplay remain unverified. **P3–P6 gameplay has not been built.**
