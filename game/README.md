@@ -19,6 +19,6 @@ Run verification:
     godot --headless --path game --script res://tests/test_p3.gd
     godot --headless --path game --quit-after 12
 
-All three GDScript headless suites, the headless editor import, and main-scene boot **passed** in [GitHub Actions run 42527012709](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709): P1 7/7, P2 56/56, P3 67/67; 26 Python checks passed. This is not a Windows human playtest. The first production milestone still requires playable gate and refuge shifts.
+All three GDScript headless suites, the headless editor import, and main-scene boot **passed** in [GitHub Actions run 42527012709](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709): P1 7/7, P2 56/56, P3 67/67; 24 GitHub Python checks passed (26 in the complete local package). This is not a Windows human playtest. The first production milestone still requires playable gate and refuge shifts.
 
 The legacy Godot v0.1 cub named Button and adult bear Hazel are **OLD / BAD / DO NOT USE**. Only the newly approved family records are loaded.
