@@ -23,7 +23,7 @@
 
 ## Verification status
 
-**Verified:** [GitHub Actions run 42527012709](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709) completed successfully with official **Godot 4.7.2**: P1 **7/7**, P2 **56/56**, P3 **67/67** behavioral assertions, plus a headless project import and main-scene startup smoke test. The Python CI suite passed **26/26** structural checks. This is verified source behavior and scene startup, **not a Windows gameplay/visual playtest**. The local tool environment did not have Godot; testing ran in GitHub CI.
+**Verified:** [GitHub Actions run 42527012709](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709) completed successfully with official **Godot 4.7.2**: P1 **7/7**, P2 **56/56**, P3 **67/67** behavioral assertions, plus a headless project import and main-scene startup smoke test. The GitHub Python CI suite passed **24/24** structural checks. The separate full local source package passed **26/26**, including two legacy-source integrity tests absent from the GitHub checkout. This is verified source behavior and scene startup, **not a Windows gameplay/visual playtest**. The local tool environment did not have Godot; testing ran in GitHub CI.
 
 **P3 scope limitation:** this is a playable home *sandbox*, **not** the first approved complete production milestone (one gate day + refuge day + home). Animation is procedural and simple; no Windows export, sound, complete school, economy gameplay, Grandma care scenes, full city map or authored gate cases are included.
 
