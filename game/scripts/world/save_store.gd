@@ -8,9 +8,12 @@ static func load_document(path: String) -> Dictionary:
     var file := FileAccess.open(path, FileAccess.READ)
     if file == null:
         return {"ok": false, "error": "save could not be opened"}
-    var parsed: Variant = JSON.parse_string(file.get_as_text())
-    if not parsed is Dictionary:
+    var parser := JSON.new()
+    if parser.parse(file.get_as_text()) != OK:
         return {"ok": false, "error": "invalid JSON document"}
+    var parsed: Variant = parser.data
+    if not parsed is Dictionary:
+        return {"ok": false, "error": "invalid JSON object"}
     var problems: Array[String] = WorldState.validate_state(parsed)
     if not problems.is_empty():
         return {"ok": false, "error": "; ".join(problems)}
