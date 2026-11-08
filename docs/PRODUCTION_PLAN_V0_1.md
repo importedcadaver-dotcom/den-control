@@ -110,7 +110,7 @@ Do not create placeholder named characters to fill any of these future roles.
 - Use Godot 4.7.2 / GDScript as the provisional baseline, matching the recovered v0.1 project.
 - Preserve the original Briarwood Refuge v0.1 archive unchanged as a historical source reference.
 - Create a clean Unbearable Conditions project rather than continuing to use the old seeded world as the new game's data.
-- Do not import the v0.1 Button cub or adult Hazel. Their source records remain archived only and are explicitly blacklisted from the new game's canonical data.
+- The v0.1 Button cub and adult Hazel are **OLD / BAD / DO NOT USE**. Their source records remain archived only and are explicitly blacklisted from the new game's canonical data.
 - Do not claim the later Godot UI/economy/guardianship fixes are present until their actual source revision is recovered and compared.
 
 ### Proposed architecture
