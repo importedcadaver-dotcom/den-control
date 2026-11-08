@@ -4,18 +4,18 @@ An in-development 2D pixel-art Honeyhold cave-city bureaucracy, family-life, and
 
 ## Project status
 
-**Design consolidation and source recovery. Not yet a merged playable build.**
+**P3 interactive home sandbox implemented and headless-verified. The full gate/refuge/family game is not yet built.**
 
 - Previously referenced original playable foundation: `BriarwoodRefuge_v0.1_Windows_and_Source.zip` (Godot 4 / GDScript), reported as recovered from the user's ChatGPT Library in earlier work. **Not present as source in this repo.**
 - Other historical implementation: `Honey, Please` (single-file HTML/CSS/JavaScript), provided and reviewed in an earlier chat. **Not present in this repo.**
 - The later in-progress Godot UI/economy/guardianship fixes described in the Den Control conversation have **not yet been recovered as a source archive**.
 - The user has approved the family canon: seven-year-old brown bear Mama, with six-month-old littermates Button and Hazel. Grandma (Mama's mother) cares for them outside school, but **deliberately enjoys emotional cruelty, threats, comfort neglect and humiliating dangerous dares, and both cubs justifiably hate her**. Mama knows she is mean, but relies on her because of work and money; ordinary replacement care requires a substantial storyline. Grandma lives nearby in her own home. Button prefers indoors, modern comforts, and human-like objects/technology over the outdoors; Hazel strongly dislikes being ordered around. Cubs stay in the den with Mama at 0–3 months, begin nursery at 4 months, and attend preschool from 6 months (roughly human three-year-old development). Both siblings attend the same school with distinct teachers and friends. They can fight, injure or emotionally hurt each other, become enemies or reconcile; bears visibly shed emotional tears. Aging advances continuously with the calendar. Their personalities are recorded in approved decisions.
-- The repository now includes the **clean Godot foundation** under `game/`, canonical data fixtures, first GDScript tests, and Python static checks. This is **not** the first playable milestone; no gate/refuge/family game loop has been implemented yet.
+- The repository contains a verified **P3 Godot home scene** under `game/scripts/home/`: visible Mama and two cubs, direct care and carrying, autonomous needs and intentions, sibling conflicts, memories, a finite demo pantry and save/load. The gate/refuge work shifts and the first connected two-day milestone remain unimplemented.
 - The previous AI-invented 20-person Round 6 cast is **rejected in full**. **All new characters must be created individually with the user.** No prior invented classmates, coworkers or party leaders are approved. The 12–20 goal is an eventual count, not a ready-made roster.
 
 Read [Dwargon-inspired Honeyhold architecture and Queen Ursula research](docs/DWARGON_INSPIRATION_AND_QUEEN_URSULA_RESEARCH.md) for a sourced reference brief (new layouts and character details remain proposals).
 
-**P1–P2 engineering:** [Godot source](game/) · [P2 world state](game/scripts/world/world_state.gd) · [P2 save system](game/scripts/world/save_store.gd) · [P2 checkpoint](docs/P2_CHECKPOINT.md) · [P2 state schema](docs/P2_STATE_SCHEMA.md) · [P2 test report](docs/P2_TEST_REPORT.md) · [P1 checkpoint](docs/P1_CHECKPOINT.md) · [Worldbuilding gate](docs/P1_WORLDBUILDING_GATE.md) · [Later revision gap matrix](docs/P1_LATER_REVISION_GAP_MATRIX.md)
+**P1–P3 engineering:** [P3 home code](game/scripts/home/) · [P3 checkpoint](docs/P3_CHECKPOINT.md) · [P3 Godot tests](game/tests/test_p3.gd) · [Godot source](game/) · [P2 world state](game/scripts/world/world_state.gd) · [P2 save system](game/scripts/world/save_store.gd) · [P2 checkpoint](docs/P2_CHECKPOINT.md) · [P2 state schema](docs/P2_STATE_SCHEMA.md) · [P2 test report](docs/P2_TEST_REPORT.md) · [P1 checkpoint](docs/P1_CHECKPOINT.md) · [Worldbuilding gate](docs/P1_WORLDBUILDING_GATE.md) · [Later revision gap matrix](docs/P1_LATER_REVISION_GAP_MATRIX.md)
 
 **Production documents:** [Approved first production plan](docs/PRODUCTION_PLAN_V0_1.md) · [Source recovery and reuse audit](docs/SOURCE_RECOVERY_AND_REUSE_AUDIT.md) · [Recovered source manifest](docs/RECOVERED_SOURCE_MANIFEST.md)
 
@@ -62,4 +62,12 @@ The P2 source under `game/scripts/world/` now defines canonical identities and h
 
 The system initializes only **Mama, Button, Hazel, Grandma and Queen Ursula**. Any anonymous test subject exists only in explicit QA mode. The old unrelated v0.1 Button and adult Hazel are **OLD / BAD / DO NOT USE**.
 
-**Verification:** 19 Python static checks passed in the full local source package; the GitHub CI repository subset passed **17 tests**. The [GitHub Actions workflow](.github/workflows/foundation.yml) also passed official **Godot 4.7.2** headless validation: **P1 7/7, P2 56/56** ([run evidence](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379)). Windows export and interactive gameplay remain unverified. **P3–P6 gameplay has not been built.**
+**Verification:** 19 Python static checks passed in the full local source package; the GitHub CI repository subset passed **17 tests**. The [GitHub Actions workflow](.github/workflows/foundation.yml) also passed official **Godot 4.7.2** headless validation: **P1 7/7, P2 56/56** ([run evidence](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379)). Windows export and interactive gameplay remain unverified. **P3 home sandbox is verified; P4 gate, P5 refuge and P6 two-day game are not built.**
+
+## P3 home sandbox — verified November 8, 2026
+
+The new [interactive home scene](game/scripts/home/home_view.gd) uses the same [persistent P2 world model](game/scripts/world/world_state.gd) and [save service](game/scripts/world/save_store.gd). Mama can feed, cuddle, play, wash, carry, put down, make requests, separate siblings and offer first aid. Button and Hazel have distinct autonomous intentions and persistent needs, memories and sibling dynamics, with possible emotional conflict, refusal and injury. Their sibling relationship starts neutral as a **provisional baseline**, not canonized love or hatred; relatives and personality canon remain unchanged. Visual tears and four-legged poses are part of the simple procedural pixel art.
+
+**Godot 4.7.2 CI verified:** P1 **7/7**, P2 **56/56**, P3 **67/67** assertions, **26/26 Python source tests**, headless editor import and main-scene boot — [verified Actions run](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709). **No Windows executable, visual review, full childcare, gate or refuge shift yet.** The finite six-portion P3 pantry is a temporary gameplay test fixture, not approved HM starting inventory. Save schema version is now **3**, and P2 developer saves are not supported without a future explicit migration.
+
+**Next milestone:** P4 gate workday (detailed cases plus routine arrivals) using the existing shared world state and no newly invented named characters.
