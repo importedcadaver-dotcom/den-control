@@ -23,10 +23,21 @@
 
 ## Verification status
 
-Python source-level tests were run locally and passed. The P3 Godot behavioral tests and startup smoke are added to GitHub Actions and **must be verified against a completed run** before claiming P3 runtime success. The current runner's local `godot` executable is unavailable; code review is not a substitute for runtime testing.
+**Verified:** [GitHub Actions run 42527012709](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709) completed successfully with official **Godot 4.7.2**: P1 **7/7**, P2 **56/56**, P3 **67/67** behavioral assertions, plus a headless project import and main-scene startup smoke test. The Python CI suite passed **26/26** structural checks. This is verified source behavior and scene startup, **not a Windows gameplay/visual playtest**. The local tool environment did not have Godot; testing ran in GitHub CI.
 
 **P3 scope limitation:** this is a playable home *sandbox*, **not** the first approved complete production milestone (one gate day + refuge day + home). Animation is procedural and simple; no Windows export, sound, complete school, economy gameplay, Grandma care scenes, full city map or authored gate cases are included.
 
 ## Next engineering stage
 
 P4: complete gate workday using the same persistent IDs and records. Preserve detailed+routine cases, no per-entrant timer, and original entry/legal/refuge separation. Author new recurring applicants only after individual user approval; anonymous test subjects are fine for QA.
+
+## Fixes verified during P3 delivery
+
+- An initial save/load equality check failed because Godot JSON parsing represents integer-valued JSON numbers as floating values (for example `0` → `0.0`). Tests now compare **JSON semantic values**, not raw Variant storage types; data and character memories still round-trip correctly. The malformed-state rejection tests remain in place.
+- An independent test now advances new cubs autonomously through 64 simulation steps, without arranging a fight in advance, and verifies disagreements and eventual sibling conflict can occur naturally. The manually configured injury/regression case remains separately tested.
+- The UI now shows each selected cub's most recent memory alongside needs and sibling relationship status, so consequences are discoverable rather than hidden behind an event counter.
+- **No added recurring characters; no gate/refuge shifts.** The first P6 two-day release and Windows interactive playtest are still incomplete.
+
+## Packaging
+
+A separate downloadable `Unbearable_Conditions_P3_Home_Sandbox.zip` contains the Godot source, tests, P3 checkpoint and historical editable-source references. ZIP integrity was verified before delivery. It is **source code to open in Godot, not a Windows executable**.
