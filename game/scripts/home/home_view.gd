@@ -176,7 +176,10 @@ func _refresh() -> void:
     selected_label.text = name + "  /  6 MONTHS"
     statistics_label.text = "Hunger: %d   Energy: %d\nComfort: %d   Curiosity: %d\nStress: %d     Health: %d\nTrust in Mama: %d\nNow: %s" % [int(cub["hunger"]), int(cub["energy"]), int(cub["comfort"]), int(cub["curiosity"]), int(cub["stress"]), int(cub["health"]), int(cub["trust_mama"]), str(cub["intention"]).replace("_", " ")]
     var sibling: Dictionary = home["sibling"]
-    notes_label.text = "Sibling bond: %d\nResentment: %d\nArguments/fights: %d\nPantry (demo): %d portions\nRecent memories: %d" % [int(sibling["bond"]), int(sibling["resentment"]), int(sibling["conflicts"]), int(home["pantry_portions"]), cub["memories"].size()]
+    var latest_memory: String = "No memories yet."
+    if not cub["memories"].is_empty():
+        latest_memory = str(cub["memories"].back().get("detail", ""))
+    notes_label.text = "Sibling bond: %d\nResentment: %d\nFights: %d\nPantry (demo): %d portions\nMemories: %d\nLast remembered: %s" % [int(sibling["bond"]), int(sibling["resentment"]), int(sibling["conflicts"]), int(home["pantry_portions"]), cub["memories"].size(), latest_memory]
     time_label.text = "DAY %d · %s  |  HOME TICKS %d  |  AUTO %s" % [int(world.state["calendar"]["day_index"]) + 1, str(world.state["calendar"]["phase"]).to_upper(), int(home["sim_steps"]), "ON" if running else "PAUSED"]
     message_label.text = last_message
     queue_redraw()
