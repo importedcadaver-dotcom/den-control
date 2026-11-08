@@ -84,6 +84,15 @@ func _initialize() -> void:
     var tampered: Dictionary = world.snapshot()
     tampered["financials"]["ledgers"]["household"]["balance_hm"] = 999999
     expect(not world.restore_validated(tampered), "tampered balance rejected")
+    var invalid_entry: Dictionary = world.snapshot()
+    invalid_entry["entry_permissions"]["uc.qa.visitor_a"] = "malformed entry"
+    expect(not WorldState.validate_state(invalid_entry).is_empty(), "malformed nested entry rejected without crashing")
+    var fractional_day: Dictionary = world.snapshot()
+    fractional_day["calendar"]["day_index"] = 1.5
+    expect(not WorldState.validate_state(fractional_day).is_empty(), "fractional calendar day rejected")
+    var fake_clock: Dictionary = world.snapshot()
+    fake_clock["shift_clock"]["duration_seconds"] = -1
+    expect(not WorldState.validate_state(fake_clock).is_empty(), "invalid shift duration rejected")
     expect(not bool(SaveStore.load_document("user://missing_p2_file.json").get("ok", false)), "missing save rejected")
     print("P2 HEADLESS: ", checks, " checks, ", failures.size(), " failures")
     quit(0 if failures.is_empty() else 1)

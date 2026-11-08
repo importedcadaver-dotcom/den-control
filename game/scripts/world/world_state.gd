@@ -315,7 +315,7 @@ static func validate_state(candidate: Dictionary) -> Array[String]:
             if canonical_by_id[id].has(fixed_field) and person.get(fixed_field, null) != canonical_by_id[id][fixed_field]:
                 errors.append("canonical relation changed")
     var calendar: Variant = candidate.get("calendar", null)
-    if not calendar is Dictionary or int(calendar.get("day_index", -1)) < 0 or not PHASES.has(calendar.get("phase", "")):
+    if not calendar is Dictionary or not _is_whole_number(calendar.get("day_index", -1)) or int(calendar.get("day_index", -1)) < 0 or not PHASES.has(calendar.get("phase", "")):
         errors.append("invalid calendar")
     var households: Variant = candidate.get("households", null)
     if not households is Dictionary:
@@ -375,8 +375,10 @@ static func validate_state(candidate: Dictionary) -> Array[String]:
                 if place is Dictionary and (not ["placed", "released"].has(place.get("status", "")) or not cases.has(place.get("case_id", ""))):
                     errors.append("invalid refuge placement")
                 # A placement is a distinct decision and requires authorized entry.
-                if entries is Dictionary and (not entries.has(subject) or entries[subject].get("status", "") != "authorized"):
-                    errors.append("refuge placement lacks entry clearance")
+                if entries is Dictionary:
+                    var matching_entry: Variant = entries.get(subject, null)
+                    if not matching_entry is Dictionary or matching_entry.get("status", "") != "authorized":
+                        errors.append("refuge placement lacks entry clearance")
     var financials: Variant = candidate.get("financials", null)
     if not financials is Dictionary or not financials.get("ledgers", null) is Dictionary:
         errors.append("invalid finances")
@@ -438,6 +440,14 @@ static func validate_state(candidate: Dictionary) -> Array[String]:
         for pause in clock["pause_reasons"]:
             if not ALLOWED_PAUSES.has(pause):
                 errors.append("unknown shift clock pause")
+        if not clock.get("enabled", null) is bool or not clock.get("running", null) is bool:
+            errors.append("invalid clock flags")
+        var duration: Variant = clock.get("duration_seconds", null)
+        var elapsed: Variant = clock.get("elapsed_seconds", null)
+        if duration != null and (not _is_whole_number(duration) or int(duration) <= 0):
+            errors.append("invalid shift duration")
+        if not (elapsed is float or elapsed is int) or not is_finite(float(elapsed)) or float(elapsed) < 0.0:
+            errors.append("invalid clock elapsed")
     return errors
 
 static func _is_whole_number(value: Variant) -> bool:
