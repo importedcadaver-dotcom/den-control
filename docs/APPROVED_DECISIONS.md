@@ -1,6 +1,6 @@
 # Unbearable Conditions — Approved decisions
 
-**Authority:** Explicit user choices in ChatGPT, November 6, 2026. Do not silently treat assistant recommendations as canon. Unresolved issues are listed separately.
+**Authority:** Explicit user choices and corrections in ChatGPT, November 6–7, 2026. Read chronological earlier decisions as historical when later ones supersede them. Do not silently treat assistant recommendations as canon.
 
 ## Round 1 — approved
 
@@ -135,14 +135,14 @@
 - **A — Thoroughly spoiled:** After becoming Queen unusually young, Ursula was **constantly indulged, entertained and praised**, and **almost nobody dared tell her no**. The adults around her treated even ordinary preferences as worthy of deference. This is **approved biography**, not a mere suggestion.
 - This **does not approve** the alternative isolated-childhood options B or C. Do **not** assume she was kept from friendships, experienced loneliness, had no peers or was subjected to strict ceremonial isolation unless the user chooses those details later.
 - **Character continuity:** Her approved genuine, possessive affection for subjects and ruthless reaction to challenges can be *influenced* by her spoiled upbringing, but any particular childhood incident or precise psychological mechanism is still a proposal, not an established event.
-- Still open: precise age when crowned, exact birth date, why succession happened, former sovereign's fate, whether a regency existed, identities and histories of relatives/courtiers, details of her daily routine and royal residence. **No additional characters may be created without the user's individual approval.**
+- **Updated after later approvals:** Ursula was crowned at **six months**; she had ultimate practical power from then onward; her previous monarch **died unexpectedly**. Still open: exact birth/coronation calendar dates, predecessor identity/relationship and circumstances of death, identities of relatives/courtiers, personal routine and royal residence. **No additional characters may be created without individual approval.**
 
 ## Queen Ursula — coronation age approved
 
 - **Accession age: exactly 6 months old.** Ursula was crowned Queen of Honeyhold as a **six-month-old Kodiak brown bear cub**. Under Honeyhold's approved accelerated development rules, this is the **preschool stage, roughly comparable to a three-year-old human**.
 - **Later clarified by the user:** she also **had the real political power from the outset**; no adult institution could meaningfully tell her no or rule over her. She could rely on officials for administration without ceding final authority. A six-month-old cub's comprehension is not equivalent to personally drafting legal documents.
 - Already approved: child monarch (D); childhood **thoroughly spoiled (A)**, continually indulged/entertained/praised; genuine yet possessive affection for subjects; publicly sweet and ruthless when her authority is challenged.
-- **Not decided:** Ursula's exact birth and coronation dates (**current age seven; 6 years 6 months of rule**),, details of the predecessor's **unexpected death**, exact machinery for implementing her childhood demands, succession ceremony, relatives, former rulers and individual courtiers. **Her real authority from age six months is approved; do not infer a governing regent or transfer of power when she grew older.**
+- **Not decided:** Ursula's exact birth and coronation dates (**current age seven; 6 years 6 months of rule**), details of the predecessor's **unexpected death**, exact machinery for implementing her childhood demands, succession ceremony, relatives, former rulers and individual courtiers. **Her real authority from age six months is approved; do not infer a governing regent or transfer of power when she grew older.**
 
 ## Queen Ursula — real power from childhood approved
 
@@ -156,7 +156,7 @@
 
 - **Age at game start: exactly 7 years old.** This is her actual chronological age in the fictional bear society, **not** a human-equivalent age.
 - **Coronation: at 6 months old.** By the beginning of the game she has therefore reigned for **6 years and 6 months**, assuming the normal continuous age/calendar rules. She held genuine, near-unchecked royal authority even as a very young cub.
-- **No new characters:** this age decision adds no relatives, regents, courtiers or staff. Her cause of succession, exact birth/coronation calendar dates, appearance and daily routine remain unresolved.
+- **No new characters:** this age decision adds no relatives, regents, courtiers or staff. **Later choice A resolved the broad cause of succession (previous monarch died unexpectedly)**; exact birth/coronation dates, cause and circumstances of that death, appearance and daily routine remain unresolved.
 
 ## Queen Ursula — cause of accession approved
 
