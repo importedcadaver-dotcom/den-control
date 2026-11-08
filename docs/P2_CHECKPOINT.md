@@ -22,7 +22,7 @@
 
 ## Verification
 
-- Python static tests: **19 passed, 0 failed**, including the P1 preservation checks and P2 structural checks. These are not gameplay or GDScript runtime tests.
+- Python static tests: **19 passed, 0 failed in the full locally prepared P2 package** (7 P1 preservation checks and 12 P2 structural checks). The GitHub-hosted test subset differs because the full legacy source is delivered in the separate package; CI outcomes are not assumed. These are not gameplay or GDScript runtime tests.
 - GDScript headless suite: **not run** because the Godot executable was not available in this environment.
 - Windows export / real game launch: **not run**.
 - Do not claim this implementation is a finished or playable game. A Godot runtime smoke test and headless P1/P2 test pass are required before using this source as P3's verified foundation.
@@ -34,3 +34,9 @@ P3 should build Mama/Button/Hazel home presentation and autonomous behavior **ag
 ## GitHub and package verification
 
 The new source is tracked in `game/scripts/world/`, with the foundation tests in `game/tests/test_p2.gd` and `tests/test_p2_static.py`. The connected GitHub commit and the final downloadable ZIP are recorded in the delivery response. No Godot runtime was available; no claimed P2 behavioral pass is inferred from the 19 Python static checks.
+
+## Automated CI configuration
+
+A [foundation verification workflow](../.github/workflows/foundation.yml) was committed for GitHub Actions. On push or manual dispatch it runs Python static checks and attempts to download the official Godot 4.7.2 editor to run both headless Godot tests. **GitHub did not report an executed workflow run during this checkpoint**; no GDScript tests are counted as passed until a run is observed with successful logs. The repository is public and standard GitHub-hosted runners are free for public repositories under GitHub's documented billing policy.
+
+The next verification gate is concrete: see an actual successful headless `test_p1.gd` and `test_p2.gd` run (and a Windows launch smoke test later) before claiming P2 is runtime verified.
