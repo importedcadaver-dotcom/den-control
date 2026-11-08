@@ -25,7 +25,7 @@ The identities of relatives, courtiers, household staff, opponents and any previ
 
 ## Psychological interpretation — proposals, not yet canon
 
-- **Love interpreted as compliance:** decades (duration undetermined) of deference may cause Ursula to see disobedience as a rejection of her affection.
+- **Love interpreted as compliance:** years of deference may cause Ursula to see disobedience as a rejection of her affection.
 - **Public warmth vs private demands:** she can be genuinely generous in one interaction yet impose draconian political consequences elsewhere. The contradiction is psychological, not simply a fake public persona.
 - **Varied responses:** she need not be in a permanent tantrum state. Her reactions could depend on perceived loyalty, stakes, context, existing mood, relationship history, and the visibility of the slight.
 - **Ruler with consequences:** when she signs a decree, it must change actual laws, departments, resident rights and family outcomes. An inaccurate Gazette headline must not be treated as objective truth.
