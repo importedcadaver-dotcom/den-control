@@ -94,7 +94,7 @@ Official Japanese Tensura sources: https://www.ten-sura.com/map ; https://www.te
 
 The user explicitly selected **D — Child monarch**: Ursula became Queen **unusually young** and grew up surrounded by courtiers who **reinforced her entitlement**. The user then selected **A — Thoroughly spoiled**: she was routinely indulged, constantly entertained and praised, and almost nobody dared tell her no. This fits but does not fully explain her previously approved genuine possessiveness: she may experience criticism of a royal decree as a subject personally rejecting her affection. She is not required to be calculating or incapable of love.
 
-**Not decided:** age when crowned, how many years she has ruled, whether a regency existed, the previous monarch's fate, her family members' identities, palace routines, or individual court officials. No new character has been created. Keep the next design round solely on Ursula's own childhood and current beliefs.
+**Updated after subsequent approvals:** Ursula was crowned at **six months**, is **seven at game start**, has reigned **six years six months**, and inherited the throne because the preceding monarch **died unexpectedly**. She had real authority from accession, not a regent with a veto. Still undecided: who the predecessor was and how they died, family identities, palace routines and individuals serving at court. Keep the interview focused solely on Ursula.
 
 ## G. Childhood upbringing decision — A approved
 
@@ -102,7 +102,7 @@ The user approved **A — Thoroughly spoiled**. Ursula was indulged, entertained
 
 **Individual character development proposals (not canon yet):** She may associate love with compliance, react to ordinary disagreement as if it were disloyalty, and delight in public praise while having difficulty acknowledging independent needs. Her delight in affection remains sincere; her political ruthlessness remains established. This produces a consistent, legible character without automatically making every action a tantrum.
 
-**Answered biographical question:** Ursula inherited the Crown at **six months old**, Honeyhold's preschool-age stage (roughly human three-year-old equivalent). Her actual capacity to govern at coronation, any delegated decisions, and exact calendar dates remain undecided.
+**Answered biographical question:** Ursula inherited the Crown at **six months old**, Honeyhold's preschool-age stage (roughly human three-year-old equivalent). Her personal **political authority from coronation is approved**, while her cognitive development, practical administrative procedures and exact calendar dates require further design.
 
 ## H. Numeric coronation age — six months APPROVED
 
