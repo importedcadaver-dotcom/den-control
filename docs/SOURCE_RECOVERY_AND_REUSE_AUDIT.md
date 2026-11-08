@@ -118,3 +118,12 @@ Treat Honey, Please as a focused reference for booth presentation and document i
 The first production milestone is now the approved connected slice: **one complete gate day, one complete refuge day and home/family gameplay**, with detailed gate cases, hands-on refuge care plus management, directly interactive yet autonomous cubs, coherent first-pass pixel art, save/load and cheats.
 
 No source code was modified during this inspection.
+
+### Additional concrete code findings
+- The old world script combines the entire seeded world, case logic, simulation, care, economy and persistence in one class. This is acceptable for a small prototype but is too coupled for the approved multi-system game.
+- The v0.1 day-advance function adds a fixed 35 coins every time a new day begins, without an approved workday schedule. The later transcript claims repeated post-campaign wages were fixed, but that fix is not in the recovered v0.1 source.
+- The v0.1 gate decision function adds a fixed 12 coins for every completed decision, including denials/holds. This is prototype scoring, not a usable salary or household-economy model.
+- Manual feeding consumes the shared supplies stock, while autonomous cottage eating deducts from the shared money balance. The accounting differs depending on how the animal eats.
+- Save restoration requires the exact 14 seeded animal IDs and exactly six fixed cases. It is not a viable save schema for the new cast or campaign; do not attempt to reuse v0.1 saves as the new game's starting state.
+- The main UI is built at fixed coordinates for a 1280×800 window. The top strip keeps many global controls visible at once, matching the user's earlier complaint that the interface feels crowded.
+- The current pixel art is code-painted from simple shapes. It is useful for a prototype and style reference, but it does not provide the complete adult/cub bear anatomy, red panda sprites, quadrupedal animation set or polished UI-art integration required by the new canon.
