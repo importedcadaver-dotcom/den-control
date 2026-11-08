@@ -15,7 +15,7 @@ An in-development 2D pixel-art Honeyhold cave-city bureaucracy, family-life, and
 
 Read [Dwargon-inspired Honeyhold architecture and Queen Ursula research](docs/DWARGON_INSPIRATION_AND_QUEEN_URSULA_RESEARCH.md) for a sourced reference brief (new layouts and character details remain proposals).
 
-**P1 engineering:** [Clean Godot shell](game/) · [P1 checkpoint](docs/P1_CHECKPOINT.md) · [Worldbuilding gate](docs/P1_WORLDBUILDING_GATE.md) · [Later revision gap matrix](docs/P1_LATER_REVISION_GAP_MATRIX.md)
+**P1–P2 engineering:** [Godot source](game/) · [P2 world state](game/scripts/world/world_state.gd) · [P2 save system](game/scripts/world/save_store.gd) · [P2 checkpoint](docs/P2_CHECKPOINT.md) · [P2 state schema](docs/P2_STATE_SCHEMA.md) · [P2 test report](docs/P2_TEST_REPORT.md) · [P1 checkpoint](docs/P1_CHECKPOINT.md) · [Worldbuilding gate](docs/P1_WORLDBUILDING_GATE.md) · [Later revision gap matrix](docs/P1_LATER_REVISION_GAP_MATRIX.md)
 
 **Production documents:** [Approved first production plan](docs/PRODUCTION_PLAN_V0_1.md) · [Source recovery and reuse audit](docs/SOURCE_RECOVERY_AND_REUSE_AUDIT.md) · [Recovered source manifest](docs/RECOVERED_SOURCE_MANIFEST.md)
 
@@ -55,3 +55,11 @@ This setting is **completely independent** of the user's other bear games. A pos
 ## Sources and provenance
 
 This README and the design docs derive from the user's two uploaded game conversations, the supplied Claude HTML source, the recovered Briarwood v0.1 archive, and approved choices made in this ChatGPT conversation. They are **not** evidence that a new executable has been built or tested.
+
+## P2 persistent-world foundation
+
+The P2 source under `game/scripts/world/` now defines canonical identities and households, guardian/legal links separate from temporary care, independent gate and refuge status, day/phase calendar and 3-gate/3-refuge/1-off rotation, independent household/refuge Honey Marks ledgers with **unconfigured** opening balances and Mafia loan terms, a bounded shift clock, append-only event history and versioned JSON save/load with pre-validation and backups.
+
+The system initializes only **Mama, Button, Hazel, Grandma and Queen Ursula**. Any anonymous test subject exists only in explicit QA mode. The old unrelated v0.1 Button and adult Hazel are **OLD / BAD / DO NOT USE**.
+
+**Verification:** 19 local Python static tests passed in the full P2 source package; they do not execute GDScript. A [GitHub Actions workflow](.github/workflows/foundation.yml) has been added for Python and Godot headless checks, but **no workflow run had been confirmed** at the P2 checkpoint. The Godot runtime behavior and Windows export remain unverified. **P3–P6 gameplay has not been built.**
