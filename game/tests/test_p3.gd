@@ -62,6 +62,11 @@ func _initialize() -> void:
     expect(button["memories"].size() >= 2 and hazel["memories"].size() >= 1, "home memories remain")
     expect(WorldState.validate_state(world.snapshot()).is_empty(), "world validates after autonomy")
     expect(world.state["calendar"]["day_index"] == day and world.state["calendar"]["phase"] == phase, "home ticks do not skip work or school phases")
+    # Natural autonomy should permit conflict without hand-scripted triggers.
+    var organic_world := WorldState.new()
+    expect(organic_world.tick_home(32) and organic_world.tick_home(32), "independent cub simulation continues")
+    expect(int(organic_world.state["home"]["sibling"]["resentment"]) > 0, "autonomous disputes can arise organically")
+    expect(int(organic_world.state["home"]["sibling"]["conflicts"]) >= 1, "sibling conflict can arise without a scripted player trigger")
     var snap: Dictionary = world.snapshot()
     var unapproved: Dictionary = snap.duplicate(true)
     unapproved["home"]["cubs"]["uc.family.other"] = {}
@@ -77,7 +82,7 @@ func _initialize() -> void:
     expect(not world.restore_validated(wrong_carry), "inconsistent carried-state rejected")
     expect(world.snapshot() == snap, "failed restore leaves active world unchanged")
     # Controlled test setup: force two distressed, resentful siblings into proximity.
-    home["sim_steps"] = 5
+    home["sim_steps"] = 6
     home["sibling"]["resentment"] = 90
     home["sibling"]["conflicts"] = 2
     button["x"] = 0.43
