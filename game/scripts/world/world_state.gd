@@ -4,7 +4,8 @@ extends RefCounted
 
 const CanonLoader = preload("res://scripts/foundation/canon_loader.gd")
 const HomeSystem = preload("res://scripts/home/home_system.gd")
-const SAVE_VERSION: int = 3
+const GateSystem = preload("res://scripts/gate/gate_system.gd")
+const SAVE_VERSION: int = 4
 const DUTIES = ["gate", "refuge", "gate", "refuge", "gate", "refuge", "off"]
 const PHASES = ["morning", "daytime", "evening"]
 const ALLOWED_ENTRIES = ["authorized", "denied", "held"]
@@ -53,6 +54,7 @@ func reset() -> void:
         "shift_clock": {"duration_seconds": null, "elapsed_seconds": 0.0,
             "enabled": true, "pause_reasons": [], "running": false},
         "home": HomeSystem.initial_state(),
+        "gate": GateSystem.initial_state(),
         "events": [], "next_event_sequence": 1
     }
 
@@ -305,6 +307,24 @@ func tick_home(steps: int = 1) -> bool:
     last_error = ""
     return true
 
+func begin_gate() -> bool:
+    return GateSystem.begin(self)
+
+func ask_gate(question: String) -> bool:
+    return GateSystem.ask(self, question)
+
+func verify_gate(source: String) -> bool:
+    return GateSystem.verify(self, source)
+
+func decide_gate(status: String, reason: String) -> bool:
+    return GateSystem.decide(self, status, reason)
+
+func finish_gate(allow_early: bool = false) -> bool:
+    return GateSystem.finish(self, allow_early)
+
+func show_gate_document(view: String) -> bool:
+    return GateSystem.inspection_view(self, view)
+
 static func validate_state(candidate: Dictionary) -> Array[String]:
     var errors: Array[String] = []
     if int(candidate.get("schema_version", -1)) != SAVE_VERSION:
@@ -476,6 +496,7 @@ static func validate_state(candidate: Dictionary) -> Array[String]:
             errors.append("invalid shift duration")
         if not (elapsed is float or elapsed is int) or not is_finite(float(elapsed)) or float(elapsed) < 0.0:
             errors.append("invalid clock elapsed")
+    errors.append_array(GateSystem.validate(candidate.get("gate", null), candidate))
     return errors
 
 static func _is_whole_number(value: Variant) -> bool:

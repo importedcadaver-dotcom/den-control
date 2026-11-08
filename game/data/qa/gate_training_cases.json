@@ -1,0 +1,26 @@
+{
+  "fixture_version": 1,
+  "notice": "P4 anonymous testing only. Documents and rules are QA mechanics, not approved Honeyhold law or named story characters.",
+  "training_rules": [
+    "QA-R1: An entry pass must remain valid on the current training day.",
+    "QA-R2: The pass holder and identification record must agree.",
+    "QA-R3: A minor travelling with an adult needs verifiable authorization.",
+    "QA-R4: Incomplete identity or guardian evidence may be placed on hold.",
+    "QA-R5: A registry-confirmed extension is accepted as an exception in this test."
+  ],
+  "reasons": [
+    {"code": "valid_pass", "label": "Valid documents"},
+    {"code": "expired_pass", "label": "Expired pass"},
+    {"code": "identity_unverified", "label": "Identity mismatch / pending verification"},
+    {"code": "guardian_unverified", "label": "Missing guardianship authorization"},
+    {"code": "registry_exception", "label": "Verified registry exception"}
+  ],
+  "cases": [
+    {"code": "QA-01", "type": "routine", "subject": "Anonymous adult bear", "purpose": "Trade delivery", "pass_id": "QA-118", "pass_name": "TEST SUBJECT 01", "identity_name": "TEST SUBJECT 01", "pass_valid_until_day": 3, "photo_matches": true, "accompanied_minor": false, "guardian_document": "Not required", "registry_response": "Pass active; details match.", "guardian_response": "No minor recorded.", "expected_status": "authorized", "expected_reason": "valid_pass", "requires_check": "", "questions": {"purpose": "Routine delivery. The entry pass is offered for inspection.", "papers": "The documents appear to be in order."}},
+    {"code": "QA-02", "type": "routine", "subject": "Anonymous adult bear", "purpose": "Short visit", "pass_id": "QA-119", "pass_name": "TEST SUBJECT 02", "identity_name": "TEST SUBJECT 02", "pass_valid_until_day": -1, "photo_matches": true, "accompanied_minor": false, "guardian_document": "Not required", "registry_response": "Pass expired; no extension on file.", "guardian_response": "No minor recorded.", "expected_status": "denied", "expected_reason": "expired_pass", "requires_check": "", "questions": {"purpose": "The visitor says the pass should still work.", "papers": "The pass shows a date earlier than this training day."}},
+    {"code": "QA-03", "type": "investigation", "subject": "Anonymous adult bear", "purpose": "Delivery job", "pass_id": "QA-120", "pass_name": "TEST SUBJECT 03", "identity_name": "TEST SUBJECT 03", "pass_valid_until_day": 4, "photo_matches": false, "accompanied_minor": false, "guardian_document": "Not required", "registry_response": "Identity check unresolved; pass photograph does not match.", "guardian_response": "No minor recorded.", "expected_status": "held", "expected_reason": "identity_unverified", "requires_check": "registry", "questions": {"purpose": "The visitor claims a photograph is out of date.", "papers": "The pass and ID show matching text, but the visual portrait comparison fails."}},
+    {"code": "QA-04", "type": "investigation", "subject": "Anonymous adult and cub (training case)", "purpose": "Family visit", "pass_id": "QA-121", "pass_name": "TEST SUBJECT 04", "identity_name": "TEST SUBJECT 04", "pass_valid_until_day": 3, "photo_matches": true, "accompanied_minor": true, "guardian_document": "Unverified caretaker slip", "registry_response": "Adult identification matches; the entry pass remains active.", "guardian_response": "No valid temporary-care authorization on record.", "expected_status": "held", "expected_reason": "guardian_unverified", "requires_check": "guardian", "questions": {"purpose": "The adult is travelling with an unnamed cub.", "papers": "The caretaker slip lacks confirmable authorization; do not presume the relationship is legal custody."}},
+    {"code": "QA-05", "type": "routine", "subject": "Anonymous adult cat", "purpose": "Visit family", "pass_id": "QA-122", "pass_name": "TEST SUBJECT 05", "identity_name": "TEST SUBJECT 05", "pass_valid_until_day": 6, "photo_matches": true, "accompanied_minor": false, "guardian_document": "Not required", "registry_response": "Pass active; details match.", "guardian_response": "No minor recorded.", "expected_status": "authorized", "expected_reason": "valid_pass", "requires_check": "", "questions": {"purpose": "A brief personal visit; no minor is present.", "papers": "Text and photograph match; the pass remains valid."}},
+    {"code": "QA-06", "type": "investigation", "subject": "Anonymous adult red panda", "purpose": "Seasonal work", "pass_id": "QA-123", "pass_name": "TEST SUBJECT 06", "identity_name": "TEST SUBJECT 06", "pass_valid_until_day": -1, "photo_matches": true, "accompanied_minor": false, "guardian_document": "Not required", "registry_response": "Verified extension recorded for this test day.", "guardian_response": "No minor recorded.", "expected_status": "authorized", "expected_reason": "registry_exception", "requires_check": "registry", "questions": {"purpose": "The applicant mentions an extension in the registry.", "papers": "The visible pass is expired. The claimed exception is not printed on it."}}
+  ]
+}

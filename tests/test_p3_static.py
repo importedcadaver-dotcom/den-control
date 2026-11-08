@@ -19,7 +19,7 @@ def test_p3_files_exist():
 
 def test_home_state_is_validated_and_saved():
     assert "HomeSystem.valid(candidate.get" in WORLD
-    assert "SAVE_VERSION: int = 3" in WORLD
+    assert "SAVE_VERSION: int = 4" in WORLD  # P4 adds persistent gate state; P3 cubs stay intact
     for key in ["sim_steps", "cubs", "holding_id", "memories", "sibling", "pantry_portions"]:
         assert f'"{key}"' in HOME
     for method in ["act_with_cub", "tick_home", "select_home_cub"]:
@@ -52,8 +52,9 @@ def test_no_free_food_or_unapproved_wealth():
 
 
 def test_ui_is_not_a_false_gate_or_refuge_build():
-    assert "P3 HOME PLAYTEST" in VIEW
-    assert "NO WORK SHIFTS OR SCHOOL SCENES" in VIEW
+    assert "P4 WORK IN PROGRESS" in VIEW
+    assert "GATE SHIFT TRAINING AVAILABLE" in VIEW
+    assert "NO REFUGE SCENES" not in VIEW  # P5 remains unimplemented, but gate now exists
     assert "SaveStore.save_document" in VIEW and "SaveStore.load_into" in VIEW
     assert "Timer.new()" in VIEW
 
