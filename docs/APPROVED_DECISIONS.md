@@ -209,3 +209,20 @@
 - **Continuous calendar aging** (not forced story time skips) drives developmental unlocks, schooling and legal-age changes.
 - The **shift** has a generous real-time countdown; inspecting a single entrant has **no separate time limit**. Pauses must cover document reading and menus, and a setting disables the timer entirely. This Round 4 choice supersedes earlier no-clock suggestions.
 - Never reuse the Restaurant Empire cub identities (Biscuit, Bruno, Mochi, Nugget) or the Tamagotchi cub Nova: those are distinct canons.
+
+
+## Production scope decisions — approved November 7, 2026
+
+The user explicitly approved the following production choices for the first implementation milestone:
+
+1. **First production milestone: B — one complete gate day + one complete refuge-management day + home/family gameplay.**
+2. **Gate gameplay: C — detailed investigations plus routine arrivals.**
+3. **Refuge gameplay: C — hands-on resident care plus facility and operational management.**
+4. **Family gameplay: B — direct interaction with Button and Hazel while they retain autonomous behavior.**
+5. **Art production: C — a functional prototype with a consistent pixel-art style from the beginning, followed by a dedicated polish pass.**
+
+These decisions set the production scope. They do not replace or relax any earlier approved canon.
+
+**Milestone sequencing clarification:** the first playable milestone is the connected two-day slice above. The full seven-day schedule of **3 gate days + 3 refuge days + 1 day off** remains an approved later acceptance milestone, not the initial deliverable.
+
+**Production boundaries:** do not create new named recurring characters to populate the prototype. Anonymous test fixtures may be used for mechanics. Any authored recurring applicant or supporting character must be designed individually with the user. Preserve the v0.1 Button cub and adult Hazel only as blacklisted historical source records; never import them as the approved siblings.
