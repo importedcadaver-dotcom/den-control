@@ -7,6 +7,7 @@
 - **Name:** Queen Ursula.
 - **Species:** **Kodiak brown bear**; royal dynasty is brown bear.
 - **Age at game start: 7 years old (APPROVED).** Crowned at 6 months, giving her **6 years and 6 months** on the throne at game start.
+- **Cause of succession (A — APPROVED):** The **previous monarch died unexpectedly**, leading Ursula to inherit the throne at six months. The predecessor's identity, exact relationship to Ursula, cause of death and aftermath are **not decided**.
 - **Setting:** Honeyhold, monumental hybrid mountain cave-city with seven connected districts.
 - **Physiology:** Bears move on all fours and are capable of visible emotional tears in this universe.
 - **Role and powers:** **The real sovereign with overwhelming practical authority from coronation at six months**, not merely a figurehead. Government officials administer and carry out her wishes but do not meaningfully veto or overrule them. Honeyhold retains constitutional-monarchy institutions and two parties, yet they cannot independently control her. She can suspend most laws indefinitely during declared emergencies.
@@ -42,7 +43,7 @@ These are **fictional possibilities**, not mandatory scripted events or achievem
 
 1. **Age at coronation: RESOLVED — six months old.** She **had genuine ultimate authority from the outset** (not mere title). Administrative execution of her wishes could be delegated; her capacity for preschool-level reasoning is distinct from political power.
 2. **Current age and reign duration: RESOLVED — seven years old; six years six months as Queen.** Exact calendar dates still unselected; continuous aging applies.
-3. **Cause of accession and constitutional machinery:** no former sovereign or named regent has been created. **Do not install a governing regent or ministry that can override her.** Why she took the throne remains undecided.
+3. **Cause of accession: RESOLVED at high level** — the previous monarch died unexpectedly. **Still unresolved:** who they were, their relationship to Ursula, why they died and the succession ceremony. **Do not install a governing regent or ministry that can override her.**
 4. **Early rule: RESOLVED at authority level** — Ursula made the wishes and royal decisions with real, nearly unchallengeable force, while officials handled execution and paperwork. The exact **procedure** for taking/recording her instructions is open, but **not who had final power**.
 5. **Political worldview and personal insecurities:** how does she justify indefinite emergency power?
 6. **Royal residence and physical look:** palace placement, coat, markings, decorations and ceremonial protocol.
@@ -68,4 +69,8 @@ User statement: **"C but like she had lots of authority and like no one told her
 
 **Important limits on inference:** Do not give six-month-old Ursula adult intellect or professional skill merely because her commands were followed. Nor invent a named regent, royal relative, personal aide, resistance leader, specific childhood decree, or family tragedy. Formal wording of her ordinary constitutional powers remains a further design question.
 
-**Next individual-development questions:** circumstances of accession, whether she retains a playful demand-making style in adulthood, how officials physically receive and implement her commands, and what she personally wants from subjects. Choose one topic at a time, without making new characters.
+**Next individual-development questions:** details of the predecessor's death (identity and manner unapproved), whether she retains a playful demand-making style in adulthood, how officials physically receive and implement her commands, and what she personally wants from subjects. Choose one topic at a time, without making new characters.
+
+## Unexpected predecessor death — choice A approved
+
+The user's new answer **A** approves this and nothing more: **the previous monarch died unexpectedly**, and Ursula consequently became Queen at six months. This is **not permission** to invent a parent, relative, assassination, illness, accident, political conspiracy or bereavement arc. The former monarch remains an **unnamed historical officeholder**, not a newly authored character. Her personal political power from accession remains unchanged.
