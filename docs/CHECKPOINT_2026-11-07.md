@@ -112,3 +112,31 @@ This audit verifies **GitHub state and current-conversation decisions**. It does
 - **Repaired README status wording**: said the Godot/HTML prototypes were design sources, not already merged game code; linked the new checkpoint, individual Ursula dossier and review prompt. Commit `7668584f4b0d75fbff80beecb352c76cf8e3862b`.
 - **Cleaned stale Ursula wording**: removed outdated claims that coronation age, succession trigger or reign duration remain unselected, and corrected a typo and a mistaken "decades" characterization. Documentation-only corrections: `0e69d1b998f7e9ef5433b0f66ab7c679562fe864`, `354c600f297cd0cbf1b68f1b54980a44e1af4df0`, `e3e5548c0255c975010069ced6cc0db67cf09be3`.
 - **Not completed:** source import, a first executable, test execution, implementation of any approved mechanic, creation of new NPCs, or selecting unapproved Queen Ursula biography details.
+
+
+## 8. Source recovery correction and approved production scope — November 7, 2026
+
+The earlier audit accurately stated that the GitHub repository did not contain the playable source and that the archives had not yet been inspected in that audit pass. The current conversation attachments have now been recovered and inspected, so the source-coverage status is updated as follows:
+
+### Recovered and inspected
+- **BriarwoodRefuge_v0.1_Windows_and_Source.zip:** 39,945,783 bytes; SHA-256 fd519df3f8e93d29c9b33c71029ae214d9204f946e71374fa3d8f72efa548eb8. ZIP integrity check passed. It contains 28 entries, including the Windows executable, 19 editable Godot source files, tests, stored QA results, README, license record and screenshots.
+- **Editable Godot project:** Godot 4.7.2 / GDScript according to the included project and QA record. Static inspection covered project settings, main scene, world/main/art scripts, test scripts and stored results. The source is a real small playable foundation, but its seeded cast is legacy content and its data model is not the new Honeyhold canon.
+- **Honey, Please Layer 1 v3:** complete 22,347-byte HTML source extracted from Pasted text(20261107-050627).txt. Inline JavaScript passed Node 22.16.0 syntax checking. It remains a single-screen prototype and has not been browser-playtested in this audit.
+- **Later Godot redesign:** the transcript describes subsequent bug fixes, a redesigned inspection interface, budget preview and a counterfeit-permit case. The later source archive/patch is still missing; those fixes are not verified as code.
+
+### Verification limitations
+- The current Linux analysis runner has no Godot executable on PATH. GDScript tests and the Windows executable were **not rerun**.
+- Stored v0.1 QA reports 1,336 simulation assertions and 18 UI assertions; these are historical results, not new test passes.
+- The repository remains documentation-only: recovered source has not yet been imported into GitHub or merged into a clean Unbearable Conditions project.
+- The old v0.1 Button cub and adult Hazel remain **OLD / BAD / DO NOT USE** as new-game characters. Preserve them only inside the immutable historical source archive.
+
+See [SOURCE_RECOVERY_AND_REUSE_AUDIT.md](SOURCE_RECOVERY_AND_REUSE_AUDIT.md) and [RECOVERED_SOURCE_MANIFEST.md](RECOVERED_SOURCE_MANIFEST.md) for details and checksums.
+
+### Production decisions now approved
+1. First milestone **B**: one complete gate day + one complete refuge day + home/family gameplay.
+2. Gate gameplay **C**: detailed investigations plus routine arrivals.
+3. Refuge gameplay **C**: hands-on resident care plus facility/operational management.
+4. Family gameplay **B**: direct interaction plus autonomous cub behavior.
+5. Art production **C**: consistent functional pixel-art prototype, then polish.
+
+The first milestone is a connected two-day slice. The full 3 gate / 3 refuge / 1 off week is a later acceptance milestone. The approved plan is [PRODUCTION_PLAN_V0_1.md](PRODUCTION_PLAN_V0_1.md). No new characters have been created and no game source has been modified.
