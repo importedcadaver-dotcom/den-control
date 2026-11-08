@@ -1,0 +1,21 @@
+{
+  "main.tscn": "5f504fc8efb4e412513094f2f51dc06f66c503d9c94ce52537f1022fe1a4cab9",
+  "project.godot": "c0a8eefbc427812721a030c5af2ccd289d6c551a3565ce7221e75f47c1def4d8",
+  "export_presets.cfg": "ecee6ad925ab195cb3bf99b9158b65e1fe1c6c8d59adf622812f93452303e112",
+  "build.ps1": "0a334e9c56a303b74d94fba0d51b6d93ada5bf6e53e8d12192af880a3a02ae13",
+  "tests/test_world.gd.uid": "76ee71653d7662e64a50ae7c6f5b69bc80e8c862b2d781267d7db237b33c1782",
+  "tests/ui-results.json": "5a97936a99a247ce2cf6dc0ea4d0d8e97ff0c7c0aa572b38f2cc9bf09cd41e0c",
+  "tests/write_licenses.gd": "6caff134caa9f52f062ad8dc13161055b0b0834a4152fa8d8afa97ad235b62e5",
+  "tests/test_world.gd": "8049deed9afc3f8167465b251d1b6ee070e6c03d4863835b27bac72261aa885c",
+  "tests/test_ui.gd.uid": "be0defbcd948775ef86d7c8dde1c8b07e219f98b887b5a715b0559095e63d1bb",
+  "tests/write_licenses.gd.uid": "deff857989b6a5b41389785ef4d7cfe652640478562c71ec4271bd89fa8a593e",
+  "tests/export-results.json": "890b14d173bc722f1374a84639e67f30dbaf08a4409e255bf9abede9e5496755",
+  "tests/results.json": "2ac48b69dee4b3738ed3f1e53f5664653569af36adbec23b3893fd2515bdf320",
+  "tests/test_ui.gd": "d1a9acb4bdc7ebb82114b3858af6d2d4201984c2508fe1c3d0391379abc9f0a2",
+  "scripts/main.gd": "9184ca612e7fea0b989fa9a7b45f6bdbb4b25f3b4175ae9415f728e12a204a17",
+  "scripts/world.gd.uid": "3dbe42ca2aabe2c8a44ced87888b5bad605b1bf563b28097b53a98106f870ba9",
+  "scripts/art.gd": "f08a5e32664a9592aa300774ff4660ec2f1994fabfd6f7a228aeffb143a4805a",
+  "scripts/world.gd": "07f15decc70c361c0697d51adeec8272e1b9f90156ef71f0ca5d8f32d95c2805",
+  "scripts/art.gd.uid": "5cb9cbbf0d399223563fb6781ad7ea23176aa46b8d66c38c221a352ba6293a90",
+  "scripts/main.gd.uid": "429d84b29a2160ab636d110909740098fc0ffa1f614c76e4b70b861549aae0c1"
+}
