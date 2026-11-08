@@ -22,11 +22,15 @@
 
 ## Verification
 
-- Python static tests: **see attached test report for exact number and results**.
+- Python static tests: **19 passed, 0 failed**, including the P1 preservation checks and P2 structural checks. These are not gameplay or GDScript runtime tests.
 - GDScript headless suite: **not run** because the Godot executable was not available in this environment.
 - Windows export / real game launch: **not run**.
-- Do not claim this implementation is a finished or playable game. A Godot runtime smoke test is required before using this source as P3's verified foundation.
+- Do not claim this implementation is a finished or playable game. A Godot runtime smoke test and headless P1/P2 test pass are required before using this source as P3's verified foundation.
 
 ## Next stage
 
 P3 should build Mama/Button/Hazel home presentation and autonomous behavior **against this single persistent world state**. P4 gate and P5 refuge must call the same legal/case/finance services, not invent parallel scene-local variables. Detailed event stories and new recurring people still require individual user approval.
+
+## GitHub and package verification
+
+The new source is tracked in `game/scripts/world/`, with the foundation tests in `game/tests/test_p2.gd` and `tests/test_p2_static.py`. The connected GitHub commit and the final downloadable ZIP are recorded in the delivery response. No Godot runtime was available; no claimed P2 behavioral pass is inferred from the 19 Python static checks.

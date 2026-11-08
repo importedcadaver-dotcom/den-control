@@ -1,16 +1,25 @@
-# Unbearable Conditions — P1 Godot shell
+# Unbearable Conditions — P2 persistent world foundation
 
-This is **a clean Godot 4.7.2 project foundation, not the first playable milestone**.
-It never imports the archived Briarwood v0.1 world script.
+This is a **Godot 4.7.2 data-model foundation**, not the first playable milestone.
+The start scene displays its validated world status only.
 
-With Godot installed, run:
+## Test commands
+
+From repository root (after installing Godot 4.7.2 and Python with pytest):
 
     godot --headless --path game --script res://tests/test_p1.gd
-    godot --path game
+    godot --headless --path game --script res://tests/test_p2.gd
+    python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py
 
-A Python static contract suite can run without the Godot engine:
+The Godot tests are **unrun** in this execution environment because the Godot binary is unavailable.
+The Python checks only validate static contracts and structure; they cannot prove GDScript behavior.
 
-    python -m pytest -q tests/test_p1_static.py
+## Foundation modules
 
-See [Production Plan](../docs/PRODUCTION_PLAN_V0_1.md) and [P1 checkpoint](../docs/P1_CHECKPOINT.md). 
-The old v0.1 IDs "button" and "hazel" are explicitly excluded. The new IDs are "uc.family.button" and "uc.family.hazel".
+- `scripts/foundation/canon_loader.gd` — approved characters and schedule JSON.
+- `scripts/world/world_state.gd` — state registry, legal/temporary care, case/entry/refuge, HM finance, calendar, clock and event history.
+- `scripts/world/save_store.gd` — versioned JSON save and restore with validation and backup.
+- `tests/test_p2.gd` — real Godot behavioral tests to run on target machine.
+
+No new recurring characters are initialized. The v0.1 legacy Button/Hazel are **OLD / BAD / DO NOT USE**.
+Only the five established individuals appear at reset. Anonymous QA fixtures can be created in explicit test mode and have no names.
