@@ -4,7 +4,7 @@ An in-development 2D pixel-art Honeyhold cave-city bureaucracy, family-life, and
 
 ## Project status
 
-**P3 interactive home sandbox implemented and headless-verified. The full gate/refuge/family game is not yet built.**
+**P4 anonymous gate-training workday and P3 interactive home are implemented and Godot-headless verified. P5 refuge and the P6 connected two-day production milestone are still unbuilt.**
 
 - Previously referenced original playable foundation: `BriarwoodRefuge_v0.1_Windows_and_Source.zip` (Godot 4 / GDScript), reported as recovered from the user's ChatGPT Library in earlier work. **Not present as source in this repo.**
 - Other historical implementation: `Honey, Please` (single-file HTML/CSS/JavaScript), provided and reviewed in an earlier chat. **Not present in this repo.**
@@ -68,6 +68,14 @@ The system initializes only **Mama, Button, Hazel, Grandma and Queen Ursula**. A
 
 The new [interactive home scene](game/scripts/home/home_view.gd) uses the same [persistent P2 world model](game/scripts/world/world_state.gd) and [save service](game/scripts/world/save_store.gd). Mama can feed, cuddle, play, wash, carry, put down, make requests, separate siblings and offer first aid. Button and Hazel have distinct autonomous intentions and persistent needs, memories and sibling dynamics, with possible emotional conflict, refusal and injury. Their sibling relationship starts neutral as a **provisional baseline**, not canonized love or hatred; relatives and personality canon remain unchanged. Visual tears and four-legged poses are part of the simple procedural pixel art.
 
-**Godot 4.7.2 CI verified:** P1 **7/7**, P2 **56/56**, P3 **67/67** assertions, **24/24 GitHub Python source tests** (26/26 in the complete local legacy-inclusive package), headless editor import and main-scene boot — [verified Actions run](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709). **No Windows executable, visual review, full childcare, gate or refuge shift yet.** The finite six-portion P3 pantry is a temporary gameplay test fixture, not approved HM starting inventory. Save schema version is now **3**, and P2 developer saves are not supported without a future explicit migration.
+**Godot 4.7.2 CI verified:** P1 **7/7**, P2 **56/56**, P3 **67/67** assertions, **24/24 GitHub Python source tests** (26/26 in the complete local legacy-inclusive package), headless editor import and main-scene boot — [verified Actions run](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709). **No Windows executable, visual review, full childcare or refuge-management shift yet.** The P4 gate-training shift is now available. The finite six-portion P3 pantry is a temporary gameplay test fixture, not approved HM starting inventory. Save schema version is now **4**, and P2 developer saves are not supported without a future explicit migration.
 
-**Next milestone:** P4 gate workday (detailed cases plus routine arrivals) using the existing shared world state and no newly invented named characters.
+**Next milestone:** P5 hands-on Briarwood Refuge management, using the same WorldState and no newly invented named characters.
+
+## P4 gate-workday delivery — November 8, 2026
+
+P4 includes a procedural inspection booth and six **anonymous QA-training** arrivals (routine and investigative), inspectable documents, a provisional rulebook, questioning, record verification, explicitly reasoned authorize/hold/deny decisions, a per-shift timer with document-reading pause and an unlimited-time toggle, and gate-to-home navigation. Each result persists in the P2 entry-permission/case/event records; **gate decisions do not grant refuge placement or change guardianship**. All five established individual characters remain unchanged; no new named NPCs or official laws were approved.
+
+[GitHub Actions run 42534096795](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42534096795) passed Godot 4.7.2 headless tests including P1/P2/P3 regression, the P4 gate suite, an actual home-to-gate scene interaction test, editor import and startup, plus Python static checks. Local Python checks: **32 passed**. This is **not** a Windows visual review or the P6 finished two-day slice.
+
+See [P4 checkpoint](docs/P4_CHECKPOINT.md), [P4 test matrix](docs/P4_TEST_MATRIX.md) and [gate source](game/scripts/gate/). P5 refuge gameplay, schooling/Grandma childcare during shifts, and full official legal content remain unfinished.

@@ -282,10 +282,18 @@ The [worldbuilding dependency audit](P1_WORLDBUILDING_GATE.md) finds no need to 
 
 ## P2 verified engine-checkpoint
 
-[CI run 42522146379](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379) checked out the actual GitHub source, downloaded official Godot 4.7.2 and successfully ran the P1 (7 checks) and P2 (56 checks) headless suites. GitHub Python checks passed (17). The complete local recovery package also passed 19 static checks because it carries additional legacy-integrity tests. This is **verified foundation logic, not playable family/gate/refuge gameplay**. P3 home sandbox has since been implemented and verified; P4 gate workday is next.
+[CI run 42522146379](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379) checked out the actual GitHub source, downloaded official Godot 4.7.2 and successfully ran the P1 (7 checks) and P2 (56 checks) headless suites. GitHub Python checks passed (17). The complete local recovery package also passed 19 static checks because it carries additional legacy-integrity tests. This is **verified foundation logic, not playable family/gate/refuge gameplay**. P3 home sandbox has since been implemented and verified; P4 gate training workday is implemented and verified; P5 refuge management is next.
 
 ## P3 delivery update — November 8, 2026
 
 The first in-engine family interaction layer exists under [`game/scripts/home/`](../game/scripts/home/) with coherent first-pass procedural pixel art. Mama, Button and Hazel can be observed; the cubs act autonomously and react contextually, and care, sibling injuries, disputes, relationship shifts and memories persist in the P2 world/save framework (schema **3**). Current demo interactions are feed, cuddle, play, wash, carry/put down, tidy request, first aid, separate and conditional sibling play. Six pantry portions are a P3 test fixture only.
 
 [GitHub CI](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709) verifies the Godot 4.7.2 headless P3 suite (**67 checks passed**), plus P1/P2 regression suites and main-scene startup. **No Windows executable or manually inspected graphical playthrough has been produced**. The original P6 two-day first playable production milestone still requires P4 gate and P5 refuge work.
+
+## P4 delivery update — November 8, 2026
+
+The Godot project now includes a P4 gate workday in [`game/scripts/gate/`](../game/scripts/gate/), with six anonymous QA cases (routine and investigative), evidence/document inspection, questioning, independent verifications and reasoned authorize/hold/deny decisions. Gate results persist in the existing P2 world and remain legally separate from refuge placement, custody and guardianship. Mama can return to the same P3 home state after a completed gate shift. QA examples and test regulations are **not approved fictional law or character additions**.
+
+GitHub CI [run 42534096795](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42534096795) passed Godot headless P1–P4 plus P4 live-scene interaction and Python static tests (**32 passed locally**). The shift-duration of 1,200 seconds is a provisional test setting, not a final canon number. The P4 world save schema is now **4**; P3 developer saves are not automatically migrated.
+
+**Remaining first-milestone work:** P5 refuge management, meaningful cross-day state/world scheduling and P6 two-day acceptance testing. Windows GUI/visual testing has not been done. The absence of new named characters is deliberate and must persist.

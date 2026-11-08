@@ -1,7 +1,7 @@
 # Unbearable Conditions — P4 Gate Workday Checkpoint
 
 **Stage:** P4 gate workday, on top of existing P2 persistent world and P3 home sandbox.
-**Status:** Source implemented. Static tests passed locally; Godot headless/scene tests pending GitHub Actions verification at first commit. Not a Windows export or completed P6 two-day playable slice.
+**Status:** P4 source implemented and **verified in GitHub Actions with Godot 4.7.2 headless**. Not a Windows export or completed P6 two-day playable slice.
 
 ## Scope delivered
 
@@ -38,9 +38,14 @@
 
 - [x] P4 game source, UI, QA fixtures and tests authored.
 - [x] 32 Python structural tests passed on this local source bundle (P1–P4).
-- [ ] GitHub Godot import, P1/P2/P3 regression tests, P4 behavioral tests and P4 UI interaction script all pass (verify live Actions run after commit).
+- [x] GitHub Actions run [42534096795](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42534096795) **succeeded**. It verified Godot 4.7.2 editor import, P1/P2/P3 suites, P4 behavioral tests, P4 UI scene interaction, and headless startup.
+- [x] P4 headless test contains 88 behavioral assertions; UI scene test contains 19 assertions. The workflow steps completed successfully.
 - [ ] Windows interactive test confirms desk readability, reasonable timing, no overlapping controls, and meaningful visual comparison.
 
 ## Next milestone
 
 **P5 — Briarwood Refuge Management:** take the **same** persistent entry decisions and case records into a separate refuge-placement and hands-on care system. Keep city entry, refuge placement, custody and guardianship independent; make public refuge costs distinct from the private household ledger. Do not invent a new recurring named cast to populate test beds.
+
+## Verified CI execution
+
+The completed [GitHub Actions run 42534096795](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42534096795) passed both the Python static job and Godot 4.7.2 headless job. The P4 code test has **88** authored assertions and the scene-interaction test has **19**; earlier P1/P2/P3 regression steps also passed. All **32** local Python structural tests passed. The final game source remains a QA-focused gate training sandbox; the Windows UI has **not** been manually tested.

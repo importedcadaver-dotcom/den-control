@@ -17,3 +17,7 @@
 | UI smoke | P3 home to P4 gate to P3 evening on same WorldState | Detached scenes or duplicate worlds |
 
 **Validation levels:** Python `pytest` checks source fixtures and code contracts; Godot `test_p4.gd` tests actual behaviors; Godot `test_p4_ui.gd` instantiates actual UI. A Windows manual test is still separately required.
+
+## Test execution evidence
+
+[GitHub Actions run 42534096795](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42534096795) completed successfully, including Godot P1/P2/P3/P4, P4 UI scene interaction and main-scene startup, plus Python source checks. Local Python source suite: **32 passed**. P4 behavioral source: **88** assertions; P4 UI smoke source: **19** assertions. Windows hands-on visual testing is still pending.
