@@ -97,5 +97,5 @@ The user approved first milestone B (one gate day + one refuge day + home), gate
 
 - [P3 home and family checkpoint](P3_CHECKPOINT.md): one interactable Godot home scene and persistent approved Mama/Button/Hazel home state. P2 world save version bumped to **3** for the home records; no P2 development-save migration is guaranteed.
 - Direct Mama care, cub autonomy and conditional refusals, emotional tears, quadrupedal pixel art, memories, sibling disputes, fights and possible injury are implemented within this bounded home sandbox. The demo pantry holds finite test portions; this is not an approved balance decision.
-- [GitHub Actions run 42527012709](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709) passed Godot 4.7.2 suites P1 **7/7**, P2 **56/56**, P3 **67/67**, 26 Python static checks, and headless scene startup.
+- [GitHub Actions run 42527012709](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709) passed Godot 4.7.2 suites P1 **7/7**, P2 **56/56**, P3 **67/67**, 24 GitHub Python static checks (26 in the complete local package), and headless scene startup.
 - The P3 home sandbox is **not P6** (the gate+refuge+home two-day release). Grandma's scheduled childcare, full calendar aging and any new named case character remain deferred; approved canon is unchanged. P4 gate work is next.
