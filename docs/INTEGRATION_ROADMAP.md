@@ -83,7 +83,7 @@ The user approved first milestone B (one gate day + one refuge day + home), gate
 - Clean Godot 4.7.2 project shell, canonical seed records and contract tests are now committed to `main`. No old v0.1 world initialization is referenced.
 - The original source remains intact in a separate recovery bundle and verified SHA-256 list, not in the GitHub active project.
 - See [P1 source-gap matrix](P1_LATER_REVISION_GAP_MATRIX.md) for the later reported-but-unrecovered fixes.
-- **P2 implemented and Linux-headless verified:** persistent world, legal transitions, calendar, separate HM ledgers, versioned save/load. Both P1 and P2 Godot tests passed in GitHub Actions. **P3 is next**; Windows launch is still unverified.
+- **P2 implemented and Linux-headless verified:** persistent world, legal transitions, calendar, separate HM ledgers, versioned save/load. Both P1 and P2 Godot tests passed in GitHub Actions. **P3 home sandbox is now headless-verified**; Windows launch is still unverified.
 
 ## P2 persistent-world checkpoint — November 8, 2026
 
@@ -91,4 +91,11 @@ The user approved first milestone B (one gate day + one refuge day + home), gate
 
 **Testing:** Godot test scenarios are authored in `game/tests/test_p2.gd`; Python source-level checks are authored in `tests/test_p2_static.py`. The complete local package passed **19 static pytest checks**. A [GitHub Actions verification workflow](../.github/workflows/foundation.yml) now targets Godot 4.7.2 as well, and [the actual Godot 4.7.2 run passed](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379): P1 **7/7**, P2 **56/56** headless checks, plus **17** GitHub CI static Python tests. Windows export and human playtesting remain unverified.
 
-**Next:** Begin P3 home/family behavior against this headless-verified persistent world foundation. Windows export and real UI playtesting are later independent verification gates. P4/P5 gate and refuge surfaces remain unimplemented. No new named NPCs were created.
+**Next:** Implement P4 gate workday on top of the shared home/world foundation. P3 home behavior and an in-engine scene are now implemented and headless-verified in Godot. Windows export and real UI playtesting remain separate verification gates. P5 refuge remains unimplemented. No new named NPCs were created.
+
+## P3 checkpoint — November 8, 2026
+
+- [P3 home and family checkpoint](P3_CHECKPOINT.md): one interactable Godot home scene and persistent approved Mama/Button/Hazel home state. P2 world save version bumped to **3** for the home records; no P2 development-save migration is guaranteed.
+- Direct Mama care, cub autonomy and conditional refusals, emotional tears, quadrupedal pixel art, memories, sibling disputes, fights and possible injury are implemented within this bounded home sandbox. The demo pantry holds finite test portions; this is not an approved balance decision.
+- [GitHub Actions run 42527012709](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709) passed Godot 4.7.2 suites P1 **7/7**, P2 **56/56**, P3 **67/67**, 26 Python static checks, and headless scene startup.
+- The P3 home sandbox is **not P6** (the gate+refuge+home two-day release). Grandma's scheduled childcare, full calendar aging and any new named case character remain deferred; approved canon is unchanged. P4 gate work is next.
