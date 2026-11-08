@@ -113,7 +113,12 @@ func _initialize() -> void:
     expect(bool(SaveStore.save_document(path, saved_snapshot).get("ok", false)), "P3 home save succeeds")
     expect(world.tick_home(2), "post-save home simulation advances")
     expect(bool(SaveStore.load_into(path, world).get("ok", false)), "P3 save reload succeeds")
-    expect(world.snapshot() == saved_snapshot, "home relationship, memories and positions round-trip")
+    var loaded_snapshot: Dictionary = world.snapshot()
+    if loaded_snapshot != saved_snapshot:
+        for key in saved_snapshot.keys():
+            if loaded_snapshot.get(key) != saved_snapshot[key]:
+                print("P3 ROUNDTRIP DIFFERENCE ", key, ": prior=", JSON.stringify(saved_snapshot[key]).substr(0, 320), " after=", JSON.stringify(loaded_snapshot.get(key)).substr(0, 320))
+    expect(loaded_snapshot == saved_snapshot, "home relationship, memories and positions round-trip")
     var invalid: Dictionary = saved_snapshot.duplicate(true)
     invalid["home"]["sibling"]["bond"] = -150
     expect(not world.restore_validated(invalid), "invalid sibling bond rejected")
