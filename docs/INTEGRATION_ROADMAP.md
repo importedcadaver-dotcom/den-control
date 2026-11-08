@@ -78,3 +78,9 @@ The Godot v0.1 archive and Honey, Please HTML source have now been recovered fro
 ## Production scope approved November 7, 2026
 
 The user approved first milestone B (one gate day + one refuge day + home), gate gameplay C (detailed cases plus routine arrivals), refuge gameplay C (hands-on care plus operations), family gameplay B (direct interaction plus autonomous cubs), and art production C (consistent functional pixel-art prototype, then polish). See [PRODUCTION_PLAN_V0_1.md](PRODUCTION_PLAN_V0_1.md) for the complete production specification, architecture, staged sequence and acceptance tests.
+## P1 engineering checkpoint — November 8, 2026
+
+- Clean Godot 4.7.2 project shell, canonical seed records and contract tests are now committed to `main`. No old v0.1 world initialization is referenced.
+- The original source remains intact in a separate recovery bundle and verified SHA-256 list, not in the GitHub active project.
+- See [P1 source-gap matrix](P1_LATER_REVISION_GAP_MATRIX.md) for the later reported-but-unrecovered fixes.
+- **P2 is next:** persistent world state, lawful transitions, calendar, financial separation and versioned save/load. P1 cannot be declared Godot-runtime validated until the headless suite is run with Godot installed.
