@@ -71,7 +71,7 @@ All three can generate dark satire; avoid reducing her to a purely random villai
 
 - **RESOLVED:** Ursula's affection is **possessive and genuine**, with dangerous reactions to rejection (user-approved option C).
 - **Cavern layout RESOLVED:** monumental central cavern and adjoining major chambers/tunnels (option C). **Still open:** exact location of the palace, heights, levels, district boundaries and travel routes.
-- **Child monarch D APPROVED; coronation at six months APPROVED.** Ursula's age is **seven at game start**; her reign spans **six years and six months**. Reason for succession and administrative procedures remain open. Her childhood was surrounded by courtiers who reinforced her entitlement. Do not name or invent those courtiers.
+- **Child monarch D APPROVED; coronation at six months APPROVED.** Ursula's age is **seven at game start**; her reign spans **six years and six months**. The previous monarch's unexpected death is the approved succession trigger; details and administrative procedures remain open. Her childhood was surrounded by courtiers who reinforced her entitlement. Do not name or invent those courtiers.
 - Her relationship to existing parties and the precise formal act of declaring an emergency.
 - Her current interest in Mama/Briarwood, if any, should be developed after approved history, not preinstalled as a scripted connection.
 - Names/identities of any royal relatives, aides, guards or staff require **separate character creation and approval**.
@@ -108,7 +108,7 @@ The user approved **A — Thoroughly spoiled**. Ursula was indulged, entertained
 
 The user explicitly approved **six months old** as Ursula's age upon becoming Queen. Under the established accelerated-development scheme, she was a **preschool-stage cub**, roughly comparable to a three-year-old human. **Later user clarification supersedes any mere title/figurehead interpretation:** Ursula **held real, overwhelming political power immediately**, even at six months old; officials executed her directions without effectively saying no. This does not imply adult comprehension or personal bureaucratic work. **Do not invent a named regent, family member or courtier.**
 
-**Still open:** Ursula's exact birth/coronation calendar dates (age seven and 6.5 years of reign established), the procedure used to translate a preschool-aged Queen's demands into official orders, cause of succession, and reign duration. **She already exercised real authority from the start; no later transfer of power is needed.**
+**Still open:** Ursula's exact birth/coronation calendar dates (age seven and 6.5 years of reign established), the procedure used to translate a preschool-aged Queen's demands into official orders, precise circumstances of the previous monarch's unexpected death, and administrative execution of childhood orders. **She already exercised real authority from the start; no later transfer of power is needed.**
 
 ## I. Early rule — C with user's correction APPROVED
 
@@ -119,3 +119,7 @@ The user selected **C** but explicitly strengthened it: **"she had lots of autho
 ## J. Current age decision — approved
 
 Ursula is **seven years old when the game begins**. She was crowned at **six months**, hence a **six-year-six-month reign** by game start. The user provided no other biographical details or new characters with this decision.
+
+## K. Succession trigger — previous monarch's unexpected death approved
+
+The user selected **A**, establishing that **the preceding monarch died unexpectedly**, which explains why Ursula inherited the crown as a six-month-old Kodiak brown bear. Do **not** infer the predecessor was Ursula's mother/father, or invent a name, biography, cause of death, conspiracy, regent or new character. Her current age seven, 6.5-year reign, thoroughly spoiled childhood and real childhood authority are unchanged.
