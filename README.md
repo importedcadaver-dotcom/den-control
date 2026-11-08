@@ -15,6 +15,8 @@ A planned standalone 2D pixel-art Honeyhold cave-city bureaucracy, family-life, 
 
 Read [Dwargon-inspired Honeyhold architecture and Queen Ursula research](docs/DWARGON_INSPIRATION_AND_QUEEN_URSULA_RESEARCH.md) for a sourced reference brief (new layouts and character details remain proposals).
 
+**Production documents:** [Approved first production plan](docs/PRODUCTION_PLAN_V0_1.md) · [Source recovery and reuse audit](docs/SOURCE_RECOVERY_AND_REUSE_AUDIT.md) · [Recovered source manifest](docs/RECOVERED_SOURCE_MANIFEST.md)
+
 **Project checkpoint and review:** [2026-11-07 audit and milestone checkpoint](docs/CHECKPOINT_2026-11-07.md) · [Reusable chat/GitHub review prompt](docs/CHAT_REVIEW_PROMPT_2026-11-07.md)
 
 **Canonical references:** [Approved decisions](docs/APPROVED_DECISIONS.md) · [Queen Ursula's individual dossier](docs/characters/QUEEN_URSULA.md) · [Technical integration roadmap](docs/INTEGRATION_ROADMAP.md)
