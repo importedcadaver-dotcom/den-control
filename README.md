@@ -1,6 +1,6 @@
 # Unbearable Conditions
 
-A planned standalone 2D pixel-art Honeyhold cave-city bureaucracy, family-life, and refuge-management game. The design draws on the original Godot **Briarwood Refuge** prototype and selected ideas from the HTML **Honey, Please** prototype. **These codebases have not yet been merged here.**
+An in-development 2D pixel-art Honeyhold cave-city bureaucracy, family-life, and refuge-management game. The design draws on the original Godot **Briarwood Refuge** prototype and selected ideas from the HTML **Honey, Please** prototype. **These codebases have not yet been merged here.**
 
 ## Project status
 
@@ -10,10 +10,12 @@ A planned standalone 2D pixel-art Honeyhold cave-city bureaucracy, family-life, 
 - Other historical implementation: `Honey, Please` (single-file HTML/CSS/JavaScript), provided and reviewed in an earlier chat. **Not present in this repo.**
 - The later in-progress Godot UI/economy/guardianship fixes described in the Den Control conversation have **not yet been recovered as a source archive**.
 - The user has approved the family canon: seven-year-old brown bear Mama, with six-month-old littermates Button and Hazel. Grandma (Mama's mother) cares for them outside school, but **deliberately enjoys emotional cruelty, threats, comfort neglect and humiliating dangerous dares, and both cubs justifiably hate her**. Mama knows she is mean, but relies on her because of work and money; ordinary replacement care requires a substantial storyline. Grandma lives nearby in her own home. Button prefers indoors, modern comforts, and human-like objects/technology over the outdoors; Hazel strongly dislikes being ordered around. Cubs stay in the den with Mama at 0–3 months, begin nursery at 4 months, and attend preschool from 6 months (roughly human three-year-old development). Both siblings attend the same school with distinct teachers and friends. They can fight, injure or emotionally hurt each other, become enemies or reconcile; bears visibly shed emotional tears. Aging advances continuously with the calendar. Their personalities are recorded in approved decisions.
-- This repository begins with canon and migration documentation, not a claim that the source/build has already been pushed.
+- The repository now includes the **clean Godot foundation** under `game/`, canonical data fixtures, first GDScript tests, and Python static checks. This is **not** the first playable milestone; no gate/refuge/family game loop has been implemented yet.
 - The previous AI-invented 20-person Round 6 cast is **rejected in full**. **All new characters must be created individually with the user.** No prior invented classmates, coworkers or party leaders are approved. The 12–20 goal is an eventual count, not a ready-made roster.
 
 Read [Dwargon-inspired Honeyhold architecture and Queen Ursula research](docs/DWARGON_INSPIRATION_AND_QUEEN_URSULA_RESEARCH.md) for a sourced reference brief (new layouts and character details remain proposals).
+
+**P1 engineering:** [Clean Godot shell](game/) · [P1 checkpoint](docs/P1_CHECKPOINT.md) · [Worldbuilding gate](docs/P1_WORLDBUILDING_GATE.md) · [Later revision gap matrix](docs/P1_LATER_REVISION_GAP_MATRIX.md)
 
 **Production documents:** [Approved first production plan](docs/PRODUCTION_PLAN_V0_1.md) · [Source recovery and reuse audit](docs/SOURCE_RECOVERY_AND_REUSE_AUDIT.md) · [Recovered source manifest](docs/RECOVERED_SOURCE_MANIFEST.md)
 
@@ -43,6 +45,12 @@ This setting is **completely independent** of the user's other bear games. A pos
 - Preserve the approved Button and Hazel identities and traits, their Grandma's malicious care and Mama's knowledge, and the chosen continuous aging. Do not assume unapproved appearances, surnames, Grandma name, or story events.
 - The v0.1 legacy **Button** (cub) and **Hazel** (adult) are **OLD / BAD / DO NOT USE**. Do not adapt or import them into the merged game's canon or saves. Retain original source as a historical archive only; the approved siblings need new stable IDs.
 - Keep a playable Godot Windows build, tests, and known-limitations report as real deliverables.
+
+## P1 verification
+
+- Seven Python foundation tests passed in the complete locally prepared P1 recovery package. The GitHub test subset can be run independently with Python/pytest.
+- Godot headless tests are written under `game/tests/`, but **were not executed** in the current environment because Godot was unavailable.
+- **Historical source is contained in the downloadable P1 recovery package, not yet in the GitHub legacy directory**; only its manifests and integrity hashes are in GitHub. The new clean shell is committed separately.
 
 ## Sources and provenance
 
