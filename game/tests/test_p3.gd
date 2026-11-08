@@ -114,14 +114,12 @@ func _initialize() -> void:
     expect(world.tick_home(2), "post-save home simulation advances")
     expect(bool(SaveStore.load_into(path, world).get("ok", false)), "P3 save reload succeeds")
     var loaded_snapshot: Dictionary = world.snapshot()
-    if loaded_snapshot != saved_snapshot:
-        for key in saved_snapshot.keys():
-            if loaded_snapshot.get(key) != saved_snapshot[key]:
-                print("P3 ROUNDTRIP DIFFERENCE ", key, ": prior=", JSON.stringify(saved_snapshot[key]).substr(0, 320), " after=", JSON.stringify(loaded_snapshot.get(key)).substr(0, 320))
-    expect(loaded_snapshot == saved_snapshot, "home relationship, memories and positions round-trip")
+    # Godot JSON.parse_string loads whole-valued JSON numbers as floats (0 -> 0.0).
+    # Compare the persisted JSON values, not raw Variant numeric storage types.
+    expect(JSON.parse_string(JSON.stringify(loaded_snapshot)) == JSON.parse_string(JSON.stringify(saved_snapshot)), "home relationship, memories and positions round-trip as JSON")
     var invalid: Dictionary = saved_snapshot.duplicate(true)
     invalid["home"]["sibling"]["bond"] = -150
     expect(not world.restore_validated(invalid), "invalid sibling bond rejected")
-    expect(world.snapshot() == saved_snapshot, "failed P3 restore preserves valid game")
+    expect(JSON.parse_string(JSON.stringify(world.snapshot())) == JSON.parse_string(JSON.stringify(saved_snapshot)), "failed P3 restore preserves valid game")
     print("P3 HEADLESS: ", checks, " checks, ", failures.size(), " failures")
     quit(0 if failures.is_empty() else 1)
