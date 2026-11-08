@@ -83,12 +83,12 @@ The user approved first milestone B (one gate day + one refuge day + home), gate
 - Clean Godot 4.7.2 project shell, canonical seed records and contract tests are now committed to `main`. No old v0.1 world initialization is referenced.
 - The original source remains intact in a separate recovery bundle and verified SHA-256 list, not in the GitHub active project.
 - See [P1 source-gap matrix](P1_LATER_REVISION_GAP_MATRIX.md) for the later reported-but-unrecovered fixes.
-- **P2 is next:** persistent world state, lawful transitions, calendar, financial separation and versioned save/load. P1 cannot be declared Godot-runtime validated until the headless suite is run with Godot installed.
+- **P2 implemented and Linux-headless verified:** persistent world, legal transitions, calendar, separate HM ledgers, versioned save/load. Both P1 and P2 Godot tests passed in GitHub Actions. **P3 is next**; Windows launch is still unverified.
 
 ## P2 persistent-world checkpoint — November 8, 2026
 
 **Source implemented:** `game/scripts/world/world_state.gd` and `save_store.gd` contain a new version-2 state model, separate legal/entry/refuge records, work calendar and shift-clock APIs, independent HM household/refuge ledgers and debt, event history and guarded save/restore. The [P2 state schema](P2_STATE_SCHEMA.md) and [P2 checkpoint](P2_CHECKPOINT.md) document exact contracts and limits.
 
-**Testing:** Godot test scenarios are authored in `game/tests/test_p2.gd`; Python source-level checks are authored in `tests/test_p2_static.py`. The complete local package passed **19 static pytest checks**. A [GitHub Actions verification workflow](../.github/workflows/foundation.yml) now targets Godot 4.7.2 as well, but there was **no confirmed run at checkpoint**; Godot runtime and Windows export remain unverified. P2 should not be treated as engine-tested until both headless suites pass.
+**Testing:** Godot test scenarios are authored in `game/tests/test_p2.gd`; Python source-level checks are authored in `tests/test_p2_static.py`. The complete local package passed **19 static pytest checks**. A [GitHub Actions verification workflow](../.github/workflows/foundation.yml) now targets Godot 4.7.2 as well, and [the actual Godot 4.7.2 run passed](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379): P1 **7/7**, P2 **56/56** headless checks, plus **17** GitHub CI static Python tests. Windows export and human playtesting remain unverified.
 
-**Next:** Verify the Godot tests, repair any actual parser/runtime failures, then begin P3 family behavior against this persistent state. P4/P5 gate and refuge surfaces remain unimplemented. No new named NPCs were created.
+**Next:** Begin P3 home/family behavior against this headless-verified persistent world foundation. Windows export and real UI playtesting are later independent verification gates. P4/P5 gate and refuge surfaces remain unimplemented. No new named NPCs were created.
