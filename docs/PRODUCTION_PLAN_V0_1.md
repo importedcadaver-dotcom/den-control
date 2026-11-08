@@ -273,7 +273,7 @@ These can be developed alongside production when a system actually needs them. D
 5. Build the home/family foundation, then the gate shift and refuge shift.
 6. Run the two-day integration acceptance tests before expanding the world.
 
-**Current completion (November 8, 2026):** P0 source recovery and P1 shell completed. **P2 persistent world foundation implemented and verified in GitHub Actions** with Godot 4.7.2 (7 P1 and 56 P2 headless checks passed; 17 CI Python tests passed). **P3–P8 remain unimplemented.** No playable game or Windows export has been verified. This document is a production plan, not a claim that a new build exists.
+**Current completion (November 8, 2026):** P0 source recovery and P1 shell completed. **P2 persistent world foundation implemented and verified in GitHub Actions** with Godot 4.7.2 (7 P1 and 56 P2 headless checks passed; 17 CI Python tests passed). **P3 home sandbox implemented and headless-verified; P4–P8 unimplemented.** No playable game or Windows export has been verified. This document is a production plan, not a claim that a new build exists.
 ## Production implementation update — P1
 
 The first source-code commit added `game/` as a clean Godot 4.7.2 project, approved identity and schedule fixtures, a canon loader, GDScript contract tests and Python static checks. This is **infrastructure**, not a playable two-day slice. The complete unmodified legacy source, including the earlier HTML reference, is in a separate downloadable P1 recovery bundle, while GitHub contains preservation manifests/hashes. The previously rejected v0.1 Button/Hazel records are excluded from all new seeds.
@@ -282,4 +282,10 @@ The [worldbuilding dependency audit](P1_WORLDBUILDING_GATE.md) finds no need to 
 
 ## P2 verified engine-checkpoint
 
-[CI run 42522146379](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379) checked out the actual GitHub source, downloaded official Godot 4.7.2 and successfully ran the P1 (7 checks) and P2 (56 checks) headless suites. GitHub Python checks passed (17). The complete local recovery package also passed 19 static checks because it carries additional legacy-integrity tests. This is **verified foundation logic, not playable family/gate/refuge gameplay**. P3 is the next production phase.
+[CI run 42522146379](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42522146379) checked out the actual GitHub source, downloaded official Godot 4.7.2 and successfully ran the P1 (7 checks) and P2 (56 checks) headless suites. GitHub Python checks passed (17). The complete local recovery package also passed 19 static checks because it carries additional legacy-integrity tests. This is **verified foundation logic, not playable family/gate/refuge gameplay**. P3 home sandbox has since been implemented and verified; P4 gate workday is next.
+
+## P3 delivery update — November 8, 2026
+
+The first in-engine family interaction layer exists under [`game/scripts/home/`](../game/scripts/home/) with coherent first-pass procedural pixel art. Mama, Button and Hazel can be observed; the cubs act autonomously and react contextually, and care, sibling injuries, disputes, relationship shifts and memories persist in the P2 world/save framework (schema **3**). Current demo interactions are feed, cuddle, play, wash, carry/put down, tidy request, first aid, separate and conditional sibling play. Six pantry portions are a P3 test fixture only.
+
+[GitHub CI](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42527012709) verifies the Godot 4.7.2 headless P3 suite (**67 checks passed**), plus P1/P2 regression suites and main-scene startup. **No Windows executable or manually inspected graphical playthrough has been produced**. The original P6 two-day first playable production milestone still requires P4 gate and P5 refuge work.
