@@ -58,7 +58,7 @@ def test_p4_safety_and_world_integration():
     assert "world.change_guardian(" not in gate
     assert '"gate": GateSystem.initial_state()' in world
     assert 'GateSystem.validate(candidate.get("gate", null), candidate)' in world
-    assert "const SAVE_VERSION: int = 4" in world
+    assert "const SAVE_VERSION: int = 5" in world
     assert '"mama"' not in gate.lower() or 'Mama' not in gate  # No invented family-based case outcomes
 
 

@@ -14,7 +14,8 @@ const MAX_CASES := 12
 static func initial_state() -> Dictionary:
     return {"started": false, "complete": false, "shift_day": -1,
         "queue": [], "cursor": 0, "decisions": [], "asked": [], "verified": [],
-        "view": "summary", "last_feedback": "", "skipped": [], "fixture_version": 1}
+        "view": "summary", "last_feedback": "", "skipped": [], "fixture_version": 1,
+        "history": [], "fixture_snapshot": [], "fixture_digest": ""}
 
 static func read_fixture() -> Dictionary:
     if not FileAccess.file_exists(FIXTURE_PATH):
@@ -29,48 +30,84 @@ static func read_fixture() -> Dictionary:
 
 static func begin(world: RefCounted) -> bool:
     var gate: Dictionary = world.state["gate"]
-    if bool(gate["started"]) or world.current_duty() != "gate" or not ["morning", "daytime"].has(world.state["calendar"]["phase"]):
-        return world._fail("Gate shift cannot begin at this time or twice")
+    var day: int = int(world.state["calendar"]["day_index"])
+    if world.current_duty() != "gate" or not ["morning", "daytime"].has(world.state["calendar"]["phase"]):
+        return world._fail("Not a scheduled gate shift")
+    if bool(gate["started"]) and (not gate["complete"] or int(gate["shift_day"]) >= day):
+        return world._fail("Gate shift already active or completed today")
     var fixture: Dictionary = read_fixture()
     if int(fixture.get("fixture_version", -1)) != 1 or not fixture.get("cases", null) is Array:
-        return world._fail("Missing or invalid anonymous P4 training fixtures")
+        return world._fail("Invalid P4 fixture")
     var cases: Array = fixture["cases"]
     if cases.is_empty() or cases.size() > MAX_CASES:
-        return world._fail("Training case count invalid")
+        return world._fail("Invalid QA case count")
+    var used: Dictionary = {}
+    for entry in cases:
+        if not entry is Dictionary or str(entry.get("code", "")).is_empty() or used.has(entry.get("code", "")):
+            return world._fail("Malformed or repeated QA case")
+        used[entry["code"]] = true
+    if not world.state["shift_clock"]["enabled"] is bool:
+        return world._fail("Invalid shift configuration")
+    var before: Dictionary = world.snapshot()
+    var next_gate: Dictionary = initial_state()
+    next_gate["history"] = gate["history"].duplicate(true)
+    if bool(gate["started"]):
+        var archived: Dictionary = gate.duplicate(true)
+        archived.erase("history")
+        next_gate["history"].append(archived)
+    next_gate["fixture_snapshot"] = cases.duplicate(true)
+    next_gate["fixture_digest"] = JSON.stringify(cases).sha256_text()
+    world.state["gate"] = next_gate
+    if not _apply_begin(world, cases, day):
+        var reason: String = world.last_error
+        world.state = before
+        return world._fail(reason)
+    if not world.validate_state(world.snapshot()).is_empty():
+        world.state = before
+        return world._fail("Shift initialization validation failed")
+    world.last_error = ""
+    return true
+
+static func _apply_begin(world: RefCounted, cases: Array, day: int) -> bool:
     if world.state["calendar"]["phase"] == "morning" and not world.change_phase("daytime"):
         return false
-    # The real UI never creates a new named individual. QA records are unambiguously labelled.
     world.enable_qa_mode()
-    var day: int = int(world.state["calendar"]["day_index"])
     var queue: Array = []
     for i in range(cases.size()):
         var record: Dictionary = cases[i].duplicate(true)
-        if record.get("code", "") == "":
-            return world._fail("Missing QA case token")
         var case_id := "uc.qa.gate.%d.%02d" % [day, i + 1]
         var subject_id := "uc.qa.visitor.%d.%02d" % [day, i + 1]
-        if not world.register_case(case_id, {"fixture_code": record["code"], "qa": true}):
+        var participants: Array = [subject_id]
+        if bool(record.get("accompanied_minor", false)):
+            participants.append(subject_id + ".cub")
+        if not world.register_case(case_id, {"fixture_code": record["code"], "qa": true, "participant_ids": participants.duplicate(true)}):
             return false
-        if not world.register_qa_subject(subject_id, case_id):
-            return false
+        for participant in participants:
+            if not world.register_qa_subject(participant, case_id):
+                return false
         if str(record["subject"]).find("red panda") >= 0:
             world.state["characters"][subject_id]["species"] = "red_panda"
         elif str(record["subject"]).find("cat") >= 0:
             world.state["characters"][subject_id]["species"] = "domestic_cat"
+        if participants.size() > 1:
+            world.state["characters"][participants[1]]["age_months"] = 6
+            world.state["characters"][participants[1]]["qa_minor"] = true
+            # Accompaniment does not confer guardianship; verification is separate.
         record["case_id"] = case_id
         record["subject_id"] = subject_id
+        record["participant_ids"] = participants
         queue.append(record)
+    var gate: Dictionary = world.state["gate"]
     gate["started"] = true
     gate["shift_day"] = day
     gate["queue"] = queue
-    gate["last_feedback"] = "Training cases loaded. QA regulations are provisional, not Honeyhold canon."
+    gate["last_feedback"] = "Anonymous training cases; no canonical Honeyhold laws or citizens."
     if world.state["shift_clock"]["duration_seconds"] == null:
         if not world.configure_shift_duration(QA_SHIFT_SECONDS):
             return false
     if not world.start_shift():
         return false
-    world._record("gate.training_open", "", {"case_count": queue.size(), "qa_fixture": true})
-    world.last_error = ""
+    world._record("gate.training_open", "", {"case_count": queue.size(), "day_index": day, "qa_fixture": true})
     return true
 
 static func current(world: RefCounted) -> Dictionary:
@@ -123,16 +160,21 @@ static func decide(world: RefCounted, status: String, reason: String) -> bool:
     var required_check: String = str(ticket.get("requires_check", ""))
     # Special requests and contested identification must be checked before a final decision.
     # Routine obvious denials can be decided directly from the visible paperwork.
-    if required_check != "" and not gate["verified"].has(required_check):
+    if status != "held" and required_check != "" and not gate["verified"].has(required_check):
         return world._fail("Verify the " + required_check + " before closing this investigative case")
     var subject_id: String = str(ticket["subject_id"])
     var case_id: String = str(ticket["case_id"])
-    if not world.record_entry_decision(subject_id, status, case_id):
-        return false
+    for participant in ticket.get("participant_ids", [subject_id]):
+        if not world.has_character(participant) or world.state["characters"][participant].get("registered_case_id", "") != case_id:
+            return world._fail("Participant does not belong to this case")
+    for participant in ticket.get("participant_ids", [subject_id]):
+        if not world.record_entry_decision(participant, status, case_id):
+            return false
     var correct: bool = status == ticket["expected_status"] and reason == ticket["expected_reason"]
     var outcome: Dictionary = {"case_id": case_id, "subject_id": subject_id,
         "status": status, "reason": reason, "matches_training_rule": correct,
-        "asked": gate["asked"].duplicate(true), "verified": gate["verified"].duplicate(true)}
+        "asked": gate["asked"].duplicate(true), "verified": gate["verified"].duplicate(true),
+        "participant_ids": ticket.get("participant_ids", [subject_id]).duplicate(true)}
     gate["decisions"].append(outcome)
     world.state["case_records"][case_id]["gate_training_result"] = outcome.duplicate(true)
     gate["last_feedback"] = ("Training audit: supported decision and reason. " if correct else "Training audit: review the relevant rule and evidence. ") + ("Entry permission updated; refuge placement and guardianship unchanged.")
@@ -182,6 +224,21 @@ static func validate(value: Variant, world: Dictionary) -> Array[String]:
         return errors
     var queue: Array = gate["queue"]
     var decisions: Array = gate["decisions"]
+    if not gate.get("history", null) is Array or not gate.get("fixture_snapshot", null) is Array:
+        errors.append("missing archived history or evidence")
+        return errors
+    var seen_days: Dictionary = {}
+    for previous in gate["history"]:
+        if not previous is Dictionary or not bool(previous.get("complete", false)) or seen_days.has(previous.get("shift_day", -1)):
+            errors.append("invalid archived gate shift")
+            continue
+        seen_days[previous["shift_day"]] = true
+        if previous.get("shift_day", -1) >= gate.get("shift_day", -1) or previous.get("fixture_digest", "") != JSON.stringify(previous.get("fixture_snapshot", [])).sha256_text():
+            errors.append("archived gate date or evidence modified")
+        if previous.get("cursor", -1) != previous.get("decisions", []).size():
+            errors.append("archived gate cursor mismatch")
+    if gate.get("started", false) and gate.get("fixture_digest", "") != JSON.stringify(gate["fixture_snapshot"]).sha256_text():
+        errors.append("historical QA evidence digest mismatch")
     if queue.size() > MAX_CASES or not _whole(gate.get("cursor")) or not _whole(gate.get("shift_day")):
         errors.append("gate cursor or day malformed")
         return errors
@@ -204,7 +261,7 @@ static func validate(value: Variant, world: Dictionary) -> Array[String]:
         errors.append("invalid gate shift day")
     if not world.get("qa_mode", false):
         errors.append("anonymous training gate without QA provenance")
-    var source_cases: Array = read_fixture().get("cases", [])
+    var source_cases: Array = gate["fixture_snapshot"]
     if source_cases.size() != queue.size():
         errors.append("QA fixture count modified")
     var seen: Dictionary = {}
@@ -225,6 +282,13 @@ static func validate(value: Variant, world: Dictionary) -> Array[String]:
         seen[case_id] = true
         if not world.get("characters", {}).has(subject) or not world.get("case_records", {}).has(case_id):
             errors.append("gate ticket missing persistent identity/case")
+        var participants: Variant = ticket.get("participant_ids", null)
+        if not participants is Array or participants.is_empty() or participants[0] != subject:
+            errors.append("case participants missing")
+        else:
+            for person_id in participants:
+                if not world.get("characters", {}).has(person_id) or world["characters"][person_id].get("registered_case_id", "") != case_id:
+                    errors.append("participant-case membership mismatch")
         if not ["routine", "investigation"].has(ticket.get("type", "")) or not STATUS_VALUES.has(ticket.get("expected_status", "")) or not REASON_VALUES.has(ticket.get("expected_reason", "")):
             errors.append("invalid training case definition")
         if i < decisions.size():
@@ -241,11 +305,18 @@ static func validate(value: Variant, world: Dictionary) -> Array[String]:
                 errors.append("QA training audit result tampered")
             if not result.get("verified", null) is Array or not result.get("asked", null) is Array:
                 errors.append("malformed case inquiries")
-            elif ticket.get("requires_check", "") != "" and not result["verified"].has(ticket["requires_check"]):
+            elif result.get("status", "") != "held" and ticket.get("requires_check", "") != "" and not result["verified"].has(ticket["requires_check"]):
                 errors.append("decision lacks required verification")
             var stored: Variant = world.get("case_records", {}).get(case_id, {}).get("gate_training_result", null)
-            if not stored is Dictionary or stored.get("reason", "") != result.get("reason", ""):
+            if not stored is Dictionary or JSON.stringify(stored) != JSON.stringify(result):
                 errors.append("case training result mismatch")
+            if participants is Array:
+                if result.get("participant_ids", []) != participants:
+                    errors.append("decision participants mismatch")
+                for person_id in participants:
+                    var person_entry: Variant = world.get("entry_permissions", {}).get(person_id, null)
+                    if not person_entry is Dictionary or person_entry.get("status", "") != result.get("status", "") or person_entry.get("case_id", "") != case_id:
+                        errors.append("party entry outcome mismatch")
     if gate.get("complete", false):
         if not gate.get("asked", []).is_empty() or not gate.get("verified", []).is_empty():
             errors.append("completed gate has pending inquiries")

@@ -102,7 +102,7 @@ func _make_ui() -> void:
 func _go_gate() -> void:
     if world.current_duty() != "gate":
         last_message = "No gate shift today. Next scheduled duty: " + world.current_duty() + "."
-    elif world.state["gate"]["complete"]:
+    elif world.state["gate"]["complete"] and int(world.state["gate"]["shift_day"]) == int(world.state["calendar"]["day_index"]):
         last_message = "Today's gate shift is already completed."
     else:
         request_gate.emit()

@@ -28,7 +28,7 @@ func _show_home() -> void:
     _swap(home)
 
 func _show_gate() -> void:
-    if not world.state["gate"]["started"] and not world.begin_gate():
+    if (not world.state["gate"]["started"] or int(world.state["gate"]["shift_day"]) != int(world.state["calendar"]["day_index"])) and not world.begin_gate():
         push_warning("Gate unavailable: " + world.last_error)
         return
     var gate := GateView.new()

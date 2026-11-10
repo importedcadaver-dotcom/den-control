@@ -5,7 +5,7 @@ extends RefCounted
 const CanonLoader = preload("res://scripts/foundation/canon_loader.gd")
 const HomeSystem = preload("res://scripts/home/home_system.gd")
 const GateSystem = preload("res://scripts/gate/gate_system.gd")
-const SAVE_VERSION: int = 4
+const SAVE_VERSION: int = 5
 const DUTIES = ["gate", "refuge", "gate", "refuge", "gate", "refuge", "off"]
 const PHASES = ["morning", "daytime", "evening"]
 const ALLOWED_ENTRIES = ["authorized", "denied", "held"]
@@ -55,6 +55,7 @@ func reset() -> void:
             "enabled": true, "pause_reasons": [], "running": false},
         "home": HomeSystem.initial_state(),
         "gate": GateSystem.initial_state(),
+        "world_time": {"elapsed_seconds": 0.0, "offscreen_seconds": 0.0, "care_coverage": "unresolved_schedule"},
         "events": [], "next_event_sequence": 1
     }
 
@@ -94,7 +95,7 @@ func enable_qa_mode() -> void:
 func register_qa_subject(character_id: String, case_id: String) -> bool:
     if not bool(state["qa_mode"]) or not character_id.begins_with("uc.qa.") or has_character(character_id) or not state["case_records"].has(case_id):
         return _fail("QA-only anonymous subject registration rejected")
-    state["characters"][character_id] = {"id": character_id, "display_name": "", "species": "brown_bear", "age_months": null, "qa_fixture": true}
+    state["characters"][character_id] = {"id": character_id, "display_name": "", "species": "brown_bear", "age_months": null, "qa_fixture": true, "registered_case_id": case_id}
     _record("qa.anonymous_subject", character_id, {"case_id": case_id})
     last_error = ""
     return true
@@ -165,7 +166,10 @@ func tick_shift(seconds: float) -> bool:
     if seconds < 0:
         return _fail("Negative clock step")
     var clock: Dictionary = state["shift_clock"]
-    if not bool(clock["running"]) or not bool(clock["enabled"]) or not clock["pause_reasons"].is_empty():
+    if not bool(clock["running"]) or not clock["pause_reasons"].is_empty():
+        return true
+    advance_world_time(seconds)
+    if not bool(clock["enabled"]):
         return true
     var duration: Variant = clock["duration_seconds"]
     if duration == null:
@@ -174,6 +178,19 @@ func tick_shift(seconds: float) -> bool:
     if float(clock["elapsed_seconds"]) >= float(duration):
         clock["running"] = false
         _record("clock.complete", "", {"duty": current_duty()})
+    return true
+
+func advance_world_time(seconds: float) -> bool:
+    # World simulation continues during work without assuming Grandma scenes.
+    if seconds < 0.0 or not is_finite(seconds):
+        return _fail("Invalid world-time delta")
+    var time: Dictionary = state["world_time"]
+    time["elapsed_seconds"] = float(time["elapsed_seconds"]) + seconds
+    time["offscreen_seconds"] = float(time["offscreen_seconds"]) + seconds
+    var steps: int = mini(32, int(float(time["offscreen_seconds"]) / 90.0))
+    if steps > 0:
+        time["offscreen_seconds"] = float(time["offscreen_seconds"]) - float(steps) * 90.0
+        tick_home(steps)
     return true
 
 func register_case(case_id: String, facts: Dictionary) -> bool:
@@ -187,6 +204,8 @@ func register_case(case_id: String, facts: Dictionary) -> bool:
 func record_entry_decision(character_id: String, status: String, case_id: String) -> bool:
     if not has_character(character_id) or not status in ALLOWED_ENTRIES or not state["case_records"].has(case_id):
         return _fail("Invalid character, status or case")
+    if state["characters"][character_id].get("qa_fixture", false) and state["characters"][character_id].get("registered_case_id", "") != case_id:
+        return _fail("Entry case does not belong to subject")
     if state["refuge_placements"].get(character_id, {}).get("status", "") == "placed" and status != "authorized":
         return _fail("Existing refuge placement requires a separate legal release procedure")
     state["entry_permissions"][character_id] = {"status": status, "case_id": case_id}
@@ -196,7 +215,7 @@ func record_entry_decision(character_id: String, status: String, case_id: String
 
 func place_in_refuge(character_id: String, case_id: String) -> bool:
     var entry: Dictionary = state["entry_permissions"].get(character_id, {})
-    if not has_character(character_id) or entry.get("status", "") != "authorized" or not state["case_records"].has(case_id):
+    if not has_character(character_id) or entry.get("status", "") != "authorized" or entry.get("case_id", "") != case_id or not state["case_records"].has(case_id):
         return _fail("Refuge placement requires separate authorized entry and a case")
     state["refuge_placements"][character_id] = {"status": "placed", "refuge_id": "uc.refuge.briarwood", "case_id": case_id}
     _record("refuge.placed", character_id, {"case_id": case_id})
@@ -481,6 +500,16 @@ static func validate_state(candidate: Dictionary) -> Array[String]:
             expected_seq += 1
         if candidate.get("next_event_sequence", 0) != expected_seq:
             errors.append("next event sequence mismatch")
+    var world_time: Variant = candidate.get("world_time", null)
+    if not world_time is Dictionary:
+        errors.append("missing shared world time")
+    else:
+        for field in ["elapsed_seconds", "offscreen_seconds"]:
+            var value: Variant = world_time.get(field, null)
+            if not (value is float or value is int) or not is_finite(float(value)) or float(value) < 0.0:
+                errors.append("invalid shared world time")
+        if world_time.get("care_coverage", "") != "unresolved_schedule":
+            errors.append("unapproved childcare coverage")
     var clock: Variant = candidate.get("shift_clock", null)
     if not clock is Dictionary or not clock.get("pause_reasons", null) is Array:
         errors.append("invalid shift clock")

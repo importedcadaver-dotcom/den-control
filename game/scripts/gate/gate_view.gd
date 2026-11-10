@@ -278,7 +278,9 @@ func _draw() -> void:
     draw_rect(Rect2(29, 278, 192, 46), Color("524c48"))
     var ticket: Dictionary = _ticket() if world != null else {}
     if not ticket.is_empty():
-        _draw_animal(Vector2(97, 232), bool(ticket.get("accompanied_minor", false)), str(ticket.get("subject", "")))
+        _draw_animal(Vector2(88, 223), false, str(ticket.get("subject", "")))
+        if bool(ticket.get("accompanied_minor", false)):
+            _draw_animal(Vector2(159, 277), true, "anonymous brown bear cub")
     # Wooden inspection desk, paper tray, tangible stamp block.
     draw_rect(Rect2(0, 405, 657, 58), Color("886147"))
     for x in range(0, 650, 63):
