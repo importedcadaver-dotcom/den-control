@@ -320,7 +320,7 @@ static func validate(value: Variant, world: Dictionary) -> Array[String]:
     if gate.get("complete", false):
         if not gate.get("asked", []).is_empty() or not gate.get("verified", []).is_empty():
             errors.append("completed gate has pending inquiries")
-        if world.get("calendar", {}).get("phase", "") == "daytime":
+        if world.get("calendar", {}).get("phase", "") == "daytime" and int(gate.get("shift_day", -1)) == int(world.get("calendar", {}).get("day_index", -1)):
             errors.append("completed gate remained in daytime")
         if gate.get("skipped", []) is Array:
             var actual_skipped: Array = []
