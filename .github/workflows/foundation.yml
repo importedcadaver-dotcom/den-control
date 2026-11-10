@@ -53,8 +53,8 @@ jobs:
       - name: Run P4.1 repeated-day and identity tests
         run: godot --headless --path game --script res://tests/test_p41.gd
       - name: Run P5 refuge management tests
-        run: godot --headless --path game --script res://tests/test_p5.gd
+        run: timeout 60s godot --headless --path game --script res://tests/test_p5.gd
       - name: Run P5 home/gate/refuge scene route
-        run: godot --headless --path game --script res://tests/test_p5_ui.gd
+        run: timeout 60s godot --headless --path game --script res://tests/test_p5_ui.gd
       - name: Boot main P4 home scene
         run: godot --headless --path game --quit-after 12
