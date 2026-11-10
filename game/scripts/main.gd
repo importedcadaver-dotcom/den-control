@@ -3,6 +3,7 @@ extends Control
 const WorldState = preload("res://scripts/world/world_state.gd")
 const HomeView = preload("res://scripts/home/home_view.gd")
 const GateView = preload("res://scripts/gate/gate_view.gd")
+const RefugeView = preload("res://scripts/refuge/refuge_view.gd")
 var world: RefCounted
 var active_view: Control
 
@@ -25,6 +26,7 @@ func _swap(next: Control) -> void:
 func _show_home() -> void:
     var home := HomeView.new()
     home.request_gate.connect(_show_gate)
+    home.request_refuge.connect(_show_refuge)
     _swap(home)
 
 func _show_gate() -> void:
@@ -34,3 +36,12 @@ func _show_gate() -> void:
     var gate := GateView.new()
     gate.request_home.connect(_show_home)
     _swap(gate)
+
+
+func _show_refuge() -> void:
+    if (not world.state["refuge"]["started"] or int(world.state["refuge"]["shift_day"]) != int(world.state["calendar"]["day_index"])) and not world.begin_refuge():
+        push_warning("Refuge unavailable: " + world.last_error)
+        return
+    var refuge := RefugeView.new()
+    refuge.request_home.connect(_show_home)
+    _swap(refuge)

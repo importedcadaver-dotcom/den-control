@@ -1,5 +1,6 @@
 extends Control
 signal request_gate
+signal request_refuge
 ## A bounded P3 home sandbox: visible quadrupedal bears, needs, actions, and memories.
 ## Does not advance work shifts, run school or generate named characters.
 const HomeSystem = preload("res://scripts/home/home_system.gd")
@@ -96,6 +97,7 @@ func _make_ui() -> void:
     var work_row := HBoxContainer.new()
     stack.add_child(work_row)
     _action_button("Go to gate", work_row).pressed.connect(_go_gate)
+    _action_button("Go to refuge", work_row).pressed.connect(_go_refuge)
     _action_button("Next day", work_row).pressed.connect(_next_day)
     _spacer(stack, 12)
 
@@ -106,6 +108,15 @@ func _go_gate() -> void:
         last_message = "Today's gate shift is already completed."
     else:
         request_gate.emit()
+    _refresh()
+
+func _go_refuge() -> void:
+    if world.current_duty() != "refuge":
+        last_message = "Today is not a refuge shift. Duty: " + world.current_duty()
+    elif world.state["refuge"]["complete"] and int(world.state["refuge"]["shift_day"]) == int(world.state["calendar"]["day_index"]):
+        last_message = "Today's refuge shift is finished."
+    else:
+        request_refuge.emit()
     _refresh()
 
 func _next_day() -> void:

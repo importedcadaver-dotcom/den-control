@@ -19,7 +19,7 @@ def test_p3_files_exist():
 
 def test_home_state_is_validated_and_saved():
     assert "HomeSystem.valid(candidate.get" in WORLD
-    assert "SAVE_VERSION: int = 5" in WORLD  # P4.1 adds repeatable shifts; P3 cubs stay intact
+    assert "SAVE_VERSION: int = 6" in WORLD  # P4.1 adds repeatable shifts; P3 cubs stay intact
     for key in ["sim_steps", "cubs", "holding_id", "memories", "sibling", "pantry_portions"]:
         assert f'"{key}"' in HOME
     for method in ["act_with_cub", "tick_home", "select_home_cub"]:
