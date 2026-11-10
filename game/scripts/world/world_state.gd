@@ -5,7 +5,8 @@ extends RefCounted
 const CanonLoader = preload("res://scripts/foundation/canon_loader.gd")
 const HomeSystem = preload("res://scripts/home/home_system.gd")
 const GateSystem = preload("res://scripts/gate/gate_system.gd")
-const SAVE_VERSION: int = 5
+const RefugeSystem = preload("res://scripts/refuge/refuge_system.gd")
+const SAVE_VERSION: int = 6
 const DUTIES = ["gate", "refuge", "gate", "refuge", "gate", "refuge", "off"]
 const PHASES = ["morning", "daytime", "evening"]
 const ALLOWED_ENTRIES = ["authorized", "denied", "held"]
@@ -55,6 +56,7 @@ func reset() -> void:
             "enabled": true, "pause_reasons": [], "running": false},
         "home": HomeSystem.initial_state(),
         "gate": GateSystem.initial_state(),
+        "refuge": RefugeSystem.initial_state(),
         "world_time": {"elapsed_seconds": 0.0, "offscreen_seconds": 0.0, "care_coverage": "unresolved_schedule"},
         "events": [], "next_event_sequence": 1
     }
@@ -326,6 +328,27 @@ func tick_home(steps: int = 1) -> bool:
     last_error = ""
     return true
 
+func begin_refuge() -> bool:
+    return RefugeSystem.begin(self)
+
+func eligible_refuge_subjects() -> Array:
+    return RefugeSystem.eligible(self)
+
+func admit_refuge_subject(subject: String, case_id: String) -> bool:
+    return RefugeSystem.admit(self, subject, case_id)
+
+func buy_refuge_supply(item: String) -> bool:
+    return RefugeSystem.purchase(self, item)
+
+func care_refuge_subject(subject: String, action: String) -> bool:
+    return RefugeSystem.care(self, subject, action)
+
+func tick_refuge(steps: int = 1) -> bool:
+    return RefugeSystem.tick(self, steps)
+
+func finish_refuge() -> bool:
+    return RefugeSystem.finish(self)
+
 func begin_gate() -> bool:
     return GateSystem.begin(self)
 
@@ -526,6 +549,7 @@ static func validate_state(candidate: Dictionary) -> Array[String]:
         if not (elapsed is float or elapsed is int) or not is_finite(float(elapsed)) or float(elapsed) < 0.0:
             errors.append("invalid clock elapsed")
     errors.append_array(GateSystem.validate(candidate.get("gate", null), candidate))
+    errors.append_array(RefugeSystem.validate(candidate.get("refuge", null), candidate))
     return errors
 
 static func _is_whole_number(value: Variant) -> bool:
