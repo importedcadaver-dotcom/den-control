@@ -98,7 +98,7 @@ func _initialize() -> void:
     expect(bool(SaveStore.load_into(path, loaded).get("ok", false)), "P4 save restores into new world")
     expect(WorldState.validate_state(loaded.snapshot()).is_empty(), "loaded P4 data validates")
     expect(loaded.state["gate"]["decisions"].size() == 6, "all decisions survive save/load")
-    expect(loaded.state["entry_permissions"].size() == 6, "legal entry results survive save/load")
+    expect(loaded.state["entry_permissions"].size() == 7, "separate party legal entry results survive save/load")
     expect(loaded.state["calendar"]["phase"] == "evening", "completed shift phase survives save/load")
     expect(loaded.state["guardian_links"]["uc.family.hazel"]["guardian_id"] == "uc.family.mama", "guardian protected through save/load")
     var tampered: Dictionary = world.snapshot()
