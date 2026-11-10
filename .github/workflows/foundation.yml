@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.13'
       - run: python -m pip install --disable-pip-version-check pytest
-      - run: python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py tests/test_p3_static.py tests/test_p4_static.py tests/test_p41_static.py
+      - run: python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py tests/test_p3_static.py tests/test_p4_static.py tests/test_p41_static.py tests/test_p5_static.py
 
   godot-headless:
     runs-on: ubuntu-latest
@@ -52,5 +52,9 @@ jobs:
         run: godot --headless --path game --script res://tests/test_p4_ui.gd
       - name: Run P4.1 repeated-day and identity tests
         run: godot --headless --path game --script res://tests/test_p41.gd
+      - name: Run P5 refuge management tests
+        run: godot --headless --path game --script res://tests/test_p5.gd
+      - name: Run P5 home/gate/refuge scene route
+        run: godot --headless --path game --script res://tests/test_p5_ui.gd
       - name: Boot main P4 home scene
         run: godot --headless --path game --quit-after 12
