@@ -29,7 +29,7 @@ func _initialize() -> void:
     expect(world.state["calendar"]["phase"] == "daytime", "gate opens daytime")
     expect(world.current_duty() == "gate", "approved weekly rotation intact")
     expect(gate["queue"].size() == 6, "routine and investigative fixture cases loaded")
-    expect(world.state["characters"].size() == 11, "six anonymous QA subjects plus five canonical people")
+    expect(world.state["characters"].size() == 12, "seven anonymous QA subjects including cub plus five canonical people")
     var anonymous_names_ok := true
     for id in world.state["characters"].keys():
         if str(id).begins_with("uc.qa."):
