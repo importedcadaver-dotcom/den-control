@@ -297,3 +297,13 @@ The Godot project now includes a P4 gate workday in [`game/scripts/gate/`](../ga
 GitHub CI [run 42534096795](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42534096795) passed Godot headless P1–P4 plus P4 live-scene interaction and Python static tests (**32 passed locally**). The shift-duration of 1,200 seconds is a provisional test setting, not a final canon number. The P4 world save schema is now **4**; P3 developer saves are not automatically migrated.
 
 **Remaining first-milestone work:** P5 refuge management, meaningful cross-day state/world scheduling and P6 two-day acceptance testing. Windows GUI/visual testing has not been done. The absence of new named characters is deliberate and must persist.
+
+
+## Progress update — P4.1 + P5 verified, November 9, 2026
+
+**Source implemented and verified in actual Godot CI:** P4.1 repeatable gate and legal integration safeguards, and P5 resident care/facility management with a separate public budget. The first coherent Home → Gate → Home → Refuge → Home *QA* flow now has passing Godot scene tests. [Verification and limitations](P5_CHECKPOINT.md).
+
+- P0–P5: source milestone completed and headless verified (including P4.1 prerequisite).
+- P6: **not yet a complete approved release**. The working sessions currently use anonymous engineering applicants, provisional rules, capacity, prices and a simplistic resident AI. Real childcare supervision/school, an approved recurring applicant, persistent story consequences, Windows visual and interactive QA, accessibility and save schema policy are still required.
+- P7: seven-day workweek acceptance test not run.
+- The previously documented P5-not-yet-implemented statements are **historical as of their written date** and superseded by this progress note. No silent additions to canon.

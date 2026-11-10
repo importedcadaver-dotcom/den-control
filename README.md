@@ -4,7 +4,7 @@ An in-development 2D pixel-art Honeyhold cave-city bureaucracy, family-life, and
 
 ## Project status
 
-**P4 anonymous gate-training workday and P3 interactive home are implemented and Godot-headless verified. P5 refuge and the P6 connected two-day production milestone are still unbuilt.**
+**P4.1 repeat-day and legal hardening, P5 QA refuge operations, P4 gate and P3 home are now Godot-headless verified. The P6 first production release and Windows interactive/visual review remain unfinished.**
 
 - Previously referenced original playable foundation: `BriarwoodRefuge_v0.1_Windows_and_Source.zip` (Godot 4 / GDScript), reported as recovered from the user's ChatGPT Library in earlier work. **Not present as source in this repo.**
 - Other historical implementation: `Honey, Please` (single-file HTML/CSS/JavaScript), provided and reviewed in an earlier chat. **Not present in this repo.**
@@ -79,3 +79,12 @@ P4 includes a procedural inspection booth and six **anonymous QA-training** arri
 [GitHub Actions run 42534096795](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42534096795) passed Godot 4.7.2 headless tests including P1/P2/P3 regression, the P4 gate suite, an actual home-to-gate scene interaction test, editor import and startup, plus Python static checks. Local Python checks: **32 passed**. This is **not** a Windows visual review or the P6 finished two-day slice.
 
 See [P4 checkpoint](docs/P4_CHECKPOINT.md), [P4 test matrix](docs/P4_TEST_MATRIX.md) and [gate source](game/scripts/gate/). P5 refuge gameplay, schooling/Grandma childcare during shifts, and full official legal content remain unfinished.
+
+
+## Latest milestone — P4.1 + P5 verified (November 9, 2026)
+
+- **P4.1:** Repeatable gate days, archived decisions, separate QA adult/cub identities, independently checked case ownership, saved evidence snapshots, full copied-result checks, atomic shift opening, pending HOLD and shared offscreen cub time.
+- **P5:** [Briarwood Refuge operations](game/scripts/refuge/) runs on the same persistent world state. Authorized anonymous QA applicants may receive separate refuge placements if beds are available. The player can add beds, buy food/medicine/blankets from a *public* Honey Marks account, directly feed/comfort/rest/treat residents, and observe simple resident needs and movement.
+- **No invented canon:** The training visitors have no approved personal names; provisional prices, budget seeds and capacity are test numbers, not Honeyhold law or economy. Family identities remain unchanged.
+- **Verification:** [Actions run 42747344337](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42747344337) passed **352 Godot assertions** across P1–P5 and **40 Python static tests**, editor import and headless scene boot. [Checkpoint](docs/P5_CHECKPOINT.md).
+- **Not yet P6:** No Windows executable export or manual pixel-art/UI assessment; no complete Grandma/school offscreen schedule, authored recurring applicant or seven-day campaign. [Production plan](docs/PRODUCTION_PLAN_V0_1.md).

@@ -1,4 +1,4 @@
-# Unbearable Conditions — P4 Home + Gate Training Sandbox
+# Unbearable Conditions — P5 Home + Gate + Refuge Training Sandbox
 
 **A small interactable home scene**, not the complete game or the two-day gate/refuge/family release.
 
@@ -35,3 +35,25 @@ Run with Godot 4.7.2:
     python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py tests/test_p3_static.py tests/test_p4_static.py
 
 The full P1–P4 suites and main scene startup passed in [Actions run 42534096795](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42534096795). **P5 refuge, full childcare/school schedules and a Windows visual playtest are pending.** The P4 developer save schema is version **4**; no previous P3 developer-save migration is promised.
+
+
+## P5 — Refuge day, QA mode only
+
+After completing the day-one gate shift, return home and advance to Day 2 (refuge duty). Click **Go to refuge** in the home sidebar. Briarwood Refuge uses the same persistent characters, case records, entry permissions, home state and financial ledgers as the gate.
+
+- Select an **authorized anonymous QA entrant** and admit them only if a separate refuge bed is available. Gate entry alone is not residence, guardianship or legal custody.
+- QA starts with one bed and zero supply stock. Press **Seed QA budget 80 HM** to explicitly initialize a **provisional public test budget**. None of these prices, supplies or bed limits are approved Honeyhold economy.
+- Buy food, medicine, blankets or additional beds using the **public refuge** ledger (not Mama's private household funds).
+- Select a resident and feed, comfort, rest or treat them. Needs update and persist, and a resident's simple autonomous needs continue while the refuge screen is open.
+- Finish the refuge shift, return home with the same two cubs, and save/load.
+- The full two-day production release, Windows visual review, school/Grandma offscreen activities and authentic individually authored recurring refugee story remain future work.
+
+To verify using Godot 4.7.2 and Python (from repository root):
+
+    python -m pytest -q tests/test_p1_static.py tests/test_p2_static.py tests/test_p3_static.py tests/test_p4_static.py tests/test_p41_static.py tests/test_p5_static.py
+    godot --headless --path game --editor --quit
+    godot --headless --path game --script res://tests/test_p41.gd
+    godot --headless --path game --script res://tests/test_p5.gd
+    godot --headless --path game --script res://tests/test_p5_ui.gd
+
+[Verified GitHub Actions run](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42747344337): P1–P5 headless and Python passed. Current developer-save schema is **6**, without an automatic migration promise for older developer saves.

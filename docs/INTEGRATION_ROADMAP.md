@@ -105,3 +105,14 @@ The user approved first milestone B (one gate day + one refuge day + home), gate
 The P4 gate workday was implemented on the shared P2+P3 WorldState with six **anonymous QA applicants** and provisional inspection rules. It includes questioning, document examination, record verification, reasoned legal entries/holds/denials, a shift timer that pauses while reading (and can be disabled), persistent case/decision records and home-to-gate-to-home navigation. [P4 checkpoint](P4_CHECKPOINT.md) and [test matrix](P4_TEST_MATRIX.md) describe constraints and evidence. The P4 world/save schema is **4**; earlier P3 developer saves have no automatic migration. The old v0.1 Button/Hazel identities remain excluded.
 
 [GitHub Actions 42534096795](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42534096795) passed Godot 4.7.2 P1/P2/P3/P4 headless suites, P4 UI scene interaction, editor import and startup, and Python checks. The new gate content is expressly **QA-only**, not newly invented Honeyhold law or canonical applicants. **P5 refuge management is next**, followed by P6 connected two-day acceptance testing and Windows visual testing.
+
+
+## P4.1 and P5 engineering checkpoint — November 9, 2026
+
+P4.1 repaired the audited gate repeat-day and identity handoff blockers: date-scoped repeatable shifts with archives, independent adult/cub QA IDs, case ownership, snapshot integrity, atomic gate startup, pending HOLD, visually separate adult/cub render and shared offscreen world time. The earlier completed gate no longer blocks later refuge daytime validation.
+
+P5 implemented an independent QA refuge management system with public-budget-only purchases, beds/capacity, food and medicine, direct resident care, needs/autonomy, saved resident state and Home → Gate → Home → Refuge → Home navigation, all through the existing world state. **Anonymous QA applicants and provisional numbers are NOT canonical new residents, legal statutes or official Honeyhold financial figures.**
+
+[CI run 42747344337](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42747344337) verified 352 Godot assertions (P1–P5), 40 Python static checks, Godot editor import and headless main-scene boot. See [P4.1 checkpoint](P41_CHECKPOINT.md) and [P5 checkpoint](P5_CHECKPOINT.md).
+
+**P6 remains outstanding.** The game needs authored individually approved people/cases for real fiction, a true cross-day childcare and school simulation, usable and visually inspected Windows UI, final economic balance, player-save compatibility policy and an actually tested two-day integrated release. Do not conflate the tested QA sandbox with those deliverables.
