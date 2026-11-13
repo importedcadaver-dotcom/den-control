@@ -1,4 +1,19 @@
-# Unbearable Conditions — P5 Home + Gate + Refuge Training Sandbox
+# Unbearable Conditions — P6 technical QA prototype
+
+**Working two-day QA loop, not the final authored story game.** In Godot 4.7.2 or the portable Windows QA runner: play with Mama, Button and Hazel in the den; on day one work a gate shift with anonymous training cases; return home, advance to day two; operate the public Briarwood Refuge; return home and save. A third-day gate shift can also start. No new named characters or official Honeyhold laws have been created.
+
+**Windows runner:** Download the [tested QA runner artifact](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43361027996) (Artifacts section). Extract the ZIP and launch PLAY_P6_QA.bat. The official Godot Windows executable is bundled, so a separate editor install is unnecessary. The archive was verified to contain the launcher, executable, source and license. See [P6 playtest checklist](../docs/P6_WINDOWS_PLAYTEST_CHECKLIST.md).
+
+**Verification:** [Linux + Windows Godot 4.7.2, 423 GDScript assertions plus 44 Linux Python checks](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43361027996). These automated headless checks are **not** a visual Windows playtest. P6 uses developer save schema **v7**, with a validated v6→v7 developer-save upgrade. Prior developer schemas are not guaranteed to migrate. The P6 family supervision windows are provisional; no named teacher or Grandma incident is invented.
+
+**Current project instructions (from repository root):**
+- Godot editor: open game/project.godot; click Play
+- Tests: godot --headless --path game --script res://tests/test_p6.gd
+- UI tests: godot --headless --path game --script res://tests/test_p6_ui.gd
+- Python: python -m pytest -q tests/
+
+---
+## Historical P5 setup notes (superseded by P6)
 
 **A small interactable home scene**, not the complete game or the two-day gate/refuge/family release.
 

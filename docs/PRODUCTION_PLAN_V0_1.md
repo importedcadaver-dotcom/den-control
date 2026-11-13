@@ -307,3 +307,12 @@ GitHub CI [run 42534096795](https://github.com/importedcadaver-dotcom/den-contro
 - P6: **not yet a complete approved release**. The working sessions currently use anonymous engineering applicants, provisional rules, capacity, prices and a simplistic resident AI. Real childcare supervision/school, an approved recurring applicant, persistent story consequences, Windows visual and interactive QA, accessibility and save schema policy are still required.
 - P7: seven-day workweek acceptance test not run.
 - The previously documented P5-not-yet-implemented statements are **historical as of their written date** and superseded by this progress note. No silent additions to canon.
+
+
+## Progress update — P6 technical QA slice verified (November 12, 2026)
+
+The integrated home → gate → home → refuge → home **anonymous QA flow** now runs on the shared Godot world with a provisional preschool/Grandma supervision window, time-limited refuge operations, evidence/case persistence and a validated schema **v6→v7 developer-save upgrade**. [P6 checkpoint](P6_TECHNICAL_QA_CHECKPOINT.md) records the implementation and remaining gaps.
+
+[GitHub Actions 43361027996](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43361027996) succeeded on Linux Godot, Windows Godot and Python: **423 passing GDScript assertions** in the full P1–P6 Linux suite and **44 passing Python checks**. The Windows headless job ran P1–P6 engine suites and startup. The same run published a **portable Windows QA runner** artifact containing official Godot 4.7.2 Windows executable, project source, launcher and license. Its ZIP passed integrity verification.
+
+**Do not call this the final approved P6 story release.** It has no user-approved recurring applicant, final Honeyhold regulations, finalized school/Grandma event simulation, city-scale political impact, sustained 25+ day story or verified real Windows visual/manual usability. The seven-day acceptance week is not certified. Next stage is player-led visual QA and a *single* individually approved recurring gate/refuge character case, not an invented supporting cast.

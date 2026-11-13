@@ -36,3 +36,30 @@
 - game/scripts/refuge/refuge_system.gd
 - game/tests/test_p6.gd and game/tests/test_p6_ui.gd
 - tests/test_p6_static.py
+
+
+## Verified P6 execution results — November 12, 2026 PST
+
+**Authoritative completed CI:** [GitHub Actions 43361027996](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43361027996), passing all three jobs:
+- **Linux Godot 4.7.2:** editor import, P1/P2/P3/P4/P4 UI/P4.1/P5/P5 UI/P6/P6 UI headless suites, and main-scene boot. **423 GDScript assertions passed** (P1 7, P2 56, P3 67, P4 85, P4 UI 19, P4.1 37, P5 64, P5 UI 17, P6 56, P6 UI 15).
+- **Python on Linux:** 44/44 source/contract checks passed. The first P6 attempt had one stale P4.1 source-string assertion; updated it to assert the new bounded time-step path. After that correction, all 44 passed.
+- **Windows Godot 4.7.2:** official 86 MB Windows Godot binary from the verified Godot release; editor import, all P1–P6 headless suites, and main-scene startup passed.
+
+### Downloadable Windows QA runner
+- GitHub workflow artifact ID: **14008022958**, name **UnbearableConditions-P6-QA-Windows**.
+- [Download from the successful workflow's Artifacts section](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43361027996). Artifact retention is 30 days; the repository source remains available after artifact expiry.
+- Includes the official Godot 4.7.2 Windows x64 executable, full current game project, PLAY_P6_QA.bat, QA README and official Godot MIT license.
+- The downloaded artifact ZIP passed integrity testing with **52 entries**, and SHA-256 **09b13d62e7d673cbcc0d01d6ea640ac24bfc36f753951fbb370cc292c5f22c60**. It is a portable **developer QA runner**, not a final Godot-exported game package or visual certification.
+- A user on Windows can extract the ZIP and run the launcher; no separate Godot editor installation is required. **A human Windows session has not been playtested**; no claims of validated mouse controls, text clipping, final polish or real audio are supported.
+- [QA playtest checklist](P6_WINDOWS_PLAYTEST_CHECKLIST.md) gives concrete manual verification steps.
+
+### Remaining release gates
+
+1. **First recurring applicant:** only after individual user-approved identity, relationships and legal case context. Anonymous QA visitors cannot be silently converted to fictional citizens.
+2. **Childcare:** clarify school calendar and actual timings, model observable Grandma risk/consequences and immediate safety choices, without inventing an abuse incident or excusing her established cruelty.
+3. **Legal and economy content:** official regulations, ethical uncertainty, staff welfare, actual case/refuge consequences, wages/debt and production balances remain unapproved or unimplemented.
+4. **Windows visual/manual QA:** screenshots at real desktop scale, text readability, mouse targets, scrolling, animation/character proportions and gameplay feel.
+5. **Durable saves:** v6→v7 development save upgrade exists; production cross-version compatibility and migration from schemas 1–5 are not promised.
+6. **Seven-day acceptance:** verified first/third gate days and two-day QA sequence, not a complete 3-gate/3-refuge/1-off player campaign.
+
+**Canonical protection:** exactly five approved established individuals; no new recurring named characters, real Honeyhold laws or final budget figures added. Old v0.1 Button/Hazel seeds remain excluded.

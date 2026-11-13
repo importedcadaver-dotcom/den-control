@@ -116,3 +116,14 @@ P5 implemented an independent QA refuge management system with public-budget-onl
 [CI run 42747344337](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42747344337) verified 352 Godot assertions (P1–P5), 40 Python static checks, Godot editor import and headless main-scene boot. See [P4.1 checkpoint](P41_CHECKPOINT.md) and [P5 checkpoint](P5_CHECKPOINT.md).
 
 **P6 remains outstanding.** The game needs authored individually approved people/cases for real fiction, a true cross-day childcare and school simulation, usable and visually inspected Windows UI, final economic balance, player-save compatibility policy and an actually tested two-day integrated release. Do not conflate the tested QA sandbox with those deliverables.
+
+
+## P6 technical QA checkpoint — November 12, 2026
+
+[Checkpoint and QA limits](P6_TECHNICAL_QA_CHECKPOINT.md) · [Windows manual test checklist](P6_WINDOWS_PLAYTEST_CHECKLIST.md) · [Latest Windows and Linux CI](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43361027996)
+
+Implemented: provisional half-day preschool→Grandma scheduled care state and event history, no invented school or cruelty scenes; date- and shift-scoped refuge actions; finite, bounded shift-time steps; schema v7 and v6 developer-save upgrade; independent end-to-end P6 state/UI tests. The portable **Windows P6 QA runner** is published as a workflow artifact and its ZIP passed integrity checks.
+
+Verified: **423 Godot assertions** on Linux in P1–P6 suites, **44 Python checks**, and official **Windows Godot 4.7.2** headless editor import, P1–P6 suite execution and scene boot. This is not a Windows human-controlled visual playtest.
+
+**Release status: engineering/QA prototype only.** Full authored P6 requires one individually approved recurring applicant case, school/care safety consequences, player save compatibility policy, Windows readability/interaction/visual review, and game-feel tuning. P7 seven-day campaign tests remain a separate stage. Earlier roadmap statements that P5/P6 are wholly unimplemented are superseded by this dated checkpoint.
