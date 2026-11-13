@@ -101,3 +101,41 @@ jobs:
         run: |
           & $env:GODOT_BIN --headless --path game --quit-after 12
           if ($LASTEXITCODE -ne 0) { throw "Windows startup smoke failed" }
+
+      - name: Package portable Windows QA runner (official Godot executable + project)
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $bundle = Join-Path $env:RUNNER_TEMP "UnbearableConditions-P6-QA-Windows"
+          New-Item -Path $bundle -ItemType Directory -Force | Out-Null
+          Copy-Item -Path "game" -Destination (Join-Path $bundle "game") -Recurse
+          $cache = Join-Path $bundle "game\.godot"
+          if (Test-Path $cache) { Remove-Item -Path $cache -Recurse -Force }
+          $editor = Get-ChildItem -Path (Join-Path $env:RUNNER_TEMP "godot-4.7.2-win") -Recurse -Filter "Godot_v4.7.2-stable_win64.exe" | Select-Object -First 1
+          if ($null -eq $editor) { throw "Official Godot Windows runtime not found" }
+          Copy-Item -Path $editor.FullName -Destination (Join-Path $bundle "Godot_v4.7.2-stable_win64.exe")
+          $launch = '@echo off' + [Environment]::NewLine + 'cd /d "%~dp0"' + [Environment]::NewLine + '"Godot_v4.7.2-stable_win64.exe" --path "game"' + [Environment]::NewLine
+          [System.IO.File]::WriteAllText((Join-Path $bundle "PLAY_P6_QA.bat"), $launch, [System.Text.Encoding]::ASCII)
+          @"
+          UNBEARABLE CONDITIONS — P6 QA RUNNER
+          ====================================
+          Double-click PLAY_P6_QA.bat in this folder.
+          This package includes the official Godot 4.7.2 Windows executable
+          and the Godot source project. It is not a final exported game.
+
+          Start at Mama's den. Interact with Button and Hazel.
+          Go to gate on the first workday. Complete or end the shift.
+          Return home, choose Next day, and go to Briarwood Refuge.
+          Only anonymous QA applicants and provisional laws/prices exist.
+          The first recurring character story has not been approved.
+          Save/load uses a development save; old developer schemas are limited.
+          Gameplay usability and visual quality are not yet human-certified.
+          "@ | Set-Content -Path (Join-Path $bundle "README_QA.txt") -Encoding UTF8
+          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/godotengine/godot/4.7.2-stable/LICENSE.txt" -OutFile (Join-Path $bundle "GODOT_LICENSE.txt")
+          Write-Host "Portable QA folder prepared. Godot binary and source included."
+      - uses: actions/upload-artifact@v4
+        with:
+          name: UnbearableConditions-P6-QA-Windows
+          path: ${{ runner.temp }}/UnbearableConditions-P6-QA-Windows/
+          retention-days: 30
+          if-no-files-found: error
