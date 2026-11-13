@@ -125,14 +125,18 @@ func _build_ui() -> void:
     _action(inquiries, "Call registry", _verify.bind("registry"))
     _action(inquiries, "Check guardian", _verify.bind("guardian"))
     # A bounded scrollable response prevents long registry replies clipping the window.
+    var feedback_frame := Control.new()
+    feedback_frame.custom_minimum_size = Vector2(261, 74)
+    stack.add_child(feedback_frame)
     feedback_label = RichTextLabel.new()
-    feedback_label.custom_minimum_size = Vector2(260, 68)
+    feedback_label.position = Vector2.ZERO
+    feedback_label.size = Vector2(259, 72)
     feedback_label.fit_content = false
     feedback_label.scroll_active = true
     feedback_label.bbcode_enabled = false
     feedback_label.add_theme_color_override("default_color", Color("f0dfbe"))
     feedback_label.add_theme_font_size_override("normal_font_size", 12)
-    stack.add_child(feedback_label)
+    feedback_frame.add_child(feedback_label)
     _make_label(stack, "SHIFT / SAVE", 15)
     var controls := GridContainer.new()
     controls.columns = 2
