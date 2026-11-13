@@ -18,7 +18,8 @@ def test_fixture_snapshots_and_copied_decision():
 def test_offscreen_cubs():
     w = src("scripts/world/world_state.gd")
     assert "func advance_world_time(" in w
-    assert "advance_world_time(seconds)" in w
+    assert "advance_world_time(step)" in w
+    assert "step = minf(seconds" in w  # do not advance beyond an expired shift
 def test_repeat_day_ui():
     assert '"shift_day"]) != int(world.state["calendar"]["day_index"])' in src("scripts/main.gd")
     assert '"shift_day"]) == int(world.state["calendar"]["day_index"])' in src("scripts/home/home_view.gd")
