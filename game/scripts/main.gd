@@ -1,5 +1,5 @@
 extends Control
-## P4 single-world shell: home and an anonymous QA gate shift. P5 refuge not built.
+## P6 technical QA integration: shared home/gate/refuge world, not a story release.
 const WorldState = preload("res://scripts/world/world_state.gd")
 const HomeView = preload("res://scripts/home/home_view.gd")
 const GateView = preload("res://scripts/gate/gate_view.gd")

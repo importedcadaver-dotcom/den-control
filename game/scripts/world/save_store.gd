@@ -14,6 +14,10 @@ static func load_document(path: String) -> Dictionary:
     var parsed: Variant = parser.data
     if not parsed is Dictionary:
         return {"ok": false, "error": "invalid JSON object"}
+    if parsed.get("schema_version", -1) == 6:
+        parsed = WorldState.upgrade_dev_v6(parsed)
+        if parsed.is_empty():
+            return {"ok": false, "error": "developer save upgrade failed"}
     var problems: Array[String] = WorldState.validate_state(parsed)
     if not problems.is_empty():
         return {"ok": false, "error": "; ".join(problems)}

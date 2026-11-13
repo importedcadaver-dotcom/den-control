@@ -81,9 +81,14 @@ static func admit(world: RefCounted, subject: String, case_id: String) -> bool:
     world.last_error = ""
     return true
 
+static func _active_operations(world: RefCounted) -> bool:
+    var r: Dictionary = world.state["refuge"]
+    var calendar: Dictionary = world.state["calendar"]
+    return bool(r["started"]) and not bool(r["complete"]) and int(r["shift_day"]) == int(calendar["day_index"]) and calendar["phase"] == "daytime" and world.current_duty() == "refuge" and bool(world.state["shift_clock"]["running"])
+
 static func purchase(world: RefCounted, item: String) -> bool:
     var r: Dictionary = world.state["refuge"]
-    if not r["started"] or r["complete"] or not QA_COSTS.has(item):
+    if not _active_operations(world) or not QA_COSTS.has(item):
         return world._fail("Cannot purchase outside active refuge operations")
     if item == "bed" and int(r["bed_count"]) >= int(r["capacity"]):
         return world._fail("At QA bed capacity")
@@ -99,7 +104,7 @@ static func purchase(world: RefCounted, item: String) -> bool:
 
 static func care(world: RefCounted, subject: String, action: String) -> bool:
     var r: Dictionary = world.state["refuge"]
-    if not r["started"] or r["complete"] or not r["residents"].has(subject) or not ACTIONS.has(action):
+    if not _active_operations(world) or not r["residents"].has(subject) or not ACTIONS.has(action):
         return world._fail("Invalid resident care action")
     var resident: Dictionary = r["residents"][subject]
     match action:
@@ -129,7 +134,7 @@ static func care(world: RefCounted, subject: String, action: String) -> bool:
 
 static func tick(world: RefCounted, steps: int = 1) -> bool:
     var r: Dictionary = world.state["refuge"]
-    if not r["started"] or r["complete"] or steps < 1 or steps > 32:
+    if not _active_operations(world) or steps < 1 or steps > 32:
         return world._fail("Cannot advance refuge residents")
     for step in range(steps):
         for subject in r["residents"].keys():

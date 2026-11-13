@@ -6,7 +6,8 @@ const CanonLoader = preload("res://scripts/foundation/canon_loader.gd")
 const HomeSystem = preload("res://scripts/home/home_system.gd")
 const GateSystem = preload("res://scripts/gate/gate_system.gd")
 const RefugeSystem = preload("res://scripts/refuge/refuge_system.gd")
-const SAVE_VERSION: int = 6
+const FamilySchedule = preload("res://scripts/world/family_schedule.gd")
+const SAVE_VERSION: int = 7
 const DUTIES = ["gate", "refuge", "gate", "refuge", "gate", "refuge", "off"]
 const PHASES = ["morning", "daytime", "evening"]
 const ALLOWED_ENTRIES = ["authorized", "denied", "held"]
@@ -57,6 +58,7 @@ func reset() -> void:
         "home": HomeSystem.initial_state(),
         "gate": GateSystem.initial_state(),
         "refuge": RefugeSystem.initial_state(),
+        "family_schedule": FamilySchedule.initial_state(),
         "world_time": {"elapsed_seconds": 0.0, "offscreen_seconds": 0.0, "care_coverage": "unresolved_schedule"},
         "events": [], "next_event_sequence": 1
     }
@@ -111,6 +113,8 @@ func change_phase(next_phase: String) -> bool:
         return _fail("Invalid phase transition")
     state["calendar"]["phase"] = next_phase
     state["shift_clock"]["running"] = false
+    if next_phase == "evening":
+        FamilySchedule.finish_shift(self)
     _record("calendar.phase", "", {"from": previous, "to": next_phase})
     last_error = ""
     return true
@@ -123,6 +127,7 @@ func advance_day() -> bool:
     state["shift_clock"]["elapsed_seconds"] = 0.0
     state["shift_clock"]["running"] = false
     state["shift_clock"]["pause_reasons"] = []
+    FamilySchedule.next_day(self)
     # Character ages are anchored to starting months + elapsed calendar days.
     # Exact month-length and development transitions are separate approved decisions.
     _record("calendar.new_day", "", {"duty": current_duty()})
@@ -149,6 +154,7 @@ func start_shift() -> bool:
         return _fail("No shift duration configured")
     state["shift_clock"]["running"] = true
     state["shift_clock"]["elapsed_seconds"] = 0.0
+    FamilySchedule.begin_shift(self)
     _record("clock.start", "", {"duty": current_duty()})
     last_error = ""
     return true
@@ -165,19 +171,23 @@ func pause_shift(reason: String, paused: bool) -> bool:
     return true
 
 func tick_shift(seconds: float) -> bool:
-    if seconds < 0:
-        return _fail("Negative clock step")
+    if seconds < 0.0 or not is_finite(seconds):
+        return _fail("Invalid clock step")
     var clock: Dictionary = state["shift_clock"]
     if not bool(clock["running"]) or not clock["pause_reasons"].is_empty():
         return true
-    advance_world_time(seconds)
+    var step: float = seconds
+    if bool(clock["enabled"]):
+        var duration: Variant = clock["duration_seconds"]
+        if duration == null:
+            return _fail("Unconfigured shift clock")
+        step = minf(seconds, maxf(0.0, float(duration) - float(clock["elapsed_seconds"])))
+    if not advance_world_time(step):
+        return false
     if not bool(clock["enabled"]):
         return true
-    var duration: Variant = clock["duration_seconds"]
-    if duration == null:
-        return _fail("Unconfigured shift clock")
-    clock["elapsed_seconds"] = minf(float(duration), float(clock["elapsed_seconds"]) + seconds)
-    if float(clock["elapsed_seconds"]) >= float(duration):
+    clock["elapsed_seconds"] = float(clock["elapsed_seconds"]) + step
+    if float(clock["elapsed_seconds"]) >= float(clock["duration_seconds"]):
         clock["running"] = false
         _record("clock.complete", "", {"duty": current_duty()})
     return true
@@ -192,7 +202,9 @@ func advance_world_time(seconds: float) -> bool:
     var steps: int = mini(32, int(float(time["offscreen_seconds"]) / 90.0))
     if steps > 0:
         time["offscreen_seconds"] = float(time["offscreen_seconds"]) - float(steps) * 90.0
-        tick_home(steps)
+        if not tick_home(steps):
+            return false
+    FamilySchedule.advance(self)
     return true
 
 func register_case(case_id: String, facts: Dictionary) -> bool:
@@ -550,7 +562,11 @@ static func validate_state(candidate: Dictionary) -> Array[String]:
             errors.append("invalid clock elapsed")
     errors.append_array(GateSystem.validate(candidate.get("gate", null), candidate))
     errors.append_array(RefugeSystem.validate(candidate.get("refuge", null), candidate))
+    errors.append_array(FamilySchedule.validate(candidate.get("family_schedule", null), candidate))
     return errors
+
+static func upgrade_dev_v6(candidate: Dictionary) -> Dictionary:
+    return FamilySchedule.upgrade_v6(candidate)
 
 static func _is_whole_number(value: Variant) -> bool:
     if value is int:

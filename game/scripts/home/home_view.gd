@@ -213,6 +213,11 @@ func _refresh() -> void:
     if not cub["memories"].is_empty():
         latest_memory = str(cub["memories"].back().get("detail", ""))
     notes_label.text = "Sibling bond: %d\nResentment: %d\nFights: %d\nPantry (demo): %d portions\nMemories: %d\nLast remembered: %s" % [int(sibling["bond"]), int(sibling["resentment"]), int(sibling["conflicts"]), int(home["pantry_portions"]), cub["memories"].size(), latest_memory]
+    var routine: Dictionary = world.state["family_schedule"]
+    notes_label.text += "\nCare schedule (QA): " + str(routine["window"]).replace("_", " ")
+    notes_label.text += "\nPreschool: " + str(routine["school_status"]).replace("_", " ")
+    if routine["caregiver_id"] == "uc.family.grandma":
+        notes_label.text += "\nGrandma is scheduled after school; no incidents simulated."
     time_label.text = "DAY %d · %s  |  HOME TICKS %d  |  AUTO %s" % [int(world.state["calendar"]["day_index"]) + 1, str(world.state["calendar"]["phase"]).to_upper(), int(home["sim_steps"]), "ON" if running else "PAUSED"]
     message_label.text = last_message
     queue_redraw()
