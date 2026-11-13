@@ -139,3 +139,34 @@ jobs:
           path: ${{ runner.temp }}/UnbearableConditions-P6-QA-Windows/
           retention-days: 30
           if-no-files-found: error
+
+
+  visual-snapshot:
+    name: Godot real-render screenshots on Linux virtual display
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Godot 4.7.2 and virtual X display
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y xvfb libgl1-mesa-dri libgl1
+          curl --fail --location --retry 3 --silent --show-error \
+            https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip \
+            --output /tmp/godot-4.7.2.zip
+          mkdir -p /tmp/godot-bin
+          unzip -q /tmp/godot-4.7.2.zip -d /tmp/godot-bin
+          chmod +x /tmp/godot-bin/Godot_v4.7.2-stable_linux.x86_64
+          sudo mv /tmp/godot-bin/Godot_v4.7.2-stable_linux.x86_64 /usr/local/bin/godot
+          godot --version
+      - name: Import Godot project under virtual display
+        run: xvfb-run -a -s "-screen 0 1280x800x24" godot --path game --editor --quit
+      - name: Render actual home, gate and refuge screenshots
+        run: xvfb-run -a -s "-screen 0 1280x800x24" godot --path game --script res://tests/capture_p6.gd
+      - uses: actions/upload-artifact@v4
+        with:
+          name: UnbearableConditions-P6-Visual-Screenshots
+          path: game/p6_visual_*.png
+          retention-days: 30
+          if-no-files-found: error
