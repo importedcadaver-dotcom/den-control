@@ -62,3 +62,42 @@ jobs:
         run: timeout 60s godot --headless --path game --script res://tests/test_p6_ui.gd
       - name: Boot main P6 QA home scene
         run: godot --headless --path game --quit-after 12
+
+
+  windows-headless:
+    name: Windows Godot headless smoke (not a visual playtest)
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install official Windows Godot 4.7.2
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $archive = Join-Path $env:RUNNER_TEMP "godot-4.7.2-win.zip"
+          $unpack = Join-Path $env:RUNNER_TEMP "godot-4.7.2-win"
+          Invoke-WebRequest -Uri "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_win64.exe.zip" -OutFile $archive
+          Expand-Archive -Path $archive -DestinationPath $unpack -Force
+          $binary = Get-ChildItem -Path $unpack -Recurse -Filter "*_console.exe" | Select-Object -First 1
+          if ($null -eq $binary) { throw "Godot Windows console binary not found" }
+          "GODOT_BIN=$($binary.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          & $binary.FullName --headless --version
+          if ($LASTEXITCODE -ne 0) { throw "Windows Godot version check failed" }
+      - name: Windows editor import
+        shell: pwsh
+        run: |
+          & $env:GODOT_BIN --headless --path game --editor --quit
+          if ($LASTEXITCODE -ne 0) { throw "Windows Godot editor import failed" }
+      - name: Windows P1-P6 headless regressions
+        shell: pwsh
+        run: |
+          foreach ($test in @("test_p1.gd", "test_p2.gd", "test_p3.gd", "test_p4.gd", "test_p4_ui.gd", "test_p41.gd", "test_p5.gd", "test_p5_ui.gd", "test_p6.gd", "test_p6_ui.gd")) {
+            Write-Host "Running $test on Windows"
+            & $env:GODOT_BIN --headless --path game --script "res://tests/$test"
+            if ($LASTEXITCODE -ne 0) { throw "$test failed on Windows with exit code $LASTEXITCODE" }
+          }
+      - name: Windows main-scene startup smoke
+        shell: pwsh
+        run: |
+          & $env:GODOT_BIN --headless --path game --quit-after 12
+          if ($LASTEXITCODE -ne 0) { throw "Windows startup smoke failed" }
