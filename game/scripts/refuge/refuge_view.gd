@@ -56,7 +56,7 @@ func _build() -> void:
     heading.add_theme_color_override("font_color", Color("f3d6ae"))
     add_child(heading)
     var notice := Label.new()
-    notice.text = "P5 QA TRAINING RESIDENTS  ·  PROVISIONAL COSTS / CAPACITY  ·  NOT CANON"
+    notice.text = "P6 QA TRAINING REFUGE  ·  PROVISIONAL COSTS / CAPACITY  ·  NOT CANON"
     notice.position = Vector2(24, 43)
     notice.add_theme_font_size_override("font_size", 11)
     add_child(notice)

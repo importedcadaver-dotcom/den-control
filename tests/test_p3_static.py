@@ -52,7 +52,7 @@ def test_no_free_food_or_unapproved_wealth():
 
 
 def test_ui_is_not_a_false_gate_or_refuge_build():
-    assert "P4 WORK IN PROGRESS" in VIEW
+    assert "P6 QA BUILD" in VIEW
     assert "GATE SHIFT TRAINING AVAILABLE" in VIEW
     assert "NO REFUGE SCENES" not in VIEW  # P5 remains unimplemented, but gate now exists
     assert "SaveStore.save_document" in VIEW and "SaveStore.load_into" in VIEW

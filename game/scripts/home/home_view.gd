@@ -42,7 +42,7 @@ func _ready() -> void:
 func _make_ui() -> void:
     var title := _label("UNBEARABLE CONDITIONS  /  THE DEN", Vector2(25, 12), Vector2(620, 36), 25)
     title.add_theme_color_override("font_color", Color("f4d6ac"))
-    var detail := _label("P4 WORK IN PROGRESS  •  GATE SHIFT TRAINING AVAILABLE", Vector2(26, 43), Vector2(610, 22), 12)
+    var detail := _label("P6 QA BUILD  •  HOME / GATE / REFUGE CONNECTED", Vector2(26, 43), Vector2(610, 22), 12)
     detail.add_theme_color_override("font_color", Color("e9bda0"))
     time_label = _label("", Vector2(23, 478), Vector2(615, 24), 14)
     message_label = _label("", Vector2(24, 503), Vector2(624, 30), 13)
@@ -65,6 +65,14 @@ func _make_ui() -> void:
     stack.add_theme_constant_override("separation", 7)
     scroll.add_child(stack)
     _spacer(stack, 9)
+    # Workday navigation is surfaced before the long care menu.
+    _stack_label(stack, "WORK / DAY", 16)
+    var work_row := HBoxContainer.new()
+    stack.add_child(work_row)
+    _action_button("Go to gate", work_row).pressed.connect(_go_gate)
+    _action_button("Go to refuge", work_row).pressed.connect(_go_refuge)
+    _action_button("Next day", work_row).pressed.connect(_next_day)
+    _spacer(stack, 7)
     _stack_label(stack, "MAMA'S CUBS", 23)
     var tabs := HBoxContainer.new()
     stack.add_child(tabs)
@@ -93,12 +101,6 @@ func _make_ui() -> void:
     _action_button("Pause", tools).pressed.connect(_toggle_pause)
     _action_button("Save", tools).pressed.connect(_save)
     _action_button("Load", tools).pressed.connect(_load)
-    _stack_label(stack, "WORK / DAY", 16)
-    var work_row := HBoxContainer.new()
-    stack.add_child(work_row)
-    _action_button("Go to gate", work_row).pressed.connect(_go_gate)
-    _action_button("Go to refuge", work_row).pressed.connect(_go_refuge)
-    _action_button("Next day", work_row).pressed.connect(_next_day)
     _spacer(stack, 12)
 
 func _go_gate() -> void:

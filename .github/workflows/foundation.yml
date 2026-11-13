@@ -60,6 +60,8 @@ jobs:
         run: timeout 60s godot --headless --path game --script res://tests/test_p6.gd
       - name: Run P6 complete UI route tests
         run: timeout 60s godot --headless --path game --script res://tests/test_p6_ui.gd
+      - name: Verify primary controls at 960x540
+        run: timeout 60s godot --headless --path game --script res://tests/test_p6_layout.gd
       - name: Boot main P6 QA home scene
         run: godot --headless --path game --quit-after 12
 
@@ -91,7 +93,7 @@ jobs:
       - name: Windows P1-P6 headless regressions
         shell: pwsh
         run: |
-          foreach ($test in @("test_p1.gd", "test_p2.gd", "test_p3.gd", "test_p4.gd", "test_p4_ui.gd", "test_p41.gd", "test_p5.gd", "test_p5_ui.gd", "test_p6.gd", "test_p6_ui.gd")) {
+          foreach ($test in @("test_p1.gd", "test_p2.gd", "test_p3.gd", "test_p4.gd", "test_p4_ui.gd", "test_p41.gd", "test_p5.gd", "test_p5_ui.gd", "test_p6.gd", "test_p6_ui.gd", "test_p6_layout.gd")) {
             Write-Host "Running $test on Windows"
             & $env:GODOT_BIN --headless --path game --script "res://tests/$test"
             if ($LASTEXITCODE -ne 0) { throw "$test failed on Windows with exit code $LASTEXITCODE" }

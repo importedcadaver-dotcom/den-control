@@ -14,9 +14,9 @@ var world: RefCounted
 var clock_timer: Timer
 var case_label: Label
 var clock_label: Label
-var document_label: Label
+var document_label: RichTextLabel
 var message_label: Label
-var feedback_label: Label
+var feedback_label: RichTextLabel
 var decision_reason: OptionButton
 var decision_buttons: Array[Button] = []
 var inspect_buttons: Array[Button] = []
@@ -65,17 +65,21 @@ func _build_ui() -> void:
     main_title.add_theme_color_override("font_color", Color("f4d6ac"))
     add_child(main_title)
     var notice := Label.new()
-    notice.text = "P4 TRAINING CASES  •  ANONYMOUS FIXTURES  •  RULES NOT FINAL CANON"
+    notice.text = "P6 QA TRAINING CASES  •  ANONYMOUS FIXTURES  •  NOT FINAL CANON"
     notice.position = Vector2(23, 43)
     notice.add_theme_font_size_override("font_size", 11)
     notice.add_theme_color_override("font_color", Color("f7be9a"))
     add_child(notice)
-    document_label = Label.new()
-    document_label.position = Vector2(259, 126)
-    document_label.size = Vector2(352, 265)
-    document_label.add_theme_color_override("font_color", INK)
-    document_label.add_theme_font_size_override("font_size", 17)
+    # RichTextLabel confines long laws and case notes to the physical paper area.
+    document_label = RichTextLabel.new()
+    document_label.position = Vector2(260, 123)
+    document_label.size = Vector2(359, 276)
+    document_label.bbcode_enabled = false
+    document_label.fit_content = false
+    document_label.scroll_active = true
     document_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+    document_label.add_theme_color_override("default_color", INK)
+    document_label.add_theme_font_size_override("normal_font_size", 16)
     add_child(document_label)
     message_label = Label.new()
     message_label.position = Vector2(22, 465)
@@ -96,6 +100,7 @@ func _build_ui() -> void:
     add_child(sidebar)
     var scroll := ScrollContainer.new()
     scroll.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+    scroll.offset_bottom = -124  # Pin entry decisions; do not bury them below scroll.
     sidebar.add_child(scroll)
     var stack := VBoxContainer.new()
     stack.custom_minimum_size = Vector2(271, 800)
@@ -119,21 +124,15 @@ func _build_ui() -> void:
     _action(inquiries, "Ask papers", _ask.bind("papers"))
     _action(inquiries, "Call registry", _verify.bind("registry"))
     _action(inquiries, "Check guardian", _verify.bind("guardian"))
-    feedback_label = _make_label(stack, "", 12, true)
-    _make_label(stack, "RECORD A REASON", 15)
-    decision_reason = OptionButton.new()
-    decision_reason.custom_minimum_size = Vector2(266, 30)
-    stack.add_child(decision_reason)
-    var fixture: Dictionary = GateSystem.read_fixture()
-    for entry in fixture.get("reasons", []):
-        decision_reason.add_item(str(entry.get("label", "Unknown reason")))
-        decision_reason.set_item_metadata(decision_reason.item_count - 1, str(entry.get("code", "")))
-    _make_label(stack, "GATE DECISION (NO REFUGE PLACEMENT)", 12)
-    var decisions := GridContainer.new()
-    decisions.columns = 2
-    stack.add_child(decisions)
-    for pair in [["AUTHORIZE", "authorized"], ["HOLD", "held"], ["DENY", "denied"]]:
-        decision_buttons.append(_action(decisions, pair[0], _decide.bind(pair[1])))
+    # A bounded scrollable response prevents long registry replies clipping the window.
+    feedback_label = RichTextLabel.new()
+    feedback_label.custom_minimum_size = Vector2(260, 68)
+    feedback_label.fit_content = false
+    feedback_label.scroll_active = true
+    feedback_label.bbcode_enabled = false
+    feedback_label.add_theme_color_override("default_color", Color("f0dfbe"))
+    feedback_label.add_theme_font_size_override("normal_font_size", 12)
+    stack.add_child(feedback_label)
     _make_label(stack, "SHIFT / SAVE", 15)
     var controls := GridContainer.new()
     controls.columns = 2
@@ -143,8 +142,37 @@ func _build_ui() -> void:
     _action(controls, "Load state", _load)
     early_button = _action(controls, "End early", _end_early)
     return_button = _action(stack, "Return to Mama's den", _go_home)
-    var foot := _make_label(stack, "Training materials only. Incorrect decisions stay on the record. No wages, grades or new citizens are fabricated.", 11, true)
+    var foot := _make_label(stack, "Training only; verdicts persist. No wages or named visitors are fabricated.", 11, true)
     foot.add_theme_color_override("font_color", Color("bfb0a4"))
+    # Fixed bottom strip is always visible, including at 960x540.
+    var decision_panel := PanelContainer.new()
+    decision_panel.position = Vector2(670, 416)
+    decision_panel.size = Vector2(288, 122)
+    var pinned_style := StyleBoxFlat.new()
+    pinned_style.bg_color = Color("34363b")
+    pinned_style.border_color = Color("a68668")
+    pinned_style.border_width_top = 2
+    decision_panel.add_theme_stylebox_override("panel", pinned_style)
+    add_child(decision_panel)
+    var pinned := VBoxContainer.new()
+    pinned.custom_minimum_size = Vector2(282, 116)
+    pinned.add_theme_constant_override("separation", 3)
+    decision_panel.add_child(pinned)
+    _make_label(pinned, "ENTRY DECISION + REASON (NOT REFUGE)", 11)
+    decision_reason = OptionButton.new()
+    decision_reason.custom_minimum_size = Vector2(274, 28)
+    pinned.add_child(decision_reason)
+    var fixture: Dictionary = GateSystem.read_fixture()
+    for entry in fixture.get("reasons", []):
+        decision_reason.add_item(str(entry.get("label", "Unknown reason")))
+        decision_reason.set_item_metadata(decision_reason.item_count - 1, str(entry.get("code", "")))
+    var decisions := HBoxContainer.new()
+    decisions.add_theme_constant_override("separation", 4)
+    pinned.add_child(decisions)
+    for pair in [["AUTHORIZE", "authorized"], ["HOLD", "held"], ["DENY", "denied"]]:
+        var decision_button := _action(decisions, pair[0], _decide.bind(pair[1]))
+        decision_button.custom_minimum_size = Vector2(87, 30)
+        decision_buttons.append(decision_button)
 
 func _ticket() -> Dictionary:
     return GateSystem.current(world)
