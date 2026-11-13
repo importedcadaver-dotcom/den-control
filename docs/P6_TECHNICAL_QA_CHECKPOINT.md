@@ -63,3 +63,16 @@
 6. **Seven-day acceptance:** verified first/third gate days and two-day QA sequence, not a complete 3-gate/3-refuge/1-off player campaign.
 
 **Canonical protection:** exactly five approved established individuals; no new recurring named characters, real Honeyhold laws or final budget figures added. Old v0.1 Button/Hazel seeds remain excluded.
+
+
+## Final P6 visual layout and executable QA checkpoint — November 12, 2026 (supersedes earlier snapshot artifacts)
+
+**Latest verified source:** [commit 07f0cd0](https://github.com/importedcadaver-dotcom/den-control/commit/07f0cd0c9d1a380e5fe982c60a1b4baa58495e4c) for gameplay/UI after the initial screenshot fixes. [Latest four-job passing CI](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43362289966) confirms Linux Godot, Windows Godot, Python and real virtual-display renders. Subsequent documentation updates do not alter executable behavior.
+
+**Verification totals:** P1–P6 **423** pre-existing behavioral/UI GDScript checks plus **17** P6 viewport/layout checks = **440** Linux Godot checks passing; **44/44** Python checks passing. Windows Godot ran the same P1–P6 suites including 17 layout checks. Real Godot rendering produced Home, Gate and Refuge PNGs at **960×540**; the images are available as the workflow's screenshot artifact. These were not AI-generated mockups, screenshots of an actual user Windows session, or proof of satisfactory game feel.
+
+**Fixed issues after viewing actual rendered frames:** (1) top-level Home work/navigation buttons were initially buried under care actions; now pinned near top of the scroll sidebar, (2) Gate paperwork was overflowing the paper frame; now a bounded scrollable RichTextLabel, (3) a long gate inquiry response overflowed the sidebar; now contained within a fixed-width scrollable panel, and (4) authorizing/holding/denying and choosing a reason were below the fold; now pinned in always-visible bottom-right panel. The first layout regression attempt had one remaining width assertion failure and an outdated P3 source-label assertion; both were resolved, and the final run is green. The refuge operations sidebar is visible in the capture but still uses primitive provisional art and anonymous test IDs.
+
+**Latest Windows QA ZIP artifact:** `UnbearableConditions-P6-QA-Windows`, ID `14008069706`, from [run 43362289966](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43362289966), approximately 84 MiB; local ZIP verification reported **56 entries, no errors**; **SHA-256 `4ae5481051af50488913303f882b3812428123fbcdca61c62f746c7e0ca967f4`**. Includes Godot 4.7.2 Windows runtime, source, launcher and license, and reflects the updated layouts. The **earlier QA ZIP/screenshot artifacts are superseded**. Artifacts are time-limited; GitHub source remains available.
+
+**Still not certified:** real Windows human interaction at desktop scaling, intuitive workflows, clear visual priorities at larger resolutions, 25+ day game, school/Grandma behavioral consequences, production applicant case and canon legal rules, finalized money and durable save compatibility. **P6 QA integration is tested; the authored first playable release is NOT finished.** See [P6 visual audit](P6_VISUAL_AUDIT_2026-11-12.md) and [manual playtest checklist](P6_WINDOWS_PLAYTEST_CHECKLIST.md).

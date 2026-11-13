@@ -72,3 +72,8 @@ To verify using Godot 4.7.2 and Python (from repository root):
     godot --headless --path game --script res://tests/test_p5_ui.gd
 
 [Verified GitHub Actions run](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42747344337): P1–P5 headless and Python passed. Current developer-save schema is **6**, without an automatic migration promise for older developer saves.
+
+
+## Latest P6 visual QA build
+
+The initial Linux virtual-display screenshots revealed that work navigation and some decision controls were buried or clipped. The current **source** has the fixes: the top-of-sidebar Work/Day row, pinned Gate authorize/hold/deny and reason, and scrollable bounded paper and response. [Latest CI 43362289966](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43362289966) passed all four jobs including Windows Godot headless smoke and real-render screenshots, plus a 17-assertion layout suite. See [P6 visual audit](../docs/P6_VISUAL_AUDIT_2026-11-12.md). Use the latest run's Windows QA artifact instead of previous ones.

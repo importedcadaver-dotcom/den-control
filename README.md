@@ -90,3 +90,12 @@ See [P4 checkpoint](docs/P4_CHECKPOINT.md), [P4 test matrix](docs/P4_TEST_MATRIX
 - **No invented canon:** The training visitors have no approved personal names; provisional prices, budget seeds and capacity are test numbers, not Honeyhold law or economy. Family identities remain unchanged.
 - **Verification:** [Actions run 42747344337](https://github.com/importedcadaver-dotcom/den-control/actions/runs/42747344337) passed **352 Godot assertions** across P1–P5 and **40 Python static tests**, editor import and headless scene boot. [Checkpoint](docs/P5_CHECKPOINT.md).
 - **Not yet P6:** No Windows executable export or manual pixel-art/UI assessment; no complete Grandma/school offscreen schedule, authored recurring applicant or seven-day campaign. [Production plan](docs/PRODUCTION_PLAN_V0_1.md).
+
+
+## Latest P6 rendered-layout and Windows QA verification — November 12, 2026
+
+The [latest fully passing P6 run](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43362289966) covers **four passing jobs**: 44 Python static checks, Linux Godot P1–P6 behavioral/scene tests plus 17 layout assertions, Windows Godot P1–P6 startup and tests, and **actual rendered 960×540 images** of the home/gate/refuge via a Linux virtual display. There are now **440 Linux Godot assertions** (423 previous tests + 17 new layout tests). This is **not** a human Windows visual or mouse playtest.
+
+The first rendered screenshots identified inaccessible initial navigation, gate paper overflow and clipped response text. Repairs moved Home work buttons up, pinned Gate's three verdicts and reason selector within view, and bounded paper/response in scrollable labels. See the [P6 visual audit](docs/P6_VISUAL_AUDIT_2026-11-12.md) and [updated manual QA checklist](docs/P6_WINDOWS_PLAYTEST_CHECKLIST.md).
+
+**Current Windows QA download:** use **UnbearableConditions-P6-QA-Windows** under the [latest passing run's Artifacts section](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43362289966), not an earlier package. It includes the official Godot 4.7.2 Windows runtime, project and launch batch file. It remains a developer QA runner, **not a conventional exported release or completed P6 story game**.

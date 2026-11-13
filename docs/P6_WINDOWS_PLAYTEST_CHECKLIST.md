@@ -41,3 +41,10 @@ This checklist is **not** a claim that someone has visually playtested the build
 ## Reporting issues
 
 For any error, capture: **screen and action**, **day/phase**, **expected versus actual behavior**, **Windows scaling**, a **screenshot**, and whether it reproduces after restarting. Save an unmodified copy of any useful test save before sharing it; save files may contain in-game relationship or story state. Don't include personal information or system credentials.
+
+
+## Existing technical screenshot evidence and remaining manual checks
+
+[Run 43362289966](https://github.com/importedcadaver-dotcom/den-control/actions/runs/43362289966) includes a **Godot real-render screenshot artifact** (Home, Gate, Refuge; 960×540) and a Windows runnable QA artifact with the **layout fixes**. A 17-assertion engine layout test passed, confirming the Home work buttons and Gate decision controls fit the viewport and the gate paper/response use bounded scroll surfaces. The initial screenshot audit found issues and prompted fixes; do not use the earlier screenshot/build artifacts when judging the current layout.
+
+Manual review must still check reading documents with the mouse wheel, keyboard focus/navigation, sidebar scroll hints, small fonts at 125%/150% Windows scaling, game-window resizing, actual button behavior, animations, and general gameplay clarity. UI assertions and static screenshots do not certify these.
